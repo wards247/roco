@@ -2,7 +2,7 @@
   margin-bottom: 1.5rem;
 }
 
-.select {
+.egg-group-selector__select {
   padding: 0.75rem 1rem;
   font-size: 1rem;
   border: 1px solid #ddd;
@@ -13,11 +13,11 @@
   transition: border-color 0.2s;
 }
 
-.select:hover {
+.egg-group-selector__select:hover {
   border-color: #667eea;
 }
 
-.select:focus {
+.egg-group-selector__select:focus {
   outline: none;
   border-color: #667eea;
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);

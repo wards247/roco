@@ -20,7 +20,8 @@ const EggGroupSelector = ({ eggGroups, selectedGroupId, onSelect }: Props) => {
       <select
         value={selectedGroupId ?? ''}
         onChange={(e) => onSelect(e.target.value ? Number(e.target.value) : null)}
-        className="select"
+        className="egg-group-selector__select"
+        aria-label="选择蛋组"
       >
         <option value="">全部蛋组</option>
         {eggGroups.map((group) => (
