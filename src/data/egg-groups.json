@@ -1,0 +1,311 @@
+{
+  "eggGroups": [
+    {
+      "group_id": 1,
+      "group_display": "卡洛斯亚传说中体型大的精灵",
+      "description": "卡洛斯亚传说中体型大的精灵",
+      "member_count": 13,
+      "hatchable_member_count": 0
+    },
+    {
+      "group_id": 2,
+      "group_display": "昆虫组",
+      "description": "在精灵学中被归类为虫系的精灵",
+      "member_count": 32,
+      "hatchable_member_count": 32
+    },
+    {
+      "group_id": 3,
+      "group_display": "两栖组",
+      "description": "生活在沙滩、沼泽等环境的精灵",
+      "member_count": 41,
+      "hatchable_member_count": 41
+    },
+    {
+      "group_id": 4,
+      "group_display": "软体组",
+      "description": "在精灵学中形态较为柔软的精灵",
+      "member_count": 36,
+      "hatchable_member_count": 36
+    },
+    {
+      "group_id": 5,
+      "group_display": "植物组",
+      "description": "在精灵学中外观撰要植物的精灵",
+      "member_count": 40,
+      "hatchable_member_count": 40
+    },
+    {
+      "group_id": 6,
+      "group_display": "矿物组",
+      "description": "在精灵学中外观撰要矿物的精灵",
+      "member_count": 22,
+      "hatchable_member_count": 22
+    },
+    {
+      "group_id": 7,
+      "group_display": "掣人组",
+      "description": "在精灵学中外观撰要洛克型的精灵",
+      "member_count": 44,
+      "hatchable_member_count": 44
+    },
+    {
+      "group_id": 12,
+      "group_display": "野兽组",
+      "description": "广泛分布在卡洛斯亚区域内的精灵",
+      "member_count": 85,
+      "hatchable_member_count": 85
+    },
+    {
+      "group_id": 13,
+      "group_display": "海洋组",
+      "description": "广泛分布在卡洛斯亚水域的精灵",
+      "member_count": 34,
+      "hatchable_member_count": 34
+    },
+    {
+      "group_id": 14,
+      "group_display": "龙系组",
+      "description": "在精灵学中被归类为龙系的精灵",
+      "member_count": 9,
+      "hatchable_member_count": 9
+    },
+    {
+      "group_id": 15,
+      "group_display": "机械组",
+      "description": "在精灵学中被归类为机械的精灵",
+      "member_count": 19,
+      "hatchable_member_count": 19
+    }
+  ],
+  "pokemonByGroup": {
+    "1": [
+      {
+        "base_id": 3397,
+        "display_name": "圣翼王子",
+        "page_name": "圣翼王子",
+        "avatar_url": "https://rococdn.gptvip.chat/webp/pets/head/3397.webp",
+        "body_url": "https://rococdn.gptvip.chat/webp/pets/body/3397.webp",
+        "class_name": "自然类精灵",
+        "type_name": "光元精灵",
+        "hatch_status_text": "暂不可生蛋",
+        "family_chain": "里奥 → 灵羽勇士 → 圣翼王子",
+        "family_key": "root:里奥|chain:里奥 → 灵羽勇士 → 圣翼王子",
+        "member_count": 3,
+        "can_hatch_member_count": 0
+      },
+      {
+        "base_id": 3311,
+        "display_name": "疾光千兽",
+        "page_name": "疾光千兽",
+        "avatar_url": "https://rococdn.gptvip.chat/webp/pets/head/3311.webp",
+        "body_url": "https://rococdn.gptvip.chat/webp/pets/body/3311.webp",
+        "class_name": "自然类精灵",
+        "type_name": "光元精灵",
+        "hatch_status_text": "暂不可生蛋",
+        "family_chain": "棱角鸟 → 光鳞兽 → 疾光千兽",
+        "family_key": "root:棱角鸟|chain:棱角鸟 → 光鳞兽 → 疾光千兽",
+        "member_count": 3,
+        "can_hatch_member_count": 0
+      },
+      {
+        "base_id": 3246,
+        "display_name": "滴仙子公司",
+        "page_name": "滴仙子公司",
+        "avatar_url": "https://rococdn.gptvip.chat/webp/pets/head/3246.webp",
+        "body_url": "https://rococdn.gptvip.chat/webp/pets/body/3246.webp",
+        "class_name": "自然类精灵",
+        "type_name": "光, 虫元精灵",
+        "hatch_status_text": "暂不可生蛋",
+        "family_chain": "滴滴 → 小滴滴 → 滴仙子公司",
+        "family_key": "root:滴滴|chain:滴滴 → 小滴滴 → 滴仙子公司",
+        "member_count": 3,
+        "can_hatch_member_count": 0
+      },
+      {
+        "base_id": 3004,
+        "display_name": "迪莫",
+        "page_name": "迪莫",
+        "avatar_url": "https://rococdn.gptvip.chat/webp/pets/head/3004.webp",
+        "body_url": "https://rococdn.gptvip.chat/webp/pets/body/3004.webp",
+        "class_name": "梦想类精灵",
+        "type_name": "光元精灵",
+        "hatch_status_text": "暂不可生蛋",
+        "family_chain": "迪莫",
+        "family_key": "root:迪莫|chain:迪莫",
+        "member_count": 1,
+        "can_hatch_member_count": 0
+      },
+      {
+        "base_id": 3182,
+        "display_name": "龙火帕尔",
+        "page_name": "龙火帕尔",
+        "avatar_url": "https://rococdn.gptvip.chat/webp/pets/head/3182.webp",
+        "body_url": "https://rococdn.gptvip.chat/webp/pets/body/3182.webp",
+        "class_name": "自然类精灵",
+        "type_name": "恶元精灵",
+        "hatch_status_text": "暂不可生蛋",
+        "family_chain": "小帕尔 → 帕尔萨斯 → 龙火帕尔",
+        "family_key": "root:小帕尔|chain:小帕尔 → 帕尔萨斯 → 龙火帕尔",
+        "member_count": 3,
+        "can_hatch_member_count": 0
+      }
+    ],
+    "2": [
+      {
+        "base_id": 3138,
+        "display_name": "蝴蝶",
+        "page_name": "蝴蝶（平常的样子）",
+        "avatar_url": "https://rococdn.gptvip.chat/webp/pets/head/3138.webp",
+        "body_url": "https://rococdn.gptvip.chat/webp/pets/body/3138.webp",
+        "class_name": "昆虫类精灵",
+        "type_name": "虫, 草元素精灵",
+        "hatch_status_text": "可生蛋",
+        "family_chain": "毛毛 → 爬爬 → 蝴蝶（平常的样子）, 蝴蝶（幽雅眼的样子）, 蝴蝶（眯眯的样子）, 蝴蝶（奇丽花的样子）",
+        "family_key": "root:毛毛|chain:毛毛 → 爬爬 → 蝴蝶",
+        "member_count": 6,
+        "can_hatch_member_count": 6
+      },
+      {
+        "base_id": 3179,
+        "display_name": "恶魔红爪",
+        "page_name": "恶魔红爪",
+        "avatar_url": "https://rococdn.gptvip.chat/webp/pets/head/3179.webp",
+        "body_url": "https://rococdn.gptvip.chat/webp/pets/body/3179.webp",
+        "class_name": "自然类精灵",
+        "type_name": "虫, 恶元素精灵",
+        "hatch_status_text": "可生蛋",
+        "family_chain": "赤脚爬爬 → 恶魔红爪",
+        "family_key": "root:赤脚爬爬|chain:赤脚爬爬 → 恶魔红爪",
+        "member_count": 2,
+        "can_hatch_member_count": 2
+      },
+      {
+        "base_id": 3604,
+        "display_name": "捕蝇草",
+        "page_name": "捕蝇草",
+        "avatar_url": "https://rococdn.gptvip.chat/webp/pets/head/3604.webp",
+        "body_url": "https://rococdn.gptvip.chat/webp/pets/body/3604.webp",
+        "class_name": "自然类精灵",
+        "type_name": "虫, 地元素精灵",
+        "hatch_status_text": "可生蛋",
+        "family_chain": "毛头小蜘蛛 → 捕蝇草, 食蝇短草",
+        "family_key": "root:毛头小蜘蛛|chain:毛头小蜘蛛 → 捕蝇草, 食蝇短草",
+        "member_count": 3,
+        "can_hatch_member_count": 3
+      },
+      {
+        "base_id": 3437,
+        "display_name": "萤火虫",
+        "page_name": "萤火虫",
+        "avatar_url": "https://rococdn.gptvip.chat/webp/pets/head/3437.webp",
+        "body_url": "https://rococdn.gptvip.chat/webp/pets/body/3437.webp",
+        "class_name": "自然类精灵",
+        "type_name": "火, 草元素精灵",
+        "hatch_status_text": "可生蛋",
+        "family_chain": "烛光虫 → 萤火虫",
+        "family_key": "root:烛光虫|chain:烛光虫 → 萤火虫",
+        "member_count": 2,
+        "can_hatch_member_count": 2
+      },
+      {
+        "base_id": 3615,
+        "display_name": "偷光蝇",
+        "page_name": "偷光蝇",
+        "avatar_url": "https://rococdn.gptvip.chat/webp/pets/head/3615.webp",
+        "body_url": "https://rococdn.gptvip.chat/webp/pets/body/3615.webp",
+        "class_name": "自然类精灵",
+        "type_name": "恶, 光元素精灵",
+        "hatch_status_text": "可生蛋",
+        "family_chain": "懒光蜗蜗 → 偷光蝇",
+        "family_key": "root:懒光蜗蜗|chain:懒光蜗蜗 → 偷光蝇",
+        "member_count": 2,
+        "can_hatch_member_count": 2
+      },
+      {
+        "base_id": 3132,
+        "display_name": "蛛香巨角蜘蛛",
+        "page_name": "蛛香巨角蜘蛛",
+        "avatar_url": "https://rococdn.gptvip.chat/webp/pets/head/3132.webp",
+        "body_url": "https://rococdn.gptvip.chat/webp/pets/body/3132.webp",
+        "class_name": "昆虫类精灵",
+        "type_name": "虫, 毒元素精灵",
+        "hatch_status_text": "可生蛋",
+        "family_chain": "圆眼蜘蛛 → 尖角蜘蛛 → 蛛香巨角蜘蛛",
+        "family_key": "root:圆眼蜘蛛|chain:圆眼蜘蛛 → 尖角蜘蛛 → 蛛香巨角蜘蛛",
+        "member_count": 3,
+        "can_hatch_member_count": 3
+      },
+      {
+        "base_id": 3141,
+        "display_name": "花衣蝶",
+        "page_name": "花衣蝶",
+        "avatar_url": "https://rococdn.gptvip.chat/webp/pets/head/3141.webp",
+        "body_url": "https://rococdn.gptvip.chat/webp/pets/body/3141.webp",
+        "class_name": "昆虫类精灵",
+        "type_name": "虫, 草元素精灵",
+        "hatch_status_text": "可生蛋",
+        "family_chain": "小草虫 → 草衣虫 → 花衣蝶",
+        "family_key": "root:小草虫|chain:小草虫 → 草衣虫 → 花衣蝶",
+        "member_count": 3,
+        "can_hatch_member_count": 3
+      },
+      {
+        "base_id": 3157,
+        "display_name": "花奇蜂后",
+        "page_name": "花奇蜂后",
+        "avatar_url": "https://rococdn.gptvip.chat/webp/pets/head/3157.webp",
+        "body_url": "https://rococdn.gptvip.chat/webp/pets/body/3157.webp",
+        "class_name": "昆虫类精灵",
+        "type_name": "虫, 风元素精灵",
+        "hatch_status_text": "可生蛋",
+        "family_chain": "蜂窝 → 黄蜂后 → 花奇蜂后",
+        "family_key": "root:蜂窝|chain:蜂窝 → 黄蜂后 → 花奇蜂后",
+        "member_count": 3,
+        "can_hatch_member_count": 3
+      },
+      {
+        "base_id": 3013,
+        "display_name": "银甲虫",
+        "page_name": "银甲虫",
+        "avatar_url": "https://rococdn.gptvip.chat/webp/pets/head/3013.webp",
+        "body_url": "https://rococdn.gptvip.chat/webp/pets/body/3013.webp",
+        "class_name": "昆虫类精灵",
+        "type_name": "虫元素精灵",
+        "hatch_status_text": "可生蛋",
+        "family_chain": "小甲虫 → 银甲虫",
+        "family_key": "root:小甲虫|chain:小甲虫 → 银甲虫",
+        "member_count": 2,
+        "can_hatch_member_count": 2
+      },
+      {
+        "base_id": 3400,
+        "display_name": "陨星虫",
+        "page_name": "陨星虫",
+        "avatar_url": "https://rococdn.gptvip.chat/webp/pets/head/3400.webp",
+        "body_url": "https://rococdn.gptvip.chat/webp/pets/body/3400.webp",
+        "class_name": "自然类精灵",
+        "type_name": "虫元素精灵",
+        "hatch_status_text": "可生蛋",
+        "family_chain": "星落虫 → 落星虫 → 陨星虫",
+        "family_key": "root:星落虫|chain:星落虫 → 落星虫 → 陨星虫",
+        "member_count": 3,
+        "can_hatch_member_count": 3
+      },
+      {
+        "base_id": 3377,
+        "display_name": "风滚草虫",
+        "page_name": "风滚草虫（金黄的样子）",
+        "avatar_url": "https://rococdn.gptvip.chat/webp/pets/head/3377.webp",
+        "body_url": "https://rococdn.gptvip.chat/webp/pets/body/3377.webp",
+        "class_name": "自然类精灵",
+        "type_name": "普通, 虫元素精灵",
+        "hatch_status_text": "可生蛋",
+        "family_chain": "旋叶虫（金黄的样子） → 蓬叶虫（金黄的样子） → 风滚草虫（金黄的样子）",
+        "family_key": "root:旋叶虫|chain:旋叶虫 → 蓬叶虫 → 风滚草虫",
+        "member_count": 3,
+        "can_hatch_member_count": 3
+      }
+    ]
+  }
+}
