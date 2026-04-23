@@ -1,0 +1,128 @@
+.pokemon-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.pokemon-card.cannot-hatch {
+  opacity: 0.7;
+}
+
+.pokemon-card__avatar {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 0.75rem;
+}
+
+.pokemon-card__info {
+  flex: 1;
+}
+
+.pokemon-card__name {
+  font-size: 1rem;
+  margin: 0 0 0.25rem 0;
+  color: #333;
+}
+
+.pokemon-card__type {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0 0 0.5rem 0;
+}
+
+.pokemon-card__status {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 0;
+}
+
+.pokemon-card__status.can-hatch {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.pokemon-card__status.cannot-hatch {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.pokemon-card__family {
+  font-size: 0.75rem;
+  color: #888;
+  margin: 0.5rem 0 0 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 150px;
+}
+
+.pokemon-card__actions {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.pokemon-card__mark-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: opacity 0.2s;
+}
+
+.pokemon-card__mark-btn:hover {
+  opacity: 0.9;
+}
+
+.pokemon-card__owned {
+  background: #28a745;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.pokemon-card__gender {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: white;
+}
+
+.pokemon-card__gender.gender-male {
+  background: #007bff;
+}
+
+.pokemon-card__gender.gender-female {
+  background: #e83e8c;
+}
+
+.pokemon-card__gender.gender-unknown {
+  background: #6c757d;
+}
+
+.pokemon-card__gender-select {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
