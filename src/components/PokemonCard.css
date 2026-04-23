@@ -93,6 +93,11 @@
   opacity: 0.9;
 }
 
+.pokemon-card__mark-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.4);
+}
+
 .pokemon-card__owned {
   background: #28a745;
   color: white;
@@ -125,4 +130,10 @@
   font-size: 0.8rem;
   border: 1px solid #ddd;
   border-radius: 4px;
+}
+
+.pokemon-card__gender-select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
