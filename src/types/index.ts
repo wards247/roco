@@ -25,7 +25,7 @@ export interface Pokemon {
 export interface MyPokemon {
   base_id: number;
   egg_group_id: number;
-  gender: 'male' | 'female' | 'unknown';
+  gender: Gender;
   is_mine: boolean;
   display_name?: string;
   avatar_url?: string;
