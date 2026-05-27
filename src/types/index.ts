@@ -25,6 +25,8 @@ export interface Pokemon {
 export interface MyPokemon {
   base_id: number;
   egg_group_id: number;
+  egg_group_ids?: number[];
+  can_hatch?: boolean;
   gender: Gender;
   is_mine: boolean;
   display_name?: string;

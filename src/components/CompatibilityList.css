@@ -1,0 +1,155 @@
+.compatibility-list-card {
+  background: #f7f8fb;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.compatibility-list-card__title {
+  margin: 0 0 1rem;
+  color: #333;
+  font-size: 1rem;
+}
+
+.compatibility-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.compatibility-list__item {
+  background: white;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.compatibility-list__item.is-clickable {
+  cursor: pointer;
+}
+
+.compatibility-list__item.is-clickable:hover,
+.compatibility-list__item.is-clickable:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.14), 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.compatibility-list__female {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.compatibility-list__avatar-small {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.compatibility-list__avatar-tiny {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.compatibility-list__identity {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.compatibility-list__name {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.compatibility-list__subtitle {
+  color: #777;
+  font-size: 0.82rem;
+}
+
+.compatibility-list__gender-tag {
+  background: #e83e8c;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.compatibility-list__gender-tag.gender-male {
+  background: #007bff;
+}
+
+.compatibility-list__gender-tag.gender-female {
+  background: #e83e8c;
+}
+
+.compatibility-list__count {
+  color: #666;
+  margin-bottom: 0.75rem;
+  padding-left: 3.5rem;
+}
+
+.compatibility-list__count strong {
+  color: #667eea;
+}
+
+.compatibility-list__males {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.compatibility-list__male-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  background: #e3f2fd;
+  padding: 0.375rem 0.625rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #1565c0;
+  cursor: pointer;
+}
+
+@media (max-width: 560px) {
+  .compatibility-list__males {
+    grid-template-columns: 1fr;
+  }
+}
+
+.compatibility-list__chip-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+.compatibility-list__chip-text span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.compatibility-list__chip-text small {
+  color: #4f6f96;
+  font-size: 0.72rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.compatibility-list__empty {
+  text-align: center;
+  padding: 3rem;
+  color: #888;
+  font-size: 1.1rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

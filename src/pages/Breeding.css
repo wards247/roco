@@ -1,0 +1,46 @@
+.breeding {
+  padding: 1rem 0;
+}
+
+.breeding-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 1rem;
+  align-items: start;
+}
+
+.recommendations-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.section-desc {
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.compatibility-sections {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+@media (max-width: 820px) {
+  .breeding-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .compatibility-sections {
+    grid-template-columns: 1fr;
+  }
+}

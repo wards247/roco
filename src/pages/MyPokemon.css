@@ -1,0 +1,70 @@
+.my-pokemon {
+  padding: 1rem 0;
+}
+
+.stats {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-width: 80px;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.stat-item--male .stat-value {
+  color: #007bff;
+}
+
+.stat-item--female .stat-value {
+  color: #e83e8c;
+}
+
+.stat-item--unknown .stat-value {
+  color: #6c757d;
+}
+
+.filter-select {
+  height: 46px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+  cursor: pointer;
+  min-width: 150px;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.page-empty {
+  text-align: center;
+  padding: 3rem;
+  color: #888;
+  font-size: 1.1rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

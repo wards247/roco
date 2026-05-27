@@ -1,0 +1,68 @@
+.rocom-pet-card {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 88px;
+  background: white;
+  border-radius: 10px;
+  padding: 0.85rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.rocom-pet-card.is-clickable {
+  cursor: pointer;
+}
+
+.rocom-pet-card.is-clickable:hover,
+.rocom-pet-card.is-clickable:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.14), 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rocom-pet-card__avatar {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.rocom-pet-card__info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.rocom-pet-card__name {
+  margin: 0;
+  color: #333;
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rocom-pet-card__meta,
+.rocom-pet-card__groups {
+  margin: 0;
+  color: #666;
+  font-size: 0.82rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rocom-pet-card__groups {
+  color: #777;
+}
+
+.rocom-pet-card__stat {
+  min-width: 2.5rem;
+  border-radius: 999px;
+  background: #eef1ff;
+  color: #4f62c8;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.82rem;
+}

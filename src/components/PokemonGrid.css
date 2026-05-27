@@ -1,0 +1,15 @@
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.pokemon-grid__empty {
+  text-align: center;
+  padding: 3rem;
+  color: #888;
+  font-size: 1.1rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

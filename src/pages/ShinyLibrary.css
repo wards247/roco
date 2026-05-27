@@ -1,0 +1,171 @@
+.shiny-library {
+  padding: 1rem 0;
+}
+
+.shiny-library__summary {
+  color: #666;
+  margin: -0.75rem 0 1.5rem;
+}
+
+.shiny-library__seasons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.shiny-library__season {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.shiny-library__season-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.shiny-library__season-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.15rem;
+}
+
+.shiny-library__season-header span {
+  color: #777;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.shiny-library__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.shiny-card {
+  width: 100%;
+  min-height: 230px;
+  border: 0;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.shiny-card:hover,
+.shiny-card:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(236, 154, 70, 0.18), 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.shiny-card__pets {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  align-items: end;
+  min-height: 92px;
+}
+
+.shiny-card__pet {
+  width: 100%;
+  height: 92px;
+  object-fit: contain;
+}
+
+.shiny-card__pet-placeholder {
+  min-height: 92px;
+  border-radius: 8px;
+  background: #f4f5f7;
+  color: #777;
+  display: grid;
+  place-items: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.shiny-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.shiny-card__body h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.shiny-card__owned-genders {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  flex: 0 0 auto;
+}
+
+.shiny-card__owned-gender {
+  width: 1rem;
+  height: 1rem;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.shiny-card__owned-gender.gender-male {
+  background: #cfe8ff;
+  color: #07569d;
+}
+
+.shiny-card__owned-gender.gender-female {
+  background: #ffe1ef;
+  color: #b40058;
+}
+
+.shiny-card__warning {
+  align-self: flex-start;
+  border-radius: 999px;
+  background: #fff4de;
+  color: #9a5b11;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+}
+
+.shiny-card__eggs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.shiny-card__eggs span {
+  min-width: 0;
+  border-radius: 8px;
+  background: #f7f8fb;
+  color: #555;
+  font-size: 0.82rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.55rem;
+}
+
+.shiny-card__eggs img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}

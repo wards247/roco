@@ -1,0 +1,106 @@
+.pokemon-library {
+  padding: 1rem 0;
+}
+
+.page-title {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.page-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.page-filters > * {
+  flex: 1;
+  min-width: 200px;
+}
+
+.page-loading {
+  text-align: center;
+  padding: 3rem;
+  color: #888;
+  font-size: 1.1rem;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.pagination__button {
+  border: 1px solid #d8d8e0;
+  background: white;
+  color: #333;
+  border-radius: 8px;
+  padding: 0.65rem 1rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  min-width: 88px;
+  transition: border-color 0.2s, box-shadow 0.2s, color 0.2s;
+}
+
+.pagination__button--compact {
+  min-width: 72px;
+}
+
+.pagination__button:hover:not(:disabled),
+.pagination__button:focus:not(:disabled) {
+  border-color: #667eea;
+  color: #4f62c8;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  outline: none;
+}
+
+.pagination__button:disabled {
+  cursor: not-allowed;
+  color: #aaa;
+  background: #f4f4f4;
+}
+
+.pagination__summary {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.pagination__field {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.pagination__field select,
+.pagination__field input {
+  height: 38px;
+  border: 1px solid #d8d8e0;
+  border-radius: 8px;
+  background: white;
+  color: #333;
+  padding: 0 0.6rem;
+  font-size: 0.95rem;
+}
+
+.pagination__field select {
+  min-width: 84px;
+}
+
+.pagination__field input {
+  width: 86px;
+}
+
+.pagination__field select:focus,
+.pagination__field input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  outline: none;
+}
