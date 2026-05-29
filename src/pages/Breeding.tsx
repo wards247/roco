@@ -1,4 +1,5 @@
 import CompatibilityList from '../components/CompatibilityList';
+import BreedingPlanner from '../components/BreedingPlanner';
 import SystemCompatibilityRanking from '../components/SystemCompatibilityRanking';
 import { useBreeding } from '../hooks/useBreeding';
 import { useEggGroups } from '../hooks/useEggGroups';
@@ -53,6 +54,8 @@ const Breeding = () => {
           <span className="stat-label">雌性</span>
         </div>
       </div>
+
+      <BreedingPlanner pokemon={enrichedMyPokemon} />
 
       <div className="breeding-layout">
         <section className="recommendations-section">

@@ -9,6 +9,10 @@
   align-items: start;
 }
 
+.breeding > .breeding-planner {
+  margin-top: 1rem;
+}
+
 .recommendations-section {
   background: white;
   padding: 1.5rem;
