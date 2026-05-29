@@ -253,11 +253,9 @@ const PokemonDetail = () => {
             <div className="detail-shiny-eggs" aria-label={`${displayName}蛋图`}>
               <div className="detail-shiny-egg">
                 <img src={shinyPet.normalEggUrl} alt={`${displayName}原色蛋`} loading="lazy" />
-                <span>原色蛋</span>
               </div>
               <div className="detail-shiny-egg">
                 <img src={shinyPet.shinyEggUrl} alt={`${displayName}异色蛋`} loading="lazy" />
-                <span>异色蛋</span>
               </div>
             </div>
           )}

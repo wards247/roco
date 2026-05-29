@@ -40,7 +40,7 @@
 
 .shiny-library__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1rem;
 }
 
@@ -63,6 +63,23 @@
 .shiny-card:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(236, 154, 70, 0.18), 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.shiny-card--male {
+  background: #e7f0ff;
+}
+
+.shiny-card--female {
+  background: #ffe8f0;
+}
+
+.shiny-card--both {
+  background:
+    linear-gradient(
+      135deg,
+      #e7f0ff 50%,
+      #ffe8f0 50%
+    );
 }
 
 .shiny-card__pets {
@@ -148,24 +165,11 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.75rem;
-}
-
-.shiny-card__eggs span {
-  min-width: 0;
-  border-radius: 8px;
-  background: #f7f8fb;
-  color: #555;
-  font-size: 0.82rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.45rem 0.55rem;
+  justify-items: center;
 }
 
 .shiny-card__eggs img {
-  width: 42px;
-  height: 42px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
-  flex: 0 0 auto;
 }

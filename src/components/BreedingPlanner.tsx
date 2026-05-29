@@ -109,7 +109,7 @@ const renderPokemonRows = (
             <div className="breeding-planner__egg-groups">{formatEggGroups(entry)}</div>
           </div>
           <label className="breeding-planner__count">
-            <span>数量</span>
+            <span></span>
             <input
               type="number"
               min={0}

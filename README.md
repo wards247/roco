@@ -19,3 +19,4 @@ npm run dev
 ## 说明
 
 项目当前使用本地化的蛋组数据和图片资源，生蛋推荐与详情页候选都基于本地规则计算。
+精灵蛋参考页https://wiki.biligame.com/rocom/%E7%B2%BE%E7%81%B5%E8%9B%8B%E5%9B%BE%E9%89%B4

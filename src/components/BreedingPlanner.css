@@ -72,8 +72,8 @@
   color: #333;
   font: inherit;
   min-width: 0;
-  padding: 0.45rem 0.55rem;
-  width: 4.5rem;
+  padding: 0.35rem 0.45rem;
+  width: 3rem;
 }
 
 .breeding-planner__toolbar {
@@ -157,7 +157,7 @@
 .breeding-planner__list {
   display: grid;
   gap: 0.65rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .breeding-planner__row {

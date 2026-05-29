@@ -1,6 +1,7 @@
 import type { Gender, Pokemon } from '../types';
 import type { MyPokemon } from '../types';
 import { hasPetGuideImage } from '../utils/petGuideImages';
+import { getShinyPetById } from '../utils/shinyPets';
 import PokemonCard from './PokemonCard';
 import './PokemonGrid.css';
 
@@ -37,6 +38,8 @@ const PokemonGrid = ({
     <div className="pokemon-grid">
       {pokemonList.map((pokemon) => {
         const owned = ownedPokemon?.get(pokemon.base_id) || [];
+        const shinyPet = getShinyPetById(pokemon.base_id);
+        const eggUrl = shinyPet?.hasEggImages ? shinyPet.normalEggUrl : undefined;
         return (
           <PokemonCard
             key={pokemon.base_id}
@@ -46,6 +49,7 @@ const PokemonGrid = ({
             ownedGenders={owned.map((ownedPokemon) => ownedPokemon.gender)}
             actionMode={actionMode}
             isChoosingGender={choosingGenderBaseId === pokemon.base_id}
+            eggUrl={eggUrl}
             showActions={showActions}
             onMarkAsMine={() => onMarkAsMine?.(pokemon)}
             onConfirmMarkAsMine={(genders) => onConfirmMarkAsMine?.(pokemon, genders)}

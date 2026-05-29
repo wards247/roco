@@ -12,6 +12,7 @@ interface Props {
   ownedGenders?: Gender[];
   actionMode?: 'library' | 'manage';
   isChoosingGender?: boolean;
+  eggUrl?: string;
   onMarkAsMine?: (pokemon: Pokemon) => void;
   onConfirmMarkAsMine?: (genders: Gender[]) => void;
   onCancelMarkAsMine?: () => void;
@@ -27,6 +28,7 @@ const PokemonCard = ({
   ownedGenders = [],
   actionMode = 'manage',
   isChoosingGender,
+  eggUrl,
   showActions,
   onMarkAsMine,
   onConfirmMarkAsMine,
@@ -77,23 +79,41 @@ const PokemonCard = ({
     <div
       className={`pokemon-card ${!canHatch ? 'cannot-hatch' : ''}`}
     >
-      <a
-        href={detailHref}
-        className={`pokemon-card__detail-link pokemon-card__avatar-link ${isClickable ? 'is-clickable' : ''}`}
-        onClick={handleOpenPokemonClick}
-        onKeyDown={handleOpenPokemonKeyDown}
-        aria-label={`查看${pokemon.display_name}详情`}
-      >
-        <img
-          src={toPublicAssetUrl(pokemon.avatar_url)}
-          alt={pokemon.display_name}
-          className="pokemon-card__avatar"
-          loading="lazy"
-          onError={(event) => {
-            event.currentTarget.style.visibility = 'hidden';
-          }}
-        />
-      </a>
+      <div className="pokemon-card__avatar-row">
+        <a
+          href={detailHref}
+          className={`pokemon-card__detail-link pokemon-card__avatar-link ${isClickable ? 'is-clickable' : ''}`}
+          onClick={handleOpenPokemonClick}
+          onKeyDown={handleOpenPokemonKeyDown}
+          aria-label={`查看${pokemon.display_name}详情`}
+        >
+          <img
+            src={toPublicAssetUrl(pokemon.avatar_url)}
+            alt={pokemon.display_name}
+            className="pokemon-card__avatar"
+            loading="lazy"
+            onError={(event) => {
+              event.currentTarget.style.visibility = 'hidden';
+            }}
+          />
+        </a>
+        {eggUrl && (
+          <a
+            href={detailHref}
+            className={`pokemon-card__detail-link pokemon-card__egg-link ${isClickable ? 'is-clickable' : ''}`}
+            onClick={handleOpenPokemonClick}
+            onKeyDown={handleOpenPokemonKeyDown}
+            aria-label={`查看${pokemon.display_name}的蛋`}
+          >
+            <img
+              src={eggUrl}
+              alt={`${pokemon.display_name}的蛋`}
+              className="pokemon-card__egg"
+              loading="lazy"
+            />
+          </a>
+        )}
+      </div>
       <a
         href={detailHref}
         className={`pokemon-card__detail-link pokemon-card__info ${isClickable ? 'is-clickable' : ''}`}

@@ -62,11 +62,21 @@ const ShinyLibrary = () => {
                   relatedBaseIdsByShinyPetId.get(pet.id) ?? [pet.id],
                 );
 
+                const hasMale = ownedGenders.includes('male');
+                const hasFemale = ownedGenders.includes('female');
+                const ownedClass = hasMale && hasFemale
+                  ? 'shiny-card--both'
+                  : hasMale
+                    ? 'shiny-card--male'
+                    : hasFemale
+                      ? 'shiny-card--female'
+                      : '';
+
                 return (
                   <button
                     key={pet.id}
                     type="button"
-                    className="shiny-card"
+                    className={`shiny-card${ownedClass ? ` ${ownedClass}` : ''}`}
                     onClick={() => navigate(`/pokemon/${pet.id}`)}
                   >
                     <div className="shiny-card__pets">
@@ -104,14 +114,8 @@ const ShinyLibrary = () => {
                         <span className="shiny-card__warning">暂无蛋图</span>
                       ) : (
                         <div className="shiny-card__eggs">
-                          <span>
-                            <img src={pet.normalEggUrl} alt={`${pet.displayName}原色蛋`} loading="lazy" />
-                            原色蛋
-                          </span>
-                          <span>
-                            <img src={pet.shinyEggUrl} alt={`${pet.displayName}异色蛋`} loading="lazy" />
-                            异色蛋
-                          </span>
+                          <img src={pet.normalEggUrl} alt={`${pet.displayName}原色蛋`} loading="lazy" />
+                          <img src={pet.shinyEggUrl} alt={`${pet.displayName}异色蛋`} loading="lazy" />
                         </div>
                       )}
                     </div>
