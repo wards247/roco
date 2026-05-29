@@ -7,6 +7,8 @@ import {
   getPlannerPokemonKey,
 } from '../utils/breedingPlanner';
 import type {
+  BreedingPlannerConfig,
+  BreedingPlannerEntryConfig,
   BreedingPlanResult,
   PlannerGender,
   PlannerInstance,
@@ -17,6 +19,14 @@ import './BreedingPlanner.css';
 interface BreedingPlannerProps {
   pokemon: MyPokemon[];
 }
+
+type UpdateEntryHandler = (
+  baseId: number,
+  gender: PlannerGender,
+  patch: Partial<BreedingPlannerEntryConfig>,
+) => void;
+
+type CountChangeHandler = (baseId: number, gender: PlannerGender, rawValue: string) => void;
 
 const clampNumber = (value: number, min: number, max: number) => {
   if (!Number.isFinite(value)) {
@@ -45,8 +55,9 @@ const getInstanceLabel = (instance: PlannerInstance | PlannerMaleSlot | undefine
 const renderPokemonRows = (
   entries: MyPokemon[],
   gender: PlannerGender,
-  config: BreedingPlanResult extends never ? never : ReturnType<typeof useBreedingPlannerConfig>['config'],
-  updateEntry: ReturnType<typeof useBreedingPlannerConfig>['updateEntry'],
+  config: BreedingPlannerConfig,
+  onUpdateEntry: UpdateEntryHandler,
+  onCountChange: CountChangeHandler,
 ) => (
   <div className="breeding-planner__list" role="list">
     {entries.map((entry) => {
@@ -60,7 +71,7 @@ const renderPokemonRows = (
             <input
               type="checkbox"
               checked={itemConfig.enabled}
-              onChange={(event) => updateEntry(entry.base_id, gender, { enabled: event.target.checked })}
+              onChange={(event) => onUpdateEntry(entry.base_id, gender, { enabled: event.target.checked })}
             />
             <span className="breeding-planner__sr-only">启用{name}</span>
           </label>
@@ -81,11 +92,7 @@ const renderPokemonRows = (
               min={0}
               max={10}
               value={itemConfig.count}
-              onChange={(event) => {
-                updateEntry(entry.base_id, gender, {
-                  count: clampNumber(Number(event.target.value), 0, 10),
-                });
-              }}
+              onChange={(event) => onCountChange(entry.base_id, gender, event.target.value)}
             />
           </label>
         </div>
@@ -242,6 +249,34 @@ const BreedingPlanner = ({ pokemon }: BreedingPlannerProps) => {
     setResult(buildBreedingPlan({ pokemon: plannerPokemon, config }));
   };
 
+  const handleNestCountChange = (rawValue: string) => {
+    setResult(null);
+    if (rawValue === '') {
+      return;
+    }
+
+    updateNestCount(clampNumber(Number(rawValue), 1, 10));
+  };
+
+  const handleUpdateEntry: UpdateEntryHandler = (baseId, gender, patch) => {
+    setResult(null);
+    updateEntry(baseId, gender, patch);
+  };
+
+  const handleCountChange: CountChangeHandler = (baseId, gender, rawValue) => {
+    setResult(null);
+    if (rawValue === '') {
+      return;
+    }
+
+    updateEntry(baseId, gender, { count: clampNumber(Number(rawValue), 0, 10) });
+  };
+
+  const handleSetAllEnabled = (enabled: boolean) => {
+    setResult(null);
+    setAllEnabled(enabled, plannerPokemon);
+  };
+
   return (
     <section className="breeding-planner" aria-labelledby="breeding-planner-title">
       <div className="breeding-planner__header">
@@ -256,7 +291,7 @@ const BreedingPlanner = ({ pokemon }: BreedingPlannerProps) => {
             min={1}
             max={10}
             value={config.nestCount}
-            onChange={(event) => updateNestCount(clampNumber(Number(event.target.value), 1, 10))}
+            onChange={(event) => handleNestCountChange(event.target.value)}
           />
         </label>
       </div>
@@ -267,8 +302,8 @@ const BreedingPlanner = ({ pokemon }: BreedingPlannerProps) => {
           <span>已启用雄性 {enabledStats.male}</span>
         </div>
         <div className="breeding-planner__actions">
-          <button type="button" onClick={() => setAllEnabled(true, plannerPokemon)}>全选</button>
-          <button type="button" onClick={() => setAllEnabled(false, plannerPokemon)}>清空</button>
+          <button type="button" onClick={() => handleSetAllEnabled(true)}>全选</button>
+          <button type="button" onClick={() => handleSetAllEnabled(false)}>清空</button>
           <button type="button" className="breeding-planner__primary" onClick={handleBuildPlan}>生成方案</button>
         </div>
       </div>
@@ -277,13 +312,13 @@ const BreedingPlanner = ({ pokemon }: BreedingPlannerProps) => {
         <section className="breeding-planner__selector" aria-labelledby="breeding-planner-female-title">
           <h4 id="breeding-planner-female-title">雌性</h4>
           {femalePokemon.length > 0
-            ? renderPokemonRows(femalePokemon, 'female', config, updateEntry)
+            ? renderPokemonRows(femalePokemon, 'female', config, handleUpdateEntry, handleCountChange)
             : <div className="breeding-planner__empty">暂无可参与的雌性精灵。</div>}
         </section>
         <section className="breeding-planner__selector" aria-labelledby="breeding-planner-male-title">
           <h4 id="breeding-planner-male-title">雄性</h4>
           {malePokemon.length > 0
-            ? renderPokemonRows(malePokemon, 'male', config, updateEntry)
+            ? renderPokemonRows(malePokemon, 'male', config, handleUpdateEntry, handleCountChange)
             : <div className="breeding-planner__empty">暂无可参与的雄性精灵。</div>}
         </section>
       </div>
