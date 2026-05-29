@@ -122,6 +122,27 @@ export const sanitizeBreedingPlannerConfig = (
   return { nestCount, entries };
 };
 
+export const mergeBreedingPlannerConfigWithPokemon = (
+  pokemon: MyPokemon[],
+  config: BreedingPlannerConfig,
+): BreedingPlannerConfig => {
+  const sanitizedConfig = sanitizeBreedingPlannerConfig(config);
+  const entries = { ...sanitizedConfig.entries };
+
+  pokemon.forEach((owned) => {
+    if (owned.can_hatch === false || (owned.gender !== 'male' && owned.gender !== 'female')) {
+      return;
+    }
+
+    const key = getPlannerPokemonKey(owned.base_id, owned.gender);
+    if (!entries[key]) {
+      entries[key] = { enabled: true, count: 1 };
+    }
+  });
+
+  return { ...sanitizedConfig, entries };
+};
+
 export const getMyPokemonEggGroupIdsForPlanner = (pokemon: MyPokemon) =>
   pokemon.egg_group_ids && pokemon.egg_group_ids.length > 0
     ? pokemon.egg_group_ids

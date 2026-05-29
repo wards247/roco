@@ -1,6 +1,7 @@
 import {
   buildBreedingPlan,
   getPlannerPokemonKey,
+  mergeBreedingPlannerConfigWithPokemon,
   sanitizeBreedingPlannerConfig,
 } from './breedingPlanner';
 import type { BreedingPlannerConfig } from './breedingPlanner';
@@ -131,6 +132,39 @@ if (
 
 if ('invalid:key' in sanitized.entries) {
   throw new Error('planner config should drop invalid entry keys');
+}
+
+const mergedConfig = mergeBreedingPlannerConfigWithPokemon(
+  [
+    makeOwned(1, 'female', [6]),
+    makeOwned(2, 'male', [6]),
+    makeOwned(3, 'unknown', [6]),
+    makeOwned(4, 'female', [6], '不可生蛋', false),
+  ],
+  {
+    nestCount: 4,
+    entries: {
+      '1:female': { enabled: false, count: 3 },
+    },
+  },
+);
+
+if (
+  mergedConfig.entries['1:female']?.enabled !== false
+  || mergedConfig.entries['1:female']?.count !== 3
+) {
+  throw new Error('planner config merge should keep existing entry values');
+}
+
+if (
+  mergedConfig.entries['2:male']?.enabled !== true
+  || mergedConfig.entries['2:male']?.count !== 1
+) {
+  throw new Error('planner config merge should default new owned planner entries');
+}
+
+if ('3:unknown' in mergedConfig.entries || '4:female' in mergedConfig.entries) {
+  throw new Error('planner config merge should skip unknown gender and non-hatchable pokemon');
 }
 
 [
