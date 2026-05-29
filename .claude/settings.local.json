@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(claude plugin --help)"
+      "Bash(claude plugin --help)",
+      "Bash(npm run build)"
     ]
   }
 }
