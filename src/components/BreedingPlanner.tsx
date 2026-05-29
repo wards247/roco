@@ -13,6 +13,7 @@ import type {
   PlannerGender,
   PlannerInstance,
   PlannerMaleSlot,
+  PlannerPokemonKey,
 } from '../utils/breedingPlanner';
 import './BreedingPlanner.css';
 
@@ -27,6 +28,7 @@ type UpdateEntryHandler = (
 ) => void;
 
 type CountChangeHandler = (baseId: number, gender: PlannerGender, rawValue: string) => void;
+type CountBlurHandler = (baseId: number, gender: PlannerGender) => void;
 
 const clampNumber = (value: number, min: number, max: number) => {
   if (!Number.isFinite(value)) {
@@ -56,13 +58,16 @@ const renderPokemonRows = (
   entries: MyPokemon[],
   gender: PlannerGender,
   config: BreedingPlannerConfig,
+  countDrafts: Partial<Record<PlannerPokemonKey, string>>,
   onUpdateEntry: UpdateEntryHandler,
   onCountChange: CountChangeHandler,
+  onCountBlur: CountBlurHandler,
 ) => (
   <div className="breeding-planner__list" role="list">
     {entries.map((entry) => {
       const key = getPlannerPokemonKey(entry.base_id, gender);
       const itemConfig = config.entries[key] ?? { enabled: true, count: 1 };
+      const countValue = countDrafts[key] ?? itemConfig.count;
       const name = getDisplayName(entry);
 
       return (
@@ -91,8 +96,9 @@ const renderPokemonRows = (
               type="number"
               min={0}
               max={10}
-              value={itemConfig.count}
+              value={countValue}
               onChange={(event) => onCountChange(entry.base_id, gender, event.target.value)}
+              onBlur={() => onCountBlur(entry.base_id, gender)}
             />
           </label>
         </div>
@@ -224,6 +230,8 @@ const BreedingPlanner = ({ pokemon }: BreedingPlannerProps) => {
   );
   const { config, updateNestCount, updateEntry, setAllEnabled } = useBreedingPlannerConfig(plannerPokemon);
   const [result, setResult] = useState<BreedingPlanResult | null>(null);
+  const [nestCountDraft, setNestCountDraft] = useState<string | null>(null);
+  const [countDrafts, setCountDrafts] = useState<Partial<Record<PlannerPokemonKey, string>>>({});
 
   const enabledStats = useMemo(
     () => plannerPokemon.reduce(
@@ -251,11 +259,23 @@ const BreedingPlanner = ({ pokemon }: BreedingPlannerProps) => {
 
   const handleNestCountChange = (rawValue: string) => {
     setResult(null);
+    setNestCountDraft(rawValue);
     if (rawValue === '') {
       return;
     }
 
     updateNestCount(clampNumber(Number(rawValue), 1, 10));
+  };
+
+  const handleNestCountBlur = () => {
+    if (nestCountDraft === null) {
+      return;
+    }
+
+    if (nestCountDraft !== '') {
+      updateNestCount(clampNumber(Number(nestCountDraft), 1, 10));
+    }
+    setNestCountDraft(null);
   };
 
   const handleUpdateEntry: UpdateEntryHandler = (baseId, gender, patch) => {
@@ -264,12 +284,32 @@ const BreedingPlanner = ({ pokemon }: BreedingPlannerProps) => {
   };
 
   const handleCountChange: CountChangeHandler = (baseId, gender, rawValue) => {
+    const key = getPlannerPokemonKey(baseId, gender);
+
     setResult(null);
+    setCountDrafts((drafts) => ({ ...drafts, [key]: rawValue }));
     if (rawValue === '') {
       return;
     }
 
     updateEntry(baseId, gender, { count: clampNumber(Number(rawValue), 0, 10) });
+  };
+
+  const handleCountBlur: CountBlurHandler = (baseId, gender) => {
+    const key = getPlannerPokemonKey(baseId, gender);
+    const draft = countDrafts[key];
+    if (draft === undefined) {
+      return;
+    }
+
+    if (draft !== '') {
+      updateEntry(baseId, gender, { count: clampNumber(Number(draft), 0, 10) });
+    }
+    setCountDrafts((drafts) => {
+      const nextDrafts = { ...drafts };
+      delete nextDrafts[key];
+      return nextDrafts;
+    });
   };
 
   const handleSetAllEnabled = (enabled: boolean) => {
@@ -290,8 +330,9 @@ const BreedingPlanner = ({ pokemon }: BreedingPlannerProps) => {
             type="number"
             min={1}
             max={10}
-            value={config.nestCount}
+            value={nestCountDraft ?? config.nestCount}
             onChange={(event) => handleNestCountChange(event.target.value)}
+            onBlur={handleNestCountBlur}
           />
         </label>
       </div>
@@ -312,13 +353,29 @@ const BreedingPlanner = ({ pokemon }: BreedingPlannerProps) => {
         <section className="breeding-planner__selector" aria-labelledby="breeding-planner-female-title">
           <h4 id="breeding-planner-female-title">雌性</h4>
           {femalePokemon.length > 0
-            ? renderPokemonRows(femalePokemon, 'female', config, handleUpdateEntry, handleCountChange)
+            ? renderPokemonRows(
+              femalePokemon,
+              'female',
+              config,
+              countDrafts,
+              handleUpdateEntry,
+              handleCountChange,
+              handleCountBlur,
+            )
             : <div className="breeding-planner__empty">暂无可参与的雌性精灵。</div>}
         </section>
         <section className="breeding-planner__selector" aria-labelledby="breeding-planner-male-title">
           <h4 id="breeding-planner-male-title">雄性</h4>
           {malePokemon.length > 0
-            ? renderPokemonRows(malePokemon, 'male', config, handleUpdateEntry, handleCountChange)
+            ? renderPokemonRows(
+              malePokemon,
+              'male',
+              config,
+              countDrafts,
+              handleUpdateEntry,
+              handleCountChange,
+              handleCountBlur,
+            )
             : <div className="breeding-planner__empty">暂无可参与的雄性精灵。</div>}
         </section>
       </div>
