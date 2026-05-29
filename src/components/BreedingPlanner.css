@@ -101,7 +101,7 @@
 .breeding-planner__selectors {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   margin-top: 1rem;
 }
 
@@ -123,6 +123,7 @@
 .breeding-planner__list {
   display: grid;
   gap: 0.65rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .breeding-planner__row {
@@ -130,10 +131,10 @@
   border: 1px solid #f0f0f0;
   border-radius: 10px;
   display: grid;
-  gap: 0.65rem;
-  grid-template-columns: auto 36px minmax(0, 1fr) auto;
+  gap: 0.5rem;
+  grid-template-columns: auto 32px minmax(0, 1fr) auto;
   min-width: 0;
-  padding: 0.6rem;
+  padding: 0.5rem;
 }
 
 .breeding-planner__check {
@@ -149,9 +150,9 @@
 .breeding-planner__avatar {
   background: #f5f7fb;
   border-radius: 50%;
-  height: 36px;
+  height: 32px;
   object-fit: contain;
-  width: 36px;
+  width: 32px;
 }
 
 .breeding-planner__info {
@@ -160,7 +161,7 @@
 
 .breeding-planner__name {
   color: #333;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -169,7 +170,7 @@
 
 .breeding-planner__egg-groups {
   color: #777;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -317,9 +318,12 @@
     flex-direction: column;
   }
 
-  .breeding-planner__selectors,
   .breeding-planner__result-main {
     grid-template-columns: 1fr;
+  }
+
+  .breeding-planner__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .breeding-planner__actions {
@@ -330,6 +334,10 @@
 @media (max-width: 560px) {
   .breeding-planner {
     padding: 1rem;
+  }
+
+  .breeding-planner__list {
+    grid-template-columns: 1fr;
   }
 
   .breeding-planner__row {
