@@ -55,7 +55,7 @@ const Breeding = () => {
         </div>
       </div>
 
-      <BreedingPlanner pokemon={enrichedMyPokemon} />
+      <BreedingPlanner pokemon={enrichedMyPokemon} allPokemon={allPokemon} />
 
       <div className="breeding-layout">
         <section className="recommendations-section">

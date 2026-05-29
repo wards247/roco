@@ -6,6 +6,7 @@ import SearchBar from '../components/SearchBar';
 import { useEggGroups } from '../hooks/useEggGroups';
 import { useMyPokemon } from '../hooks/useMyPokemon';
 import type { Gender, Pokemon } from '../types';
+import { toPublicAssetUrl } from '../utils/publicAssets';
 import './MyPokemon.css';
 
 type GenderFilter = Gender | 'all';
@@ -30,7 +31,7 @@ const MyPokemon = () => {
       base_id: pokemon.base_id,
       display_name: source?.display_name || pokemon.display_name || `精灵 #${pokemon.base_id}`,
       page_name: source?.page_name || pokemon.display_name || '',
-      avatar_url: source?.avatar_url || `/pets/head/${pokemon.base_id}.webp`,
+      avatar_url: source?.avatar_url || toPublicAssetUrl(`/pets/head/${pokemon.base_id}.webp`),
       body_url: source?.body_url || '',
       class_name: source?.class_name || '',
       type_name: source?.type_name || '',

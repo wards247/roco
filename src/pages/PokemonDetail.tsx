@@ -15,6 +15,7 @@ import {
   toRocomPetCard,
 } from '../utils/rocomPets';
 import { getPetGuideImageById } from '../utils/petGuideImages';
+import { toPublicAssetUrl } from '../utils/publicAssets';
 import { getShinyPetById } from '../utils/shinyPets';
 import type { EggGroup, Pokemon } from '../types';
 import type { RocomEvolutionNode, RocomEvolutionStage } from '../types/rocom';
@@ -65,7 +66,7 @@ const PokemonDetail = () => {
   const typeName = primaryPokemon?.type_name || (rocomDetail ? getRocomTypeName(rocomDetail) : '');
   const className = primaryPokemon?.class_name || rocomDetail?.world_profile?.classis_name || '';
   const hatchStatus = primaryPokemon?.hatch_status_text || (rocomDetail?.breeding_profile?.egg_groups.length ? '可生蛋' : '');
-  const avatarUrl = primaryPokemon?.avatar_url || `/pets/head/${parsedBaseId}.webp`;
+  const avatarUrl = primaryPokemon?.avatar_url || toPublicAssetUrl(`/pets/head/${parsedBaseId}.webp`);
   const bodyUrl = rocomDetail ? getRocomFriendImageUrl(rocomDetail.name) : primaryPokemon?.body_url || avatarUrl;
   const rocomEggGroupIds = rocomDetail?.breeding_profile?.egg_groups ?? [];
   const sourceEggGroupIds = localEntries.length > 0 ? getPokemonEggGroupIds(localEntries) : rocomEggGroupIds;

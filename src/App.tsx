@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import PokemonLibrary from './pages/PokemonLibrary';
 import CompletePokemonLibrary from './pages/CompletePokemonLibrary';
@@ -10,7 +10,7 @@ import './index.css';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Header />
       <main className="main-content">
         <Routes>
@@ -22,7 +22,7 @@ function App() {
           <Route path="/breeding" element={<Breeding />} />
         </Routes>
       </main>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

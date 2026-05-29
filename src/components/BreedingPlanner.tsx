@@ -1,8 +1,12 @@
 import { useMemo, useState } from 'react';
-import type { MyPokemon } from '../types';
+import type { MyPokemon, Pokemon } from '../types';
 import { useBreedingPlannerConfig } from '../hooks/useBreedingPlannerConfig';
+import { getVisibleOwnedGendersForBaseIds } from '../utils/ownedGenders';
+import { toPublicAssetUrl } from '../utils/publicAssets';
+import { shinyPets } from '../utils/shinyPets';
 import {
   buildBreedingPlan,
+  generateBreedingPlacement,
   getMyPokemonEggGroupIdsForPlanner,
   getPlannerPokemonKey,
 } from '../utils/breedingPlanner';
@@ -19,7 +23,10 @@ import './BreedingPlanner.css';
 
 interface BreedingPlannerProps {
   pokemon: MyPokemon[];
+  allPokemon: Pokemon[];
 }
+
+type PlannerMode = 'normal' | 'shiny';
 
 type UpdateEntryHandler = (
   baseId: number,
@@ -54,6 +61,11 @@ const truncateName = (name: string, maxLength = 5) =>
 const getInstanceLabel = (instance: PlannerInstance | PlannerMaleSlot | undefined) =>
   instance ? truncateName(instance.displayName) : '';
 
+const NORMAL_PLANNER_STORAGE_KEY = 'roco_breeding_planner_config';
+const SHINY_PLANNER_STORAGE_KEY = 'roco_breeding_planner_shiny_config';
+const NORMAL_DEFAULT_ENTRY = { enabled: true, count: 1 };
+const SHINY_DEFAULT_ENTRY = { enabled: false, count: 1 };
+
 const renderPokemonRows = (
   entries: MyPokemon[],
   gender: PlannerGender,
@@ -62,6 +74,7 @@ const renderPokemonRows = (
   onUpdateEntry: UpdateEntryHandler,
   onCountChange: CountChangeHandler,
   onCountBlur: CountBlurHandler,
+  ownedKeys: Set<PlannerPokemonKey>,
 ) => (
   <div className="breeding-planner__list" role="list">
     {entries.map((entry) => {
@@ -69,9 +82,14 @@ const renderPokemonRows = (
       const itemConfig = config.entries[key] ?? { enabled: true, count: 1 };
       const countValue = countDrafts[key] ?? itemConfig.count;
       const name = getDisplayName(entry);
+      const isOwned = ownedKeys.has(key);
 
       return (
-        <div className="breeding-planner__row" role="listitem" key={key}>
+        <div
+          className={isOwned ? 'breeding-planner__row breeding-planner__row--owned' : 'breeding-planner__row'}
+          role="listitem"
+          key={key}
+        >
           <label className="breeding-planner__check">
             <input
               type="checkbox"
@@ -82,7 +100,7 @@ const renderPokemonRows = (
           </label>
           <img
             className="breeding-planner__avatar"
-            src={entry.avatar_url || `/pets/head/${entry.base_id}.webp`}
+            src={toPublicAssetUrl(entry.avatar_url || `/pets/head/${entry.base_id}.webp`)}
             alt=""
             loading="lazy"
           />
@@ -215,11 +233,84 @@ const BreedingPlanGrid = ({ result }: { result: BreedingPlanResult }) => {
   );
 };
 
-const BreedingPlanner = ({ pokemon }: BreedingPlannerProps) => {
-  const plannerPokemon = useMemo(
+const BreedingPlanner = ({ pokemon, allPokemon }: BreedingPlannerProps) => {
+  const [mode, setMode] = useState<PlannerMode>('normal');
+  const normalPlannerPokemon = useMemo(
     () => pokemon.filter((entry) => entry.can_hatch !== false && (entry.gender === 'male' || entry.gender === 'female')),
     [pokemon],
   );
+  const shinyRelatedBaseIdsById = useMemo(
+    () =>
+      new Map(
+        shinyPets.map((pet) => [
+          pet.id,
+          [
+            pet.id,
+            ...allPokemon
+              .filter((entry) => entry.base_id === pet.id || entry.family_chain.includes(pet.displayName))
+              .map((entry) => entry.base_id),
+          ],
+        ]),
+      ),
+    [allPokemon],
+  );
+  const shinyPlannerPokemon = useMemo(
+    () =>
+      shinyPets.flatMap((pet): MyPokemon[] => {
+        const relatedIds = shinyRelatedBaseIdsById.get(pet.id) ?? [pet.id];
+        const eggGroupIds = [
+          ...new Set(
+            allPokemon
+              .filter((entry) =>
+                relatedIds.includes(entry.base_id)
+                && entry.hatch_status_text === '可生蛋'
+                && entry.egg_group_id > 0,
+              )
+              .map((entry) => entry.egg_group_id),
+          ),
+        ];
+
+        if (eggGroupIds.length === 0) {
+          return [];
+        }
+
+        const baseEntry = {
+          base_id: pet.id,
+          egg_group_id: eggGroupIds[0],
+          egg_group_ids: eggGroupIds,
+          can_hatch: true,
+          is_mine: false,
+          display_name: pet.displayName,
+          avatar_url: pet.shinyImageUrl,
+        };
+
+        return [
+          { ...baseEntry, gender: 'female' as const },
+          { ...baseEntry, gender: 'male' as const },
+        ];
+      }),
+    [allPokemon, shinyRelatedBaseIdsById],
+  );
+  const shinyOwnedKeys = useMemo(() => {
+    const keys = new Set<PlannerPokemonKey>();
+
+    shinyPets.forEach((pet) => {
+      const relatedIds = shinyRelatedBaseIdsById.get(pet.id) ?? [pet.id];
+      const ownedGenders = getVisibleOwnedGendersForBaseIds(pokemon, relatedIds);
+
+      ownedGenders.forEach((gender) => {
+        if (gender === 'male' || gender === 'female') {
+          keys.add(getPlannerPokemonKey(pet.id, gender));
+        }
+      });
+    });
+
+    return keys;
+  }, [pokemon, shinyRelatedBaseIdsById]);
+  const plannerPokemon = mode === 'shiny' ? shinyPlannerPokemon : normalPlannerPokemon;
+  const ownedKeys = mode === 'shiny' ? shinyOwnedKeys : new Set<PlannerPokemonKey>();
+  const storageKey = mode === 'shiny' ? SHINY_PLANNER_STORAGE_KEY : NORMAL_PLANNER_STORAGE_KEY;
+  const defaultEntry = mode === 'shiny' ? SHINY_DEFAULT_ENTRY : NORMAL_DEFAULT_ENTRY;
   const femalePokemon = useMemo(
     () => plannerPokemon.filter((entry) => entry.gender === 'female'),
     [plannerPokemon],
@@ -228,8 +319,13 @@ const BreedingPlanner = ({ pokemon }: BreedingPlannerProps) => {
     () => plannerPokemon.filter((entry) => entry.gender === 'male'),
     [plannerPokemon],
   );
-  const { config, updateNestCount, updateEntry, setAllEnabled } = useBreedingPlannerConfig(plannerPokemon);
+  const { config, updateNestCount, updateEntry, setAllEnabled } = useBreedingPlannerConfig(
+    plannerPokemon,
+    storageKey,
+    defaultEntry,
+  );
   const [result, setResult] = useState<BreedingPlanResult | null>(null);
+  const [placementAttempted, setPlacementAttempted] = useState(false);
   const [nestCountDraft, setNestCountDraft] = useState<string | null>(null);
   const [countDrafts, setCountDrafts] = useState<Partial<Record<PlannerPokemonKey, string>>>({});
 
@@ -254,11 +350,26 @@ const BreedingPlanner = ({ pokemon }: BreedingPlannerProps) => {
   );
 
   const handleBuildPlan = () => {
+    setPlacementAttempted(false);
     setResult(buildBreedingPlan({ pokemon: plannerPokemon, config }));
   };
 
-  const handleNestCountChange = (rawValue: string) => {
+  const handleGeneratePlacement = () => {
+    setPlacementAttempted(true);
+    setResult((currentResult) => (
+      currentResult && !currentResult.error
+        ? generateBreedingPlacement(currentResult)
+        : currentResult
+    ));
+  };
+
+  const clearResult = () => {
+    setPlacementAttempted(false);
     setResult(null);
+  };
+
+  const handleNestCountChange = (rawValue: string) => {
+    clearResult();
     setNestCountDraft(rawValue);
     if (rawValue === '') {
       return;
@@ -279,14 +390,14 @@ const BreedingPlanner = ({ pokemon }: BreedingPlannerProps) => {
   };
 
   const handleUpdateEntry: UpdateEntryHandler = (baseId, gender, patch) => {
-    setResult(null);
+    clearResult();
     updateEntry(baseId, gender, patch);
   };
 
   const handleCountChange: CountChangeHandler = (baseId, gender, rawValue) => {
     const key = getPlannerPokemonKey(baseId, gender);
 
-    setResult(null);
+    clearResult();
     setCountDrafts((drafts) => ({ ...drafts, [key]: rawValue }));
     if (rawValue === '') {
       return;
@@ -313,8 +424,15 @@ const BreedingPlanner = ({ pokemon }: BreedingPlannerProps) => {
   };
 
   const handleSetAllEnabled = (enabled: boolean) => {
-    setResult(null);
+    clearResult();
     setAllEnabled(enabled, plannerPokemon);
+  };
+
+  const handleModeChange = (nextMode: PlannerMode) => {
+    clearResult();
+    setCountDrafts({});
+    setNestCountDraft(null);
+    setMode(nextMode);
   };
 
   return (
@@ -322,7 +440,27 @@ const BreedingPlanner = ({ pokemon }: BreedingPlannerProps) => {
       <div className="breeding-planner__header">
         <div>
           <h3 className="breeding-planner__title" id="breeding-planner-title">配窝助手</h3>
-          <p className="breeding-planner__desc">选择参与配窝的精灵和数量，生成 7x7 窝位摆放参考。</p>
+          <p className="breeding-planner__desc">
+            {mode === 'shiny'
+              ? '筛选赛季异色目标，浅蓝卡片表示我的精灵中已拥有对应性别。'
+              : '选择参与配窝的精灵和数量，生成 7x7 窝位摆放参考。'}
+          </p>
+        </div>
+        <div className="breeding-planner__mode-switch" aria-label="配窝助手模式">
+          <button
+            type="button"
+            className={mode === 'normal' ? 'is-active' : ''}
+            onClick={() => handleModeChange('normal')}
+          >
+            普通
+          </button>
+          <button
+            type="button"
+            className={mode === 'shiny' ? 'is-active' : ''}
+            onClick={() => handleModeChange('shiny')}
+          >
+            异色
+          </button>
         </div>
         <label className="breeding-planner__nest-control">
           <span>窝位数</span>
@@ -345,7 +483,15 @@ const BreedingPlanner = ({ pokemon }: BreedingPlannerProps) => {
         <div className="breeding-planner__actions">
           <button type="button" onClick={() => handleSetAllEnabled(true)}>全选</button>
           <button type="button" onClick={() => handleSetAllEnabled(false)}>清空</button>
-          <button type="button" className="breeding-planner__primary" onClick={handleBuildPlan}>生成方案</button>
+          <button type="button" className="breeding-planner__primary" onClick={handleBuildPlan}>智能推荐配窝方案</button>
+          <button
+            type="button"
+            className="breeding-planner__secondary"
+            disabled={!result || Boolean(result.error)}
+            onClick={handleGeneratePlacement}
+          >
+            生成位置图
+          </button>
         </div>
       </div>
 
@@ -361,6 +507,7 @@ const BreedingPlanner = ({ pokemon }: BreedingPlannerProps) => {
               handleUpdateEntry,
               handleCountChange,
               handleCountBlur,
+              ownedKeys,
             )
             : <div className="breeding-planner__empty">暂无可参与的雌性精灵。</div>}
         </section>
@@ -375,6 +522,7 @@ const BreedingPlanner = ({ pokemon }: BreedingPlannerProps) => {
               handleUpdateEntry,
               handleCountChange,
               handleCountBlur,
+              ownedKeys,
             )
             : <div className="breeding-planner__empty">暂无可参与的雄性精灵。</div>}
         </section>
@@ -392,22 +540,28 @@ const BreedingPlanner = ({ pokemon }: BreedingPlannerProps) => {
             </div>
           )}
 
-          <div className="breeding-planner__result-main">
-            <div className="breeding-planner__visual">
-              <BreedingPlanGrid result={result} />
-            </div>
-            <section className="breeding-planner__pair-stats" aria-labelledby="breeding-planner-pair-stats-title">
-              <h4 id="breeding-planner-pair-stats-title">雌性配对次数</h4>
-              <div className="breeding-planner__summary-list">
-                {result.femalePairStats.map((stat) => (
-                  <div className="breeding-planner__summary-row" key={stat.female.id}>
-                    <span title={stat.female.displayName}>{stat.female.displayName}</span>
-                    <strong>{stat.pairCount}</strong>
-                  </div>
-                ))}
+          {result.placement ? (
+            <div className="breeding-planner__result-main">
+              <div className="breeding-planner__visual">
+                <BreedingPlanGrid result={result} />
               </div>
-            </section>
-          </div>
+              <section className="breeding-planner__pair-stats" aria-labelledby="breeding-planner-pair-stats-title">
+                <h4 id="breeding-planner-pair-stats-title">雌性配对次数</h4>
+                <div className="breeding-planner__summary-list">
+                  {result.femalePairStats.map((stat) => (
+                    <div className="breeding-planner__summary-row" key={stat.female.id}>
+                      <span title={stat.female.displayName}>{stat.female.displayName}</span>
+                      <strong>{stat.pairCount}</strong>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            </div>
+          ) : (
+            <div className="breeding-planner__empty-result">
+              {placementAttempted ? '本次没有生成位置图，可再次点击“生成位置图”重试。' : '已生成配窝方案，可继续生成位置图。'}
+            </div>
+          )}
 
           <section className="breeding-planner__coverage" aria-labelledby="breeding-planner-coverage-title">
             <h4 id="breeding-planner-coverage-title">雄性覆盖明细</h4>

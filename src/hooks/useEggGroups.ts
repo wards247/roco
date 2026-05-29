@@ -2,6 +2,7 @@ import { useCallback } from 'react';
 import eggGroupsData from '../data/egg-groups.json';
 import type { EggGroup, Pokemon } from '../types';
 import { sortPokemonByBaseId } from '../utils/eggGroupSorting';
+import { toPublicAssetUrl } from '../utils/publicAssets';
 
 const eggGroups: EggGroup[] = eggGroupsData.eggGroups.map((group) => ({
   ...group,
@@ -14,6 +15,8 @@ const allPokemon: Pokemon[] = sortPokemonByBaseId(
     ([groupId, pokemonList]) =>
       pokemonList.map((pokemon) => ({
         ...pokemon,
+        avatar_url: toPublicAssetUrl(pokemon.avatar_url),
+        body_url: toPublicAssetUrl(pokemon.body_url),
         egg_group_id: Number(groupId),
       })),
   ),

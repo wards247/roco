@@ -125,6 +125,7 @@ export const sanitizeBreedingPlannerConfig = (
 export const mergeBreedingPlannerConfigWithPokemon = (
   pokemon: MyPokemon[],
   config: BreedingPlannerConfig,
+  defaultEntry: BreedingPlannerEntryConfig = { enabled: true, count: 1 },
 ): BreedingPlannerConfig => {
   const sanitizedConfig = sanitizeBreedingPlannerConfig(config);
   const entries = { ...sanitizedConfig.entries };
@@ -136,7 +137,7 @@ export const mergeBreedingPlannerConfigWithPokemon = (
 
     const key = getPlannerPokemonKey(owned.base_id, owned.gender);
     if (!entries[key]) {
-      entries[key] = { enabled: true, count: 1 };
+      entries[key] = defaultEntry;
     }
   });
 
@@ -445,7 +446,7 @@ const solvePlacement = (
     return false;
   };
 
-  for (let attempt = 0; attempt < 300; attempt += 1) {
+  for (let attempt = 0; attempt < 3000; attempt += 1) {
     const occupied = new Set<number>();
     const maleCoords = maleSlots.map(() => {
       const coord = getRandomFreeCoord(occupied);
@@ -494,7 +495,6 @@ const solvePlacement = (
 export const buildBreedingPlan = ({
   pokemon,
   config,
-  random = Math.random,
 }: BuildBreedingPlanInput): BreedingPlanResult => {
   const sanitizedConfig = sanitizeBreedingPlannerConfig(config);
   const participants = buildParticipants(pokemon, sanitizedConfig);
@@ -567,23 +567,37 @@ export const buildBreedingPlan = ({
     return { male, coveredFemales };
   });
   const uncoveredFemales = femaleInstances.filter((female) => !coveredFemaleIds.has(female.id));
-  const coveredFemales = femaleInstances.filter((female) => coveredFemaleIds.has(female.id));
-  const placement = coveredFemales.length > 0 ? solvePlacement(coveredFemales, maleSlots, random) : undefined;
-  const femalePairStats = femaleInstances
-    .map((female) => {
-      const placementFemaleIndex = coveredFemales.findIndex((candidate) => candidate.id === female.id);
-      const pairCount = placementFemaleIndex === -1
-        ? 0
-        : placement?.lines.filter((line) => line.femaleIndex === placementFemaleIndex).length ?? 0;
-
-      return { female, pairCount };
-    });
-
   return {
     femaleInstances,
     maleSlots,
     uncoveredFemales,
     maleCoverDetails,
+    femalePairStats: sortFemalePairStats(femaleInstances.map((female) => ({ female, pairCount: 0 }))),
+  };
+};
+
+export const generateBreedingPlacement = (
+  plan: BreedingPlanResult,
+  random: () => number = Math.random,
+): BreedingPlanResult => {
+  if (plan.error || plan.femaleInstances.length === 0 || plan.maleSlots.length === 0) {
+    return plan;
+  }
+
+  const uncoveredFemaleIds = new Set(plan.uncoveredFemales.map((female) => female.id));
+  const coveredFemales = plan.femaleInstances.filter((female) => !uncoveredFemaleIds.has(female.id));
+  const placement = coveredFemales.length > 0 ? solvePlacement(coveredFemales, plan.maleSlots, random) : undefined;
+  const femalePairStats = plan.femaleInstances.map((female) => {
+    const placementFemaleIndex = coveredFemales.findIndex((candidate) => candidate.id === female.id);
+    const pairCount = placementFemaleIndex === -1
+      ? 0
+      : placement?.lines.filter((line) => line.femaleIndex === placementFemaleIndex).length ?? 0;
+
+    return { female, pairCount };
+  });
+
+  return {
+    ...plan,
     placement,
     femalePairStats: sortFemalePairStats(femalePairStats),
   };

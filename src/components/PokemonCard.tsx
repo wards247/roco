@@ -1,5 +1,6 @@
 import { useState, type KeyboardEvent, type MouseEvent } from 'react';
 import type { Gender, Pokemon } from '../types';
+import { toPublicAssetUrl } from '../utils/publicAssets';
 import './PokemonCard.css';
 
 type GenderChoice = 'male' | 'female' | 'both';
@@ -37,11 +38,21 @@ const PokemonCard = ({
   const canHatch = pokemon.hatch_status_text === '可生蛋';
   const isLibraryMode = actionMode === 'library';
   const isClickable = !!onOpenPokemon;
+  const detailHref = `/pokemon/${pokemon.base_id}`;
   const stopActionClick = (event: MouseEvent<HTMLElement>) => {
     event.stopPropagation();
   };
 
-  const handleCardKeyDown = (event: KeyboardEvent<HTMLAnchorElement>) => {
+  const handleOpenPokemonClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    if (!onOpenPokemon) {
+      return;
+    }
+
+    event.preventDefault();
+    onOpenPokemon();
+  };
+
+  const handleOpenPokemonKeyDown = (event: KeyboardEvent<HTMLAnchorElement>) => {
     if (!onOpenPokemon) {
       return;
     }
@@ -63,30 +74,33 @@ const PokemonCard = ({
   const visibleOwnedGenders = ownedGenders.filter((gender) => gender !== 'unknown');
 
   return (
-    <a
-      href={`/pokemon/${pokemon.base_id}`}
-      className={`pokemon-card ${!canHatch ? 'cannot-hatch' : ''} ${isClickable ? 'is-clickable' : ''}`}
-      onClick={(e) => {
-        if (onOpenPokemon) {
-          e.preventDefault();
-          onOpenPokemon();
-        }
-      }}
-      onKeyDown={handleCardKeyDown}
-      role={isClickable ? 'link' : undefined}
-      tabIndex={isClickable ? 0 : undefined}
-      aria-label={isClickable ? `查看${pokemon.display_name}详情` : undefined}
+    <div
+      className={`pokemon-card ${!canHatch ? 'cannot-hatch' : ''}`}
     >
-      <img
-        src={pokemon.avatar_url}
-        alt={pokemon.display_name}
-        className="pokemon-card__avatar"
-        loading="lazy"
-        onError={(event) => {
-          event.currentTarget.style.visibility = 'hidden';
-        }}
-      />
-      <div className="pokemon-card__info">
+      <a
+        href={detailHref}
+        className={`pokemon-card__detail-link pokemon-card__avatar-link ${isClickable ? 'is-clickable' : ''}`}
+        onClick={handleOpenPokemonClick}
+        onKeyDown={handleOpenPokemonKeyDown}
+        aria-label={`查看${pokemon.display_name}详情`}
+      >
+        <img
+          src={toPublicAssetUrl(pokemon.avatar_url)}
+          alt={pokemon.display_name}
+          className="pokemon-card__avatar"
+          loading="lazy"
+          onError={(event) => {
+            event.currentTarget.style.visibility = 'hidden';
+          }}
+        />
+      </a>
+      <a
+        href={detailHref}
+        className={`pokemon-card__detail-link pokemon-card__info ${isClickable ? 'is-clickable' : ''}`}
+        onClick={handleOpenPokemonClick}
+        onKeyDown={handleOpenPokemonKeyDown}
+        aria-label={`查看${pokemon.display_name}详情`}
+      >
         <h3 className="pokemon-card__name">
           <span>{pokemon.display_name}</span>
           {hasGuideImage && (
@@ -113,7 +127,7 @@ const PokemonCard = ({
         {pokemon.family_chain && (
           <p className="pokemon-card__family">{pokemon.family_chain}</p>
         )}
-      </div>
+      </a>
       {showActions && (
         <div className="pokemon-card__actions">
           {isOwned ? (
@@ -204,7 +218,7 @@ const PokemonCard = ({
           )}
         </div>
       )}
-    </a>
+    </div>
   );
 };
 

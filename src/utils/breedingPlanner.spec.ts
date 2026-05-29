@@ -1,5 +1,6 @@
 import {
   buildBreedingPlan,
+  generateBreedingPlacement,
   getPlannerPokemonKey,
   mergeBreedingPlannerConfigWithPokemon,
   sanitizeBreedingPlannerConfig,
@@ -63,20 +64,26 @@ if (plan.maleSlots.some((slot) => slot.baseId === 5 || slot.baseId === 6)) {
   throw new Error('planner should exclude unknown gender and non-hatchable pokemon');
 }
 
-if (!plan.placement || plan.placement.lines.length === 0) {
-  throw new Error('planner should generate placement lines for covered females');
+if (plan.placement) {
+  throw new Error('planner should not generate placement before the placement step');
 }
 
-if (plan.placement.lines.some((line) => line.distance > 2)) {
+const planWithPlacement = generateBreedingPlacement(plan, () => 0.42);
+
+if (!planWithPlacement.placement || planWithPlacement.placement.lines.length === 0) {
+  throw new Error('placement step should generate placement lines for covered females');
+}
+
+if (planWithPlacement.placement.lines.some((line) => line.distance > 2)) {
   throw new Error('placement lines should only use Manhattan distance <= 2');
 }
 
-if (plan.placement.femaleInstances.length !== 2) {
+if (planWithPlacement.placement.femaleInstances.length !== 2) {
   throw new Error('placement should expose covered female instances for UI rendering');
 }
 
-const femaleOne = plan.femalePairStats.find((stat) => stat.female.baseId === 1);
-const femaleTwo = plan.femalePairStats.find((stat) => stat.female.baseId === 2);
+const femaleOne = planWithPlacement.femalePairStats.find((stat) => stat.female.baseId === 1);
+const femaleTwo = planWithPlacement.femalePairStats.find((stat) => stat.female.baseId === 2);
 
 if (!femaleOne || femaleOne.pairCount < 1 || !femaleTwo || femaleTwo.pairCount < 1) {
   throw new Error('female pair stats should count generated placement lines');
@@ -240,7 +247,8 @@ const normalSortedPlan = buildBreedingPlan({
   random: () => 0.5,
 });
 
-const normalSortedNames = normalSortedPlan.femalePairStats.map((stat) => stat.female.displayName).join(',');
+const normalSortedNames = generateBreedingPlacement(normalSortedPlan, () => 0.5)
+  .femalePairStats.map((stat) => stat.female.displayName).join(',');
 if (normalSortedNames !== '常三,阿一,波二') {
   throw new Error('normal results should sort female pair stats by pair count desc then Chinese name');
 }

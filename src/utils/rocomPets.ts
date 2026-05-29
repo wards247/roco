@@ -1,7 +1,8 @@
 import type { RocomPetCard, RocomPetIndex, RocomType } from '../types/rocom';
+import { toPublicAssetUrl } from './publicAssets';
 
-export const ROCOM_DATA_BASE = '/rocom/data';
-export const ROCOM_FRIENDS_BASE = '/rocom/assets/webp/friends';
+export const ROCOM_DATA_BASE = toPublicAssetUrl('/rocom/data');
+export const ROCOM_FRIENDS_BASE = toPublicAssetUrl('/rocom/assets/webp/friends');
 
 export const getRocomFriendImageUrl = (assetName: string) =>
   `${ROCOM_FRIENDS_BASE}/JL_${assetName}.webp`;
@@ -36,7 +37,7 @@ export const toRocomPetCard = (pet: RocomPetIndex): RocomPetCard => ({
   typeName: getRocomTypeName(pet),
   eggGroupIds: pet.breeding_profile?.egg_groups ?? [],
   implemented: pet.implemented,
-  avatarUrl: `/pets/head/${pet.id}.webp`,
+  avatarUrl: toPublicAssetUrl(`/pets/head/${pet.id}.webp`),
   bodyUrl: getRocomFriendImageUrl(pet.name),
   totalStats: getRocomTotalStats(pet),
 });

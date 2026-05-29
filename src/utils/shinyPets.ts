@@ -1,4 +1,5 @@
 import { getRocomFriendImageUrl } from './rocomPets';
+import { toPublicAssetUrl } from './publicAssets';
 
 export interface ShinyPet {
   id: number;
@@ -73,7 +74,7 @@ const s1ShinyPetDefinitions: ShinyPetDefinition[] = [
 
 const toShinyPet = (pet: ShinyPetDefinition): ShinyPet => {
   const shinyAssetName = pet.shinyAssetName ?? null;
-  const normalImageUrl = pet.normalImageUrl ?? getRocomFriendImageUrl(pet.assetName);
+  const normalImageUrl = toPublicAssetUrl(pet.normalImageUrl ?? getRocomFriendImageUrl(pet.assetName));
   const hasNormalImage = pet.hasNormalImage ?? true;
 
   return {
@@ -84,9 +85,9 @@ const toShinyPet = (pet: ShinyPetDefinition): ShinyPet => {
     shinyAssetName,
     normalImageUrl,
     hasNormalImage,
-    shinyImageUrl: pet.shinyImageUrl ?? (shinyAssetName ? getRocomFriendImageUrl(shinyAssetName) : normalImageUrl),
-    normalEggUrl: `/shiny-eggs/${pet.eggAssetName}-normal.webp`,
-    shinyEggUrl: `/shiny-eggs/${pet.eggAssetName}-shiny.webp`,
+    shinyImageUrl: toPublicAssetUrl(pet.shinyImageUrl ?? (shinyAssetName ? getRocomFriendImageUrl(shinyAssetName) : normalImageUrl)),
+    normalEggUrl: toPublicAssetUrl(`/shiny-eggs/${pet.eggAssetName}-normal.webp`),
+    shinyEggUrl: toPublicAssetUrl(`/shiny-eggs/${pet.eggAssetName}-shiny.webp`),
     hasShinyImage: !!shinyAssetName || !!pet.shinyImageUrl,
     hasEggImages: pet.hasEggImages ?? true,
   };

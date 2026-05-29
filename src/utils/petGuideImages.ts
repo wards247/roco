@@ -1,4 +1,5 @@
 import petGuideImagesData from '../data/pet-guide-images.json';
+import { toPublicAssetUrl } from './publicAssets';
 
 export interface PetGuideImage {
   guideId: number;
@@ -11,7 +12,10 @@ export interface PetGuideImage {
   relatedIds: number[];
 }
 
-const guideImages = petGuideImagesData.guides satisfies PetGuideImage[];
+const guideImages = petGuideImagesData.guides.map((guideImage) => ({
+  ...guideImage,
+  imageUrl: toPublicAssetUrl(guideImage.imageUrl),
+})) satisfies PetGuideImage[];
 const directGuideImageById = new Map<number, PetGuideImage>();
 const relatedGuideImageById = new Map<number, PetGuideImage>();
 

@@ -12,12 +12,11 @@ import type {
 } from '../utils/breedingPlanner';
 
 const STORAGE_KEY = 'roco_breeding_planner_config';
-const STORAGE_EVENT = 'roco_breeding_planner_config_changed';
 
 const DEFAULT_CONFIG_SNAPSHOT = JSON.stringify(sanitizeBreedingPlannerConfig(null));
 
-const readStoredConfig = (): BreedingPlannerConfig => {
-  const stored = localStorage.getItem(STORAGE_KEY);
+const readStoredConfig = (storageKey: string): BreedingPlannerConfig => {
+  const stored = localStorage.getItem(storageKey);
   if (!stored) {
     return sanitizeBreedingPlannerConfig(null);
   }
@@ -29,37 +28,48 @@ const readStoredConfig = (): BreedingPlannerConfig => {
   }
 };
 
-const subscribe = (onStoreChange: () => void) => {
+const subscribe = (storageEvent: string, onStoreChange: () => void) => {
   window.addEventListener('storage', onStoreChange);
-  window.addEventListener(STORAGE_EVENT, onStoreChange);
+  window.addEventListener(storageEvent, onStoreChange);
 
   return () => {
     window.removeEventListener('storage', onStoreChange);
-    window.removeEventListener(STORAGE_EVENT, onStoreChange);
+    window.removeEventListener(storageEvent, onStoreChange);
   };
 };
 
-const getSnapshot = () => JSON.stringify(readStoredConfig());
+const getStorageEvent = (storageKey: string) => `${storageKey}_changed`;
 
-const writeStoredConfig = (config: BreedingPlannerConfig) => {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(sanitizeBreedingPlannerConfig(config)));
-  window.dispatchEvent(new Event(STORAGE_EVENT));
+const getSnapshot = (storageKey: string) => JSON.stringify(readStoredConfig(storageKey));
+
+const writeStoredConfig = (storageKey: string, config: BreedingPlannerConfig) => {
+  localStorage.setItem(storageKey, JSON.stringify(sanitizeBreedingPlannerConfig(config)));
+  window.dispatchEvent(new Event(getStorageEvent(storageKey)));
 };
 
-export const useBreedingPlannerConfig = (pokemon: MyPokemon[]) => {
-  const snapshot = useSyncExternalStore(subscribe, getSnapshot, () => DEFAULT_CONFIG_SNAPSHOT);
+export const useBreedingPlannerConfig = (
+  pokemon: MyPokemon[],
+  storageKey = STORAGE_KEY,
+  defaultEntry: BreedingPlannerEntryConfig = { enabled: true, count: 1 },
+) => {
+  const storageEvent = getStorageEvent(storageKey);
+  const snapshot = useSyncExternalStore(
+    (onStoreChange) => subscribe(storageEvent, onStoreChange),
+    () => getSnapshot(storageKey),
+    () => DEFAULT_CONFIG_SNAPSHOT,
+  );
   const storedConfig = useMemo(
     () => sanitizeBreedingPlannerConfig(JSON.parse(snapshot)),
     [snapshot],
   );
   const config = useMemo(
-    () => mergeBreedingPlannerConfigWithPokemon(pokemon, storedConfig),
-    [pokemon, storedConfig],
+    () => mergeBreedingPlannerConfigWithPokemon(pokemon, storedConfig, defaultEntry),
+    [defaultEntry, pokemon, storedConfig],
   );
 
   const updateNestCount = useCallback((nestCount: number) => {
-    writeStoredConfig({ ...readStoredConfig(), nestCount });
-  }, []);
+    writeStoredConfig(storageKey, { ...readStoredConfig(storageKey), nestCount });
+  }, [storageKey]);
 
   const updateEntry = useCallback(
     (
@@ -67,11 +77,11 @@ export const useBreedingPlannerConfig = (pokemon: MyPokemon[]) => {
       gender: PlannerGender,
       patch: Partial<BreedingPlannerEntryConfig>,
     ) => {
-      const previous = readStoredConfig();
+      const previous = readStoredConfig(storageKey);
       const key = getPlannerPokemonKey(baseId, gender);
       const entry = previous.entries[key] ?? { enabled: true, count: 1 };
 
-      writeStoredConfig({
+      writeStoredConfig(storageKey, {
         ...previous,
         entries: {
           ...previous.entries,
@@ -79,11 +89,11 @@ export const useBreedingPlannerConfig = (pokemon: MyPokemon[]) => {
         },
       });
     },
-    [],
+    [storageKey],
   );
 
   const setAllEnabled = useCallback((enabled: boolean, visiblePokemon: MyPokemon[]) => {
-    const previous = readStoredConfig();
+    const previous = readStoredConfig(storageKey);
     const entries = { ...previous.entries };
 
     visiblePokemon.forEach((owned) => {
@@ -98,8 +108,8 @@ export const useBreedingPlannerConfig = (pokemon: MyPokemon[]) => {
       };
     });
 
-    writeStoredConfig({ ...previous, entries });
-  }, []);
+    writeStoredConfig(storageKey, { ...previous, entries });
+  }, [storageKey]);
 
   return {
     config,

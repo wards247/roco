@@ -13,6 +13,35 @@
   margin-bottom: 1rem;
 }
 
+.breeding-planner__mode-switch {
+  background: #f5f7fb;
+  border: 1px solid #e3e8f0;
+  border-radius: 10px;
+  display: inline-flex;
+  flex-shrink: 0;
+  gap: 0.25rem;
+  padding: 0.25rem;
+}
+
+.breeding-planner__mode-switch button {
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  color: #555;
+  cursor: pointer;
+  font: inherit;
+  min-height: 2rem;
+  padding: 0.35rem 0.75rem;
+  white-space: nowrap;
+}
+
+.breeding-planner__mode-switch button.is-active {
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  color: #2f65c8;
+  font-weight: 700;
+}
+
 .breeding-planner__title {
   color: #333;
   font-size: 1.25rem;
@@ -88,6 +117,11 @@
   background: #efefef;
 }
 
+.breeding-planner__actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
 .breeding-planner__actions .breeding-planner__primary {
   background: #4f8cff;
   border-color: #4f8cff;
@@ -101,7 +135,7 @@
 .breeding-planner__selectors {
   display: grid;
   gap: 1rem;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-top: 1rem;
 }
 
@@ -123,7 +157,7 @@
 .breeding-planner__list {
   display: grid;
   gap: 0.65rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .breeding-planner__row {
@@ -135,6 +169,11 @@
   grid-template-columns: auto 32px minmax(0, 1fr) auto;
   min-width: 0;
   padding: 0.5rem;
+}
+
+.breeding-planner__row--owned {
+  background: #eaf4ff;
+  border-color: #b8d7ff;
 }
 
 .breeding-planner__check {
@@ -318,6 +357,11 @@
     flex-direction: column;
   }
 
+  .breeding-planner__mode-switch {
+    align-self: flex-start;
+  }
+
+  .breeding-planner__selectors,
   .breeding-planner__result-main {
     grid-template-columns: 1fr;
   }

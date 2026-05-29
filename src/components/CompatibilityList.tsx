@@ -1,6 +1,7 @@
 import { useEggGroups } from '../hooks/useEggGroups';
 import type { BreedingPair } from '../hooks/useBreeding';
 import { getMyPokemonEggGroupIds } from '../utils/breedingCandidates';
+import { toPublicAssetUrl } from '../utils/publicAssets';
 import './CompatibilityList.css';
 
 interface Props {
@@ -12,7 +13,7 @@ interface Props {
 const getPokemonName = (baseId: number, displayName?: string) => displayName || `精灵 #${baseId}`;
 
 const getPokemonAvatar = (baseId: number, avatarUrl?: string) =>
-  avatarUrl?.startsWith('/') ? avatarUrl : `/pets/head/${baseId}.webp`;
+  toPublicAssetUrl(avatarUrl || `/pets/head/${baseId}.webp`);
 
 const CompatibilityList = ({ title, recommendations, onOpenPokemon }: Props) => {
   const { eggGroups } = useEggGroups();
