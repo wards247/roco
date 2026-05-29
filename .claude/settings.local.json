@@ -7,7 +7,11 @@
       "Bash(cat /Users/zxm/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.7/.claude-plugin/*.json)",
       "Bash(npx tsc -b)",
       "Bash(npx vite build)",
-      "Bash(npm run dev)"
+      "Bash(npm run dev)",
+      "Bash(git push origin master)",
+      "Bash(ssh -T git@github.com)",
+      "Bash(ssh-add -l)",
+      "Bash(ssh-add ~/.ssh/id_ed25519)"
     ]
   }
 }
