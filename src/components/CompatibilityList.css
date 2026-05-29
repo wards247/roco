@@ -123,6 +123,69 @@
   }
 }
 
+@media (max-width: 768px) {
+  .compatibility-list-card {
+    padding: 0.5rem;
+  }
+
+  .compatibility-list-card__title {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .compatibility-list {
+    gap: 0.5rem;
+  }
+
+  .compatibility-list__item {
+    padding: 0.5rem;
+    min-width: 0;
+  }
+
+  .compatibility-list__female {
+    gap: 0.35rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .compatibility-list__avatar-small {
+    width: 28px;
+    height: 28px;
+  }
+
+  .compatibility-list__name {
+    font-size: 0.75rem;
+  }
+
+  .compatibility-list__subtitle {
+    font-size: 0.6rem;
+  }
+
+  .compatibility-list__gender-tag {
+    padding: 0.1rem 0.25rem;
+    font-size: 0.6rem;
+  }
+
+  .compatibility-list__count {
+    font-size: 0.7rem;
+    margin-bottom: 0.35rem;
+    padding-left: 0;
+  }
+
+  .compatibility-list__males {
+    gap: 0.25rem;
+  }
+
+  .compatibility-list__male-chip {
+    padding: 0.15rem 0.3rem;
+    font-size: 0.65rem;
+  }
+
+  .compatibility-list__avatar-tiny {
+    width: 18px;
+    height: 18px;
+  }
+}
+
 .compatibility-list__chip-text {
   display: flex;
   flex-direction: column;

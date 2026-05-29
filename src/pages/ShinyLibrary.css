@@ -173,3 +173,43 @@
   height: 60px;
   object-fit: contain;
 }
+
+@media (max-width: 768px) {
+  .shiny-library__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6rem;
+  }
+
+  .shiny-card {
+    min-height: 180px;
+    padding: 0.75rem;
+    gap: 0.6rem;
+  }
+
+  .shiny-card__pets {
+    min-height: 68px;
+  }
+
+  .shiny-card__pet {
+    height: 68px;
+  }
+
+  .shiny-card__pet-placeholder {
+    min-height: 68px;
+  }
+
+  .shiny-card__body h3 {
+    font-size: 0.9rem;
+  }
+
+  .shiny-card__eggs img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .shiny-library__season-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+}

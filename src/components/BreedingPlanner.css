@@ -166,7 +166,7 @@
   border-radius: 10px;
   display: grid;
   gap: 0.5rem;
-  grid-template-columns: auto 32px minmax(0, 1fr) auto;
+  grid-template-columns: auto 40px minmax(0, 1fr) auto;
   min-width: 0;
   padding: 0.5rem;
 }
@@ -189,9 +189,9 @@
 .breeding-planner__avatar {
   background: #f5f7fb;
   border-radius: 50%;
-  height: 32px;
+  height: 40px;
   object-fit: contain;
-  width: 32px;
+  width: 40px;
 }
 
 .breeding-planner__info {
@@ -200,7 +200,7 @@
 
 .breeding-planner__name {
   color: #333;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -213,6 +213,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  display: none;
 }
 
 .breeding-planner__empty,
@@ -377,20 +378,35 @@
 
 @media (max-width: 560px) {
   .breeding-planner {
-    padding: 1rem;
+    padding: 0.75rem;
   }
 
   .breeding-planner__list {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.25rem;
   }
 
   .breeding-planner__row {
-    grid-template-columns: auto 36px minmax(0, 1fr);
+    grid-template-columns: auto 32px minmax(0, 1fr);
+    gap: 0.25rem;
+    padding: 0.25rem 0.35rem;
+    border-radius: 6px;
+  }
+
+  .breeding-planner__check input {
+    height: 0.9rem;
+    width: 0.9rem;
   }
 
   .breeding-planner__count {
     grid-column: 2 / -1;
     justify-content: flex-start;
+    font-size: 0.7rem;
+  }
+
+  .breeding-planner__count input {
+    width: 2.5rem;
+    padding: 0.2rem 0.3rem;
   }
 
   .breeding-planner__coverage-row {

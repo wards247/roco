@@ -358,3 +358,83 @@
 .pokemon-card__confirm-btn:hover {
   opacity: 0.9;
 }
+
+@media (max-width: 768px) {
+  .pokemon-card {
+    padding: 0.4rem;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .pokemon-card__avatar-row {
+    gap: 0;
+    margin-bottom: 0.2rem;
+  }
+
+  .pokemon-card__avatar {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 0;
+  }
+
+  .pokemon-card__egg {
+    display: none;
+  }
+
+  .pokemon-card__info {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .pokemon-card__name {
+    font-size: 0.7rem;
+    min-height: 0;
+    max-width: 100%;
+  }
+
+  .pokemon-card__type {
+    font-size: 0.6rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .pokemon-card__status {
+    font-size: 0.55rem;
+    padding: 0.1rem 0.2rem;
+  }
+
+  .pokemon-card__family {
+    display: none;
+  }
+
+  .pokemon-card__actions {
+    gap: 0.15rem;
+    margin-top: 0.2rem;
+  }
+
+  .pokemon-card__mark-btn,
+  .pokemon-card__remove-btn,
+  .pokemon-card__confirm-btn {
+    padding: 0.15rem 0.3rem;
+    font-size: 0.6rem;
+  }
+
+  .pokemon-card__owned {
+    font-size: 0.55rem;
+    padding: 0.1rem 0.2rem;
+  }
+
+  .pokemon-card__guide-icon {
+    width: 0.55rem;
+    height: 0.55rem;
+  }
+
+  .pokemon-card__name-genders {
+    gap: 0.1rem;
+  }
+
+  .pokemon-card__name-gender {
+    width: 0.7rem;
+    height: 0.7rem;
+    font-size: 0.5rem;
+  }
+}

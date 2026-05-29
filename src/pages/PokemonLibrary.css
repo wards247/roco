@@ -104,3 +104,53 @@
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
   outline: none;
 }
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 1.35rem;
+  }
+
+  .page-filters {
+    flex-direction: column;
+  }
+
+  .page-filters > * {
+    min-width: 0;
+  }
+
+  .pagination {
+    gap: 0.5rem;
+  }
+
+  .pagination__button {
+    padding: 0.5rem 0.65rem;
+    font-size: 0.85rem;
+    min-width: 64px;
+  }
+
+  .pagination__button--compact {
+    min-width: 56px;
+  }
+
+  .pagination__summary {
+    font-size: 0.85rem;
+  }
+
+  .pagination__field {
+    font-size: 0.85rem;
+  }
+
+  .pagination__field select,
+  .pagination__field input {
+    height: 34px;
+    font-size: 0.85rem;
+  }
+
+  .pagination__field select {
+    min-width: 72px;
+  }
+
+  .pagination__field input {
+    width: 72px;
+  }
+}

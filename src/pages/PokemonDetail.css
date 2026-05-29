@@ -427,9 +427,11 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   .detail-hero {
     grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
   }
 
   .detail-facts div {
@@ -439,5 +441,13 @@
 
   .detail-shiny-eggs {
     grid-template-columns: 1fr;
+  }
+
+  .candidate-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .detail-egg-groups {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

@@ -3,7 +3,11 @@
     "allow": [
       "Bash(claude plugin --help)",
       "Bash(npm run build)",
-      "WebFetch(domain:wiki.biligame.com)"
+      "WebFetch(domain:wiki.biligame.com)",
+      "Bash(cat /Users/zxm/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.7/.claude-plugin/*.json)",
+      "Bash(npx tsc -b)",
+      "Bash(npx vite build)",
+      "Bash(npm run dev)"
     ]
   }
 }

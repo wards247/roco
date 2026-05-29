@@ -1,6 +1,14 @@
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 
+const NAV_ITEMS = [
+  { path: '/', icon: '📚', label: '蛋组库' },
+  { path: '/pets', icon: '📋', label: '完整精灵库' },
+  { path: '/shiny', icon: '✨', label: '异色' },
+  { path: '/my-pokemon', icon: '⭐', label: '我的精灵' },
+  { path: '/breeding', icon: '🥚', label: '生蛋推荐' },
+];
+
 const Header = () => {
   const location = useLocation();
 
@@ -9,23 +17,21 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header-content">
-        <h1 className="logo">洛克王国：世界 - 生蛋系统</h1>
+        <h1 className="logo">
+          <span className="logo__desktop">洛克王国：世界 - 生蛋系统</span>
+          <span className="logo__mobile">洛克精灵库</span>
+        </h1>
         <nav className="nav">
-          <Link to="/" className={`nav-link ${isActive('/') ? 'active' : ''}`}>
-            蛋组库
-          </Link>
-          <Link to="/pets" className={`nav-link ${isActive('/pets') ? 'active' : ''}`}>
-            完整精灵库
-          </Link>
-          <Link to="/shiny" className={`nav-link ${isActive('/shiny') ? 'active' : ''}`}>
-            异色
-          </Link>
-          <Link to="/my-pokemon" className={`nav-link ${isActive('/my-pokemon') ? 'active' : ''}`}>
-            我的精灵
-          </Link>
-          <Link to="/breeding" className={`nav-link ${isActive('/breeding') ? 'active' : ''}`}>
-            生蛋推荐
-          </Link>
+          {NAV_ITEMS.map(({ path, icon, label }) => (
+            <Link
+              key={path}
+              to={path}
+              className={`nav-link ${isActive(path) ? 'active' : ''}`}
+            >
+              <span className="nav-link__icon">{icon}</span>
+              <span className="nav-link__text">{label}</span>
+            </Link>
+          ))}
         </nav>
       </div>
     </header>

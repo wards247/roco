@@ -66,3 +66,30 @@
   padding: 0.25rem 0.5rem;
   font-size: 0.82rem;
 }
+
+@media (max-width: 768px) {
+  .rocom-pet-card {
+    grid-template-columns: 36px minmax(0, 1fr);
+    gap: 0.35rem;
+    padding: 0.4rem;
+    min-height: 56px;
+  }
+
+  .rocom-pet-card__avatar {
+    width: 36px;
+    height: 36px;
+  }
+
+  .rocom-pet-card__name {
+    font-size: 0.78rem;
+  }
+
+  .rocom-pet-card__meta,
+  .rocom-pet-card__groups {
+    font-size: 0.65rem;
+  }
+
+  .rocom-pet-card__stat {
+    display: none;
+  }
+}
