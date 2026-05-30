@@ -1,17 +1,20 @@
 {
   "permissions": {
     "allow": [
-      "Bash(claude plugin --help)",
-      "Bash(npm run build)",
-      "WebFetch(domain:wiki.biligame.com)",
-      "Bash(cat /Users/zxm/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.7/.claude-plugin/*.json)",
-      "Bash(npx tsc -b)",
-      "Bash(npx vite build)",
-      "Bash(npm run dev)",
-      "Bash(git push origin master)",
-      "Bash(ssh -T git@github.com)",
-      "Bash(ssh-add -l)",
-      "Bash(ssh-add ~/.ssh/id_ed25519)"
+      "Bash(claude *)",
+      "Bash(npm *)",
+      "WebFetch(*)",
+      "Bash(cat *)",
+      "Bash(npx *)",
+      "Bash(git *)",
+      "Bash(ssh *)",
+      "Skill(agent-browser)",
+      "Bash(curl *)",
+      "Bash(node *)",
+      "Bash(nvm *)",
+      "Bash(bash /tmp/*)",
+      "Bash(ls *)",
+      "Bash(/usr/bin/python3 *)"
     ]
   }
 }

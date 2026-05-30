@@ -1,0 +1,3519 @@
+{
+  "byPetId": {
+    "3001": {
+      "petId": 3001,
+      "normal": "/eggs/egg_miaomiao.webp",
+      "shiny": null
+    },
+    "3002": {
+      "petId": 3002,
+      "normal": "/eggs/egg_shuilanlan.webp",
+      "shiny": null
+    },
+    "3003": {
+      "petId": 3003,
+      "normal": "/eggs/egg_huohua.webp",
+      "shiny": null
+    },
+    "3004": {
+      "petId": 3004,
+      "normal": "/eggs/egg_dimo.webp",
+      "shiny": null
+    },
+    "3005": {
+      "petId": 3002,
+      "normal": "/eggs/egg_shuilanlan.webp",
+      "shiny": null
+    },
+    "3006": {
+      "petId": 3003,
+      "normal": "/eggs/egg_huohua.webp",
+      "shiny": null
+    },
+    "3007": {
+      "petId": 3001,
+      "normal": "/eggs/egg_miaomiao.webp",
+      "shiny": null
+    },
+    "3008": {
+      "petId": 3008,
+      "normal": "/eggs/egg_caotouya.webp",
+      "shiny": null
+    },
+    "3010": {
+      "petId": 3010,
+      "normal": "/eggs/egg_emoding.webp",
+      "shiny": null
+    },
+    "3011": {
+      "petId": 3011,
+      "normal": "/eggs/egg_emolang.webp",
+      "shiny": null
+    },
+    "3012": {
+      "petId": 3012,
+      "normal": "/eggs/egg_yajiji.webp",
+      "shiny": null
+    },
+    "3013": {
+      "petId": 3038,
+      "normal": "/eggs/egg_xiaojiachong.webp",
+      "shiny": null
+    },
+    "3014": {
+      "petId": 3014,
+      "normal": "/eggs/egg_amiyate.webp",
+      "shiny": null
+    },
+    "3015": {
+      "petId": 3014,
+      "normal": "/eggs/egg_amiyate.webp",
+      "shiny": null
+    },
+    "3016": {
+      "petId": 3014,
+      "normal": "/eggs/egg_amiyate.webp",
+      "shiny": null
+    },
+    "3017": {
+      "petId": 3017,
+      "normal": "/eggs/egg_bengbengzhongzi.webp",
+      "shiny": null
+    },
+    "3018": {
+      "petId": 3017,
+      "normal": "/eggs/egg_bengbengzhongzi.webp",
+      "shiny": null
+    },
+    "3019": {
+      "petId": 3017,
+      "normal": "/eggs/egg_bengbengzhongzi.webp",
+      "shiny": null
+    },
+    "3020": {
+      "petId": 3020,
+      "normal": "/eggs/egg_dishu.webp",
+      "shiny": null
+    },
+    "3021": {
+      "petId": 3020,
+      "normal": "/eggs/egg_dishu.webp",
+      "shiny": null
+    },
+    "3022": {
+      "petId": 3020,
+      "normal": "/eggs/egg_dishu.webp",
+      "shiny": null
+    },
+    "3025": {
+      "petId": 3001,
+      "normal": "/eggs/egg_miaomiao.webp",
+      "shiny": null
+    },
+    "3026": {
+      "petId": 3026,
+      "normal": "/eggs/egg_lvcaojingling.webp",
+      "shiny": null
+    },
+    "3027": {
+      "petId": 3034,
+      "normal": "/eggs/egg_pugongying.webp",
+      "shiny": null
+    },
+    "3028": {
+      "petId": 3028,
+      "normal": "/eggs/egg_dongyuque.webp",
+      "shiny": null
+    },
+    "3029": {
+      "petId": 3029,
+      "normal": "/eggs/egg_qilicao.webp",
+      "shiny": "/eggs/egg_qilicao_yise.webp"
+    },
+    "3030": {
+      "petId": 3029,
+      "normal": "/eggs/egg_qilicao.webp",
+      "shiny": "/eggs/egg_qilicao_yise.webp"
+    },
+    "3031": {
+      "petId": 3029,
+      "normal": "/eggs/egg_qilicao.webp",
+      "shiny": "/eggs/egg_qilicao_yise.webp"
+    },
+    "3032": {
+      "petId": 3003,
+      "normal": "/eggs/egg_huohua.webp",
+      "shiny": null
+    },
+    "3033": {
+      "petId": 3002,
+      "normal": "/eggs/egg_shuilanlan.webp",
+      "shiny": null
+    },
+    "3034": {
+      "petId": 3034,
+      "normal": "/eggs/egg_pugongying.webp",
+      "shiny": null
+    },
+    "3035": {
+      "petId": 3026,
+      "normal": "/eggs/egg_lvcaojingling.webp",
+      "shiny": null
+    },
+    "3036": {
+      "petId": 3012,
+      "normal": "/eggs/egg_yajiji.webp",
+      "shiny": null
+    },
+    "3037": {
+      "petId": 3037,
+      "normal": "/eggs/egg_lanniao.webp",
+      "shiny": null
+    },
+    "3038": {
+      "petId": 3038,
+      "normal": "/eggs/egg_xiaojiachong.webp",
+      "shiny": null
+    },
+    "3039": {
+      "petId": 3010,
+      "normal": "/eggs/egg_emoding.webp",
+      "shiny": null
+    },
+    "3040": {
+      "petId": 3040,
+      "normal": "/eggs/egg_diudiu.webp",
+      "shiny": null
+    },
+    "3041": {
+      "petId": 3040,
+      "normal": "/eggs/egg_diudiu.webp",
+      "shiny": null
+    },
+    "3042": {
+      "petId": 3040,
+      "normal": "/eggs/egg_diudiu.webp",
+      "shiny": null
+    },
+    "3043": {
+      "petId": 3043,
+      "normal": "/eggs/egg_yibeier.webp",
+      "shiny": null
+    },
+    "3044": {
+      "petId": 3043,
+      "normal": "/eggs/egg_yibeier.webp",
+      "shiny": null
+    },
+    "3045": {
+      "petId": 3045,
+      "normal": "/eggs/egg_youlingyang.webp",
+      "shiny": null
+    },
+    "3046": {
+      "petId": 3045,
+      "normal": "/eggs/egg_youlingyang.webp",
+      "shiny": null
+    },
+    "3047": {
+      "petId": 3045,
+      "normal": "/eggs/egg_youlingyang.webp",
+      "shiny": null
+    },
+    "3049": {
+      "petId": 3049,
+      "normal": "/eggs/egg_baifalanren.webp",
+      "shiny": null
+    },
+    "3050": {
+      "petId": 3050,
+      "normal": "/eggs/egg_jiyishi.webp",
+      "shiny": null
+    },
+    "3052": {
+      "petId": 3053,
+      "normal": "/eggs/egg_haixiuqiuqiu.webp",
+      "shiny": null
+    },
+    "3053": {
+      "petId": 3053,
+      "normal": "/eggs/egg_haixiuqiuqiu.webp",
+      "shiny": null
+    },
+    "3055": {
+      "petId": 3055,
+      "normal": "/eggs/egg_banbanke.webp",
+      "shiny": null
+    },
+    "3056": {
+      "petId": 3055,
+      "normal": "/eggs/egg_banbanke.webp",
+      "shiny": null
+    },
+    "3057": {
+      "petId": 3055,
+      "normal": "/eggs/egg_banbanke.webp",
+      "shiny": null
+    },
+    "3058": {
+      "petId": 3157,
+      "normal": "/eggs/egg_huakuifenghou.webp",
+      "shiny": null
+    },
+    "3059": {
+      "petId": 3157,
+      "normal": "/eggs/egg_huakuifenghou.webp",
+      "shiny": null
+    },
+    "3060": {
+      "petId": 3060,
+      "normal": "/eggs/egg_xiaoyoulinglian.webp",
+      "shiny": null
+    },
+    "3061": {
+      "petId": 3060,
+      "normal": "/eggs/egg_xiaoyoulinglian.webp",
+      "shiny": null
+    },
+    "3062": {
+      "petId": 3062,
+      "normal": "/eggs/egg_xiaodujiaoshou.webp",
+      "shiny": null
+    },
+    "3063": {
+      "petId": 3062,
+      "normal": "/eggs/egg_xiaodujiaoshou.webp",
+      "shiny": null
+    },
+    "3064": {
+      "petId": 3064,
+      "normal": "/eggs/egg_youlingshu.webp",
+      "shiny": null
+    },
+    "3065": {
+      "petId": 3065,
+      "normal": "/eggs/egg_huyouli.webp",
+      "shiny": null
+    },
+    "3066": {
+      "petId": 3065,
+      "normal": "/eggs/egg_huyouli.webp",
+      "shiny": null
+    },
+    "3067": {
+      "petId": 3008,
+      "normal": "/eggs/egg_caotouya.webp",
+      "shiny": null
+    },
+    "3069": {
+      "petId": 3069,
+      "normal": "/eggs/egg_chuitouguan.webp",
+      "shiny": null
+    },
+    "3070": {
+      "petId": 3070,
+      "normal": "/eggs/egg_huzhuquan.webp",
+      "shiny": null
+    },
+    "3071": {
+      "petId": 3070,
+      "normal": "/eggs/egg_huzhuquan.webp",
+      "shiny": null
+    },
+    "3072": {
+      "petId": 3072,
+      "normal": "/eggs/egg_gelanzhongzi.webp",
+      "shiny": null
+    },
+    "3073": {
+      "petId": 3072,
+      "normal": "/eggs/egg_gelanzhongzi.webp",
+      "shiny": null
+    },
+    "3074": {
+      "petId": 3072,
+      "normal": "/eggs/egg_gelanzhongzi.webp",
+      "shiny": null
+    },
+    "3075": {
+      "petId": 3075,
+      "normal": "/eggs/egg_linghu.webp",
+      "shiny": null
+    },
+    "3076": {
+      "petId": 3075,
+      "normal": "/eggs/egg_linghu.webp",
+      "shiny": null
+    },
+    "3077": {
+      "petId": 3075,
+      "normal": "/eggs/egg_linghu.webp",
+      "shiny": null
+    },
+    "3081": {
+      "petId": 3081,
+      "normal": "/eggs/egg_zhiyuhuowa.webp",
+      "shiny": null
+    },
+    "3082": {
+      "petId": 3081,
+      "normal": "/eggs/egg_zhiyuhuowa.webp",
+      "shiny": null
+    },
+    "3083": {
+      "petId": 3083,
+      "normal": "/eggs/egg_keaiyuan.webp",
+      "shiny": null
+    },
+    "3084": {
+      "petId": 3083,
+      "normal": "/eggs/egg_keaiyuan.webp",
+      "shiny": null
+    },
+    "3085": {
+      "petId": 3083,
+      "normal": "/eggs/egg_keaiyuan.webp",
+      "shiny": null
+    },
+    "3086": {
+      "petId": 3086,
+      "normal": "/eggs/egg_keliji.webp",
+      "shiny": null
+    },
+    "3087": {
+      "petId": 3086,
+      "normal": "/eggs/egg_keliji.webp",
+      "shiny": null
+    },
+    "3088": {
+      "petId": 3086,
+      "normal": "/eggs/egg_keliji.webp",
+      "shiny": null
+    },
+    "3089": {
+      "petId": 3086,
+      "normal": "/eggs/egg_keliji.webp",
+      "shiny": null
+    },
+    "3090": {
+      "petId": 3090,
+      "normal": "/eggs/egg_huoweiwate.webp",
+      "shiny": null
+    },
+    "3091": {
+      "petId": 3090,
+      "normal": "/eggs/egg_huoweiwate.webp",
+      "shiny": null
+    },
+    "3092": {
+      "petId": 3090,
+      "normal": "/eggs/egg_huoweiwate.webp",
+      "shiny": null
+    },
+    "3093": {
+      "petId": 3093,
+      "normal": "/eggs/egg_daixiaolu.webp",
+      "shiny": null
+    },
+    "3094": {
+      "petId": 3093,
+      "normal": "/eggs/egg_daixiaolu.webp",
+      "shiny": null
+    },
+    "3095": {
+      "petId": 3093,
+      "normal": "/eggs/egg_daixiaolu.webp",
+      "shiny": null
+    },
+    "3098": {
+      "petId": 3098,
+      "normal": "/eggs/egg_lversongshu.webp",
+      "shiny": null
+    },
+    "3099": {
+      "petId": 3098,
+      "normal": "/eggs/egg_lversongshu.webp",
+      "shiny": null
+    },
+    "3100": {
+      "petId": 3098,
+      "normal": "/eggs/egg_lversongshu.webp",
+      "shiny": null
+    },
+    "3101": {
+      "petId": 3049,
+      "normal": "/eggs/egg_baifalanren.webp",
+      "shiny": null
+    },
+    "3102": {
+      "petId": 3049,
+      "normal": "/eggs/egg_baifalanren.webp",
+      "shiny": null
+    },
+    "3103": {
+      "petId": 3103,
+      "normal": "/eggs/egg_xiaobushi.webp",
+      "shiny": null
+    },
+    "3104": {
+      "petId": 3103,
+      "normal": "/eggs/egg_xiaobushi.webp",
+      "shiny": null
+    },
+    "3105": {
+      "petId": 3103,
+      "normal": "/eggs/egg_xiaobushi.webp",
+      "shiny": null
+    },
+    "3106": {
+      "petId": 3106,
+      "normal": "/eggs/egg_huociyanxiyi.webp",
+      "shiny": null
+    },
+    "3107": {
+      "petId": 3106,
+      "normal": "/eggs/egg_huociyanxiyi.webp",
+      "shiny": null
+    },
+    "3108": {
+      "petId": 3106,
+      "normal": "/eggs/egg_huociyanxiyi.webp",
+      "shiny": null
+    },
+    "3109": {
+      "petId": 3109,
+      "normal": "/eggs/egg_maya.webp",
+      "shiny": null
+    },
+    "3110": {
+      "petId": 3109,
+      "normal": "/eggs/egg_maya.webp",
+      "shiny": null
+    },
+    "3111": {
+      "petId": 3109,
+      "normal": "/eggs/egg_maya.webp",
+      "shiny": null
+    },
+    "3112": {
+      "petId": 3112,
+      "normal": "/eggs/egg_xiaotiantian.webp",
+      "shiny": null
+    },
+    "3113": {
+      "petId": 3112,
+      "normal": "/eggs/egg_xiaotiantian.webp",
+      "shiny": null
+    },
+    "3114": {
+      "petId": 3112,
+      "normal": "/eggs/egg_xiaotiantian.webp",
+      "shiny": null
+    },
+    "3115": {
+      "petId": 3115,
+      "normal": "/eggs/egg_fuzhousha.webp",
+      "shiny": null
+    },
+    "3116": {
+      "petId": 3115,
+      "normal": "/eggs/egg_fuzhousha.webp",
+      "shiny": null
+    },
+    "3117": {
+      "petId": 3115,
+      "normal": "/eggs/egg_fuzhousha.webp",
+      "shiny": null
+    },
+    "3118": {
+      "petId": 3118,
+      "normal": "/eggs/egg_guodong.webp",
+      "shiny": null
+    },
+    "3119": {
+      "petId": 3119,
+      "normal": "/eggs/egg_feicuishuimu.webp",
+      "shiny": null
+    },
+    "3120": {
+      "petId": 3119,
+      "normal": "/eggs/egg_feicuishuimu.webp",
+      "shiny": null
+    },
+    "3121": {
+      "petId": 3123,
+      "normal": "/eggs/egg_xueyingwawa.webp",
+      "shiny": null
+    },
+    "3122": {
+      "petId": 3123,
+      "normal": "/eggs/egg_xueyingwawa.webp",
+      "shiny": null
+    },
+    "3123": {
+      "petId": 3123,
+      "normal": "/eggs/egg_xueyingwawa.webp",
+      "shiny": null
+    },
+    "3124": {
+      "petId": 3124,
+      "normal": "/eggs/egg_dingding.webp",
+      "shiny": null
+    },
+    "3125": {
+      "petId": 3124,
+      "normal": "/eggs/egg_dingding.webp",
+      "shiny": null
+    },
+    "3126": {
+      "petId": 3124,
+      "normal": "/eggs/egg_dingding.webp",
+      "shiny": null
+    },
+    "3127": {
+      "petId": 3127,
+      "normal": "/eggs/egg_xiaoshijiu.webp",
+      "shiny": null
+    },
+    "3128": {
+      "petId": 3127,
+      "normal": "/eggs/egg_xiaoshijiu.webp",
+      "shiny": null
+    },
+    "3129": {
+      "petId": 3127,
+      "normal": "/eggs/egg_xiaoshijiu.webp",
+      "shiny": null
+    },
+    "3130": {
+      "petId": 3130,
+      "normal": "/eggs/egg_yuanyanzhizhu.webp",
+      "shiny": null
+    },
+    "3131": {
+      "petId": 3130,
+      "normal": "/eggs/egg_yuanyanzhizhu.webp",
+      "shiny": null
+    },
+    "3132": {
+      "petId": 3130,
+      "normal": "/eggs/egg_yuanyanzhizhu.webp",
+      "shiny": null
+    },
+    "3136": {
+      "petId": 3136,
+      "normal": "/eggs/egg_maomao.webp",
+      "shiny": null
+    },
+    "3137": {
+      "petId": 3136,
+      "normal": "/eggs/egg_maomao.webp",
+      "shiny": null
+    },
+    "3138": {
+      "petId": 3136,
+      "normal": "/eggs/egg_maomao.webp",
+      "shiny": null
+    },
+    "3139": {
+      "petId": 3141,
+      "normal": "/eggs/egg_huayidie.webp",
+      "shiny": null
+    },
+    "3140": {
+      "petId": 3141,
+      "normal": "/eggs/egg_huayidie.webp",
+      "shiny": null
+    },
+    "3141": {
+      "petId": 3141,
+      "normal": "/eggs/egg_huayidie.webp",
+      "shiny": null
+    },
+    "3142": {
+      "petId": 3142,
+      "normal": "/eggs/egg_xiaoye.webp",
+      "shiny": null
+    },
+    "3143": {
+      "petId": 3142,
+      "normal": "/eggs/egg_xiaoye.webp",
+      "shiny": null
+    },
+    "3144": {
+      "petId": 3142,
+      "normal": "/eggs/egg_xiaoye.webp",
+      "shiny": null
+    },
+    "3145": {
+      "petId": 3145,
+      "normal": "/eggs/egg_xiaolinggu.webp",
+      "shiny": null
+    },
+    "3146": {
+      "petId": 3145,
+      "normal": "/eggs/egg_xiaolinggu.webp",
+      "shiny": null
+    },
+    "3147": {
+      "petId": 3145,
+      "normal": "/eggs/egg_xiaolinggu.webp",
+      "shiny": null
+    },
+    "3148": {
+      "petId": 3148,
+      "normal": "/eggs/egg_anyekulou.webp",
+      "shiny": null
+    },
+    "3149": {
+      "petId": 3148,
+      "normal": "/eggs/egg_anyekulou.webp",
+      "shiny": null
+    },
+    "3150": {
+      "petId": 3148,
+      "normal": "/eggs/egg_anyekulou.webp",
+      "shiny": null
+    },
+    "3151": {
+      "petId": 3151,
+      "normal": "/eggs/egg_duoduo.webp",
+      "shiny": null
+    },
+    "3152": {
+      "petId": 3151,
+      "normal": "/eggs/egg_duoduo.webp",
+      "shiny": null
+    },
+    "3153": {
+      "petId": 3151,
+      "normal": "/eggs/egg_duoduo.webp",
+      "shiny": null
+    },
+    "3154": {
+      "petId": 3154,
+      "normal": "/eggs/egg_qiuluo.webp",
+      "shiny": null
+    },
+    "3155": {
+      "petId": 3154,
+      "normal": "/eggs/egg_qiuluo.webp",
+      "shiny": null
+    },
+    "3156": {
+      "petId": 3154,
+      "normal": "/eggs/egg_qiuluo.webp",
+      "shiny": null
+    },
+    "3157": {
+      "petId": 3157,
+      "normal": "/eggs/egg_huakuifenghou.webp",
+      "shiny": null
+    },
+    "3161": {
+      "petId": 3372,
+      "normal": "/eggs/egg_chuntudalao.webp",
+      "shiny": null
+    },
+    "3162": {
+      "petId": 3372,
+      "normal": "/eggs/egg_chuntudalao.webp",
+      "shiny": null
+    },
+    "3165": {
+      "petId": 3165,
+      "normal": "/eggs/egg_fudishou.webp",
+      "shiny": null
+    },
+    "3166": {
+      "petId": 3165,
+      "normal": "/eggs/egg_fudishou.webp",
+      "shiny": null
+    },
+    "3167": {
+      "petId": 3165,
+      "normal": "/eggs/egg_fudishou.webp",
+      "shiny": null
+    },
+    "3168": {
+      "petId": 3168,
+      "normal": "/eggs/egg_abu.webp",
+      "shiny": null
+    },
+    "3169": {
+      "petId": 3168,
+      "normal": "/eggs/egg_abu.webp",
+      "shiny": null
+    },
+    "3170": {
+      "petId": 3170,
+      "normal": "/eggs/egg_xiaoshitou.webp",
+      "shiny": null
+    },
+    "3171": {
+      "petId": 3170,
+      "normal": "/eggs/egg_xiaoshitou.webp",
+      "shiny": null
+    },
+    "3172": {
+      "petId": 3172,
+      "normal": "/eggs/egg_xuedouding.webp",
+      "shiny": null
+    },
+    "3173": {
+      "petId": 3172,
+      "normal": "/eggs/egg_xuedouding.webp",
+      "shiny": null
+    },
+    "3174": {
+      "petId": 3172,
+      "normal": "/eggs/egg_xuedouding.webp",
+      "shiny": null
+    },
+    "3175": {
+      "petId": 3175,
+      "normal": "/eggs/egg_kakayumao.webp",
+      "shiny": null
+    },
+    "3176": {
+      "petId": 3175,
+      "normal": "/eggs/egg_kakayumao.webp",
+      "shiny": null
+    },
+    "3177": {
+      "petId": 3175,
+      "normal": "/eggs/egg_kakayumao.webp",
+      "shiny": null
+    },
+    "3178": {
+      "petId": 3178,
+      "normal": "/eggs/egg_judulangzhu.webp",
+      "shiny": null
+    },
+    "3179": {
+      "petId": 3178,
+      "normal": "/eggs/egg_judulangzhu.webp",
+      "shiny": null
+    },
+    "3188": {
+      "petId": 3188,
+      "normal": "/eggs/egg_late.webp",
+      "shiny": null
+    },
+    "3189": {
+      "petId": 3188,
+      "normal": "/eggs/egg_late.webp",
+      "shiny": null
+    },
+    "3190": {
+      "petId": 3190,
+      "normal": "/eggs/egg_dianmiemie.webp",
+      "shiny": null
+    },
+    "3191": {
+      "petId": 3190,
+      "normal": "/eggs/egg_dianmiemie.webp",
+      "shiny": null
+    },
+    "3192": {
+      "petId": 3190,
+      "normal": "/eggs/egg_dianmiemie.webp",
+      "shiny": null
+    },
+    "3193": {
+      "petId": 3193,
+      "normal": "/eggs/egg_xiaoxingguang.webp",
+      "shiny": null
+    },
+    "3194": {
+      "petId": 3193,
+      "normal": "/eggs/egg_xiaoxingguang.webp",
+      "shiny": null
+    },
+    "3195": {
+      "petId": 3195,
+      "normal": "/eggs/egg_shandianhuan.webp",
+      "shiny": null
+    },
+    "3196": {
+      "petId": 3195,
+      "normal": "/eggs/egg_shandianhuan.webp",
+      "shiny": null
+    },
+    "3197": {
+      "petId": 3195,
+      "normal": "/eggs/egg_shandianhuan.webp",
+      "shiny": null
+    },
+    "3198": {
+      "petId": 3198,
+      "normal": "/eggs/egg_fenfenxing.webp",
+      "shiny": null
+    },
+    "3199": {
+      "petId": 3198,
+      "normal": "/eggs/egg_fenfenxing.webp",
+      "shiny": null
+    },
+    "3200": {
+      "petId": 3200,
+      "normal": "/eggs/egg_jixiefangfang.webp",
+      "shiny": "/eggs/egg_jixiefangfang_yise.webp"
+    },
+    "3201": {
+      "petId": 3200,
+      "normal": "/eggs/egg_jixiefangfang.webp",
+      "shiny": "/eggs/egg_jixiefangfang_yise.webp"
+    },
+    "3202": {
+      "petId": 3200,
+      "normal": "/eggs/egg_jixiefangfang.webp",
+      "shiny": "/eggs/egg_jixiefangfang_yise.webp"
+    },
+    "3203": {
+      "petId": 3203,
+      "normal": "/eggs/egg_beise.webp",
+      "shiny": "/eggs/egg_beise_yise.webp"
+    },
+    "3204": {
+      "petId": 3203,
+      "normal": "/eggs/egg_beise.webp",
+      "shiny": "/eggs/egg_beise_yise.webp"
+    },
+    "3205": {
+      "petId": 3203,
+      "normal": "/eggs/egg_beise.webp",
+      "shiny": "/eggs/egg_beise_yise.webp"
+    },
+    "3206": {
+      "petId": 3206,
+      "normal": "/eggs/egg_duoxi.webp",
+      "shiny": null
+    },
+    "3207": {
+      "petId": 3206,
+      "normal": "/eggs/egg_duoxi.webp",
+      "shiny": null
+    },
+    "3208": {
+      "petId": 3206,
+      "normal": "/eggs/egg_duoxi.webp",
+      "shiny": null
+    },
+    "3209": {
+      "petId": 3209,
+      "normal": "/eggs/egg_xiaoyilong.webp",
+      "shiny": null
+    },
+    "3210": {
+      "petId": 3209,
+      "normal": "/eggs/egg_xiaoyilong.webp",
+      "shiny": null
+    },
+    "3211": {
+      "petId": 3211,
+      "normal": "/eggs/egg_yileilong.webp",
+      "shiny": null
+    },
+    "3215": {
+      "petId": 3215,
+      "normal": "/eggs/egg_haibaozhanshi.webp",
+      "shiny": null
+    },
+    "3216": {
+      "petId": 3215,
+      "normal": "/eggs/egg_haibaozhanshi.webp",
+      "shiny": null
+    },
+    "3217": {
+      "petId": 3217,
+      "normal": "/eggs/egg_jianfeimao.webp",
+      "shiny": null
+    },
+    "3218": {
+      "petId": 3217,
+      "normal": "/eggs/egg_jianfeimao.webp",
+      "shiny": null
+    },
+    "3219": {
+      "petId": 3217,
+      "normal": "/eggs/egg_jianfeimao.webp",
+      "shiny": null
+    },
+    "3225": {
+      "petId": 3225,
+      "normal": "/eggs/egg_guzhongshe.webp",
+      "shiny": null
+    },
+    "3226": {
+      "petId": 3225,
+      "normal": "/eggs/egg_guzhongshe.webp",
+      "shiny": null
+    },
+    "3227": {
+      "petId": 3227,
+      "normal": "/eggs/egg_juhuali.webp",
+      "shiny": null
+    },
+    "3230": {
+      "petId": 3233,
+      "normal": "/eggs/egg_heihuajiaer.webp",
+      "shiny": null
+    },
+    "3231": {
+      "petId": 3233,
+      "normal": "/eggs/egg_heihuajiaer.webp",
+      "shiny": null
+    },
+    "3232": {
+      "petId": 3233,
+      "normal": "/eggs/egg_heihuajiaer.webp",
+      "shiny": null
+    },
+    "3233": {
+      "petId": 3233,
+      "normal": "/eggs/egg_heihuajiaer.webp",
+      "shiny": null
+    },
+    "3237": {
+      "petId": 3237,
+      "normal": "/eggs/egg_xiaosongmao.webp",
+      "shiny": null
+    },
+    "3238": {
+      "petId": 3237,
+      "normal": "/eggs/egg_xiaosongmao.webp",
+      "shiny": null
+    },
+    "3239": {
+      "petId": 3239,
+      "normal": "/eggs/egg_kukugu.webp",
+      "shiny": null
+    },
+    "3240": {
+      "petId": 3239,
+      "normal": "/eggs/egg_kukugu.webp",
+      "shiny": null
+    },
+    "3241": {
+      "petId": 3239,
+      "normal": "/eggs/egg_kukugu.webp",
+      "shiny": null
+    },
+    "3244": {
+      "petId": 3244,
+      "normal": "/eggs/egg_rongrong.webp",
+      "shiny": null
+    },
+    "3245": {
+      "petId": 3244,
+      "normal": "/eggs/egg_rongrong.webp",
+      "shiny": null
+    },
+    "3246": {
+      "petId": 3244,
+      "normal": "/eggs/egg_rongrong.webp",
+      "shiny": null
+    },
+    "3248": {
+      "petId": 3248,
+      "normal": "/eggs/egg_lvzhoumengmaxiang.webp",
+      "shiny": null
+    },
+    "3249": {
+      "petId": 3248,
+      "normal": "/eggs/egg_lvzhoumengmaxiang.webp",
+      "shiny": null
+    },
+    "3250": {
+      "petId": 3250,
+      "normal": "/eggs/egg_xiaoyu.webp",
+      "shiny": null
+    },
+    "3251": {
+      "petId": 3250,
+      "normal": "/eggs/egg_xiaoyu.webp",
+      "shiny": null
+    },
+    "3252": {
+      "petId": 3250,
+      "normal": "/eggs/egg_xiaoyu.webp",
+      "shiny": null
+    },
+    "3255": {
+      "petId": 3255,
+      "normal": "/eggs/egg_benboshu.webp",
+      "shiny": null
+    },
+    "3256": {
+      "petId": 3255,
+      "normal": "/eggs/egg_benboshu.webp",
+      "shiny": null
+    },
+    "3257": {
+      "petId": 3257,
+      "normal": "/eggs/egg_bulusi.webp",
+      "shiny": null
+    },
+    "3258": {
+      "petId": 3257,
+      "normal": "/eggs/egg_bulusi.webp",
+      "shiny": null
+    },
+    "3259": {
+      "petId": 3257,
+      "normal": "/eggs/egg_bulusi.webp",
+      "shiny": null
+    },
+    "3262": {
+      "petId": 3262,
+      "normal": "/eggs/egg_huhuzhu.webp",
+      "shiny": null
+    },
+    "3263": {
+      "petId": 3262,
+      "normal": "/eggs/egg_huhuzhu.webp",
+      "shiny": null
+    },
+    "3264": {
+      "petId": 3264,
+      "normal": "/eggs/egg_xieefangchui.webp",
+      "shiny": null
+    },
+    "3265": {
+      "petId": 3264,
+      "normal": "/eggs/egg_xieefangchui.webp",
+      "shiny": null
+    },
+    "3266": {
+      "petId": 3266,
+      "normal": "/eggs/egg_danxiaomanyu.webp",
+      "shiny": null
+    },
+    "3267": {
+      "petId": 3266,
+      "normal": "/eggs/egg_danxiaomanyu.webp",
+      "shiny": null
+    },
+    "3268": {
+      "petId": 3268,
+      "normal": "/eggs/egg_datougulong.webp",
+      "shiny": null
+    },
+    "3269": {
+      "petId": 3268,
+      "normal": "/eggs/egg_datougulong.webp",
+      "shiny": null
+    },
+    "3276": {
+      "petId": 3278,
+      "normal": "/eggs/egg_mojuanniao.webp",
+      "shiny": null
+    },
+    "3277": {
+      "petId": 3278,
+      "normal": "/eggs/egg_mojuanniao.webp",
+      "shiny": null
+    },
+    "3278": {
+      "petId": 3278,
+      "normal": "/eggs/egg_mojuanniao.webp",
+      "shiny": null
+    },
+    "3279": {
+      "petId": 3282,
+      "normal": "/eggs/egg_dongyuque_chun.webp",
+      "shiny": null
+    },
+    "3280": {
+      "petId": 3283,
+      "normal": "/eggs/egg_dongyuque_xia.webp",
+      "shiny": null
+    },
+    "3281": {
+      "petId": 3284,
+      "normal": "/eggs/egg_dongyuque_qiu.webp",
+      "shiny": null
+    },
+    "3282": {
+      "petId": 3282,
+      "normal": "/eggs/egg_dongyuque_chun.webp",
+      "shiny": null
+    },
+    "3283": {
+      "petId": 3283,
+      "normal": "/eggs/egg_dongyuque_xia.webp",
+      "shiny": null
+    },
+    "3284": {
+      "petId": 3284,
+      "normal": "/eggs/egg_dongyuque_qiu.webp",
+      "shiny": null
+    },
+    "3285": {
+      "petId": 3285,
+      "normal": "/eggs/egg_lanniao_chun.webp",
+      "shiny": null
+    },
+    "3286": {
+      "petId": 3286,
+      "normal": "/eggs/egg_lanniao_xia.webp",
+      "shiny": null
+    },
+    "3287": {
+      "petId": 3287,
+      "normal": "/eggs/egg_lanniao_qiu.webp",
+      "shiny": null
+    },
+    "3288": {
+      "petId": 3040,
+      "normal": "/eggs/egg_diudiu.webp",
+      "shiny": null
+    },
+    "3289": {
+      "petId": 3040,
+      "normal": "/eggs/egg_diudiu.webp",
+      "shiny": null
+    },
+    "3290": {
+      "petId": 3290,
+      "normal": "/eggs/egg_diudiu_xueshan.webp",
+      "shiny": null
+    },
+    "3291": {
+      "petId": 3040,
+      "normal": "/eggs/egg_diudiu.webp",
+      "shiny": null
+    },
+    "3292": {
+      "petId": 3040,
+      "normal": "/eggs/egg_diudiu.webp",
+      "shiny": null
+    },
+    "3293": {
+      "petId": 3290,
+      "normal": "/eggs/egg_diudiu_xueshan.webp",
+      "shiny": null
+    },
+    "3294": {
+      "petId": 3040,
+      "normal": "/eggs/egg_diudiu.webp",
+      "shiny": null
+    },
+    "3295": {
+      "petId": 3040,
+      "normal": "/eggs/egg_diudiu.webp",
+      "shiny": null
+    },
+    "3296": {
+      "petId": 3290,
+      "normal": "/eggs/egg_diudiu_xueshan.webp",
+      "shiny": null
+    },
+    "3297": {
+      "petId": 3297,
+      "normal": "/eggs/egg_bengbengzhongzi_caiyuqiu.webp",
+      "shiny": null
+    },
+    "3298": {
+      "petId": 3298,
+      "normal": "/eggs/egg_bengbengzhongzi_duanmaoqiu.webp",
+      "shiny": null
+    },
+    "3299": {
+      "petId": 3299,
+      "normal": "/eggs/egg_bengbengzhongzi_xiangyaqiu.webp",
+      "shiny": null
+    },
+    "3300": {
+      "petId": 3297,
+      "normal": "/eggs/egg_bengbengzhongzi_caiyuqiu.webp",
+      "shiny": null
+    },
+    "3301": {
+      "petId": 3298,
+      "normal": "/eggs/egg_bengbengzhongzi_duanmaoqiu.webp",
+      "shiny": null
+    },
+    "3302": {
+      "petId": 3299,
+      "normal": "/eggs/egg_bengbengzhongzi_xiangyaqiu.webp",
+      "shiny": null
+    },
+    "3303": {
+      "petId": 3297,
+      "normal": "/eggs/egg_bengbengzhongzi_caiyuqiu.webp",
+      "shiny": null
+    },
+    "3304": {
+      "petId": 3298,
+      "normal": "/eggs/egg_bengbengzhongzi_duanmaoqiu.webp",
+      "shiny": null
+    },
+    "3305": {
+      "petId": 3299,
+      "normal": "/eggs/egg_bengbengzhongzi_xiangyaqiu.webp",
+      "shiny": null
+    },
+    "3307": {
+      "petId": 3307,
+      "normal": "/eggs/egg_kuangjingchong.webp",
+      "shiny": null
+    },
+    "3308": {
+      "petId": 3307,
+      "normal": "/eggs/egg_kuangjingchong.webp",
+      "shiny": null
+    },
+    "3309": {
+      "petId": 3309,
+      "normal": "/eggs/egg_xijiaoniao.webp",
+      "shiny": null
+    },
+    "3310": {
+      "petId": 3309,
+      "normal": "/eggs/egg_xijiaoniao.webp",
+      "shiny": null
+    },
+    "3311": {
+      "petId": 3309,
+      "normal": "/eggs/egg_xijiaoniao.webp",
+      "shiny": null
+    },
+    "3315": {
+      "petId": 3317,
+      "normal": "/eggs/egg_jushulan.webp",
+      "shiny": null
+    },
+    "3316": {
+      "petId": 3317,
+      "normal": "/eggs/egg_jushulan.webp",
+      "shiny": null
+    },
+    "3317": {
+      "petId": 3317,
+      "normal": "/eggs/egg_jushulan.webp",
+      "shiny": null
+    },
+    "3319": {
+      "petId": 3319,
+      "normal": "/eggs/egg_fenxingzai.webp",
+      "shiny": null
+    },
+    "3320": {
+      "petId": 3319,
+      "normal": "/eggs/egg_fenxingzai.webp",
+      "shiny": null
+    },
+    "3330": {
+      "petId": 3330,
+      "normal": "/eggs/egg_haikuichong.webp",
+      "shiny": null
+    },
+    "3331": {
+      "petId": 3330,
+      "normal": "/eggs/egg_haikuichong.webp",
+      "shiny": null
+    },
+    "3332": {
+      "petId": 3330,
+      "normal": "/eggs/egg_haikuichong.webp",
+      "shiny": null
+    },
+    "3333": {
+      "petId": 3333,
+      "normal": "/eggs/egg_xuewawa.webp",
+      "shiny": null
+    },
+    "3334": {
+      "petId": 3333,
+      "normal": "/eggs/egg_xuewawa.webp",
+      "shiny": null
+    },
+    "3335": {
+      "petId": 3333,
+      "normal": "/eggs/egg_xuewawa.webp",
+      "shiny": null
+    },
+    "3338": {
+      "petId": 3338,
+      "normal": "/eggs/egg_binghubao.webp",
+      "shiny": null
+    },
+    "3344": {
+      "petId": 3344,
+      "normal": "/eggs/egg_huaguitianer.webp",
+      "shiny": null
+    },
+    "3345": {
+      "petId": 3344,
+      "normal": "/eggs/egg_huaguitianer.webp",
+      "shiny": null
+    },
+    "3346": {
+      "petId": 3344,
+      "normal": "/eggs/egg_huaguitianer.webp",
+      "shiny": null
+    },
+    "3350": {
+      "petId": 3081,
+      "normal": "/eggs/egg_zhiyuhuowa.webp",
+      "shiny": null
+    },
+    "3357": {
+      "petId": 3357,
+      "normal": "/eggs/egg_diandongchangjinglu.webp",
+      "shiny": null
+    },
+    "3358": {
+      "petId": 3357,
+      "normal": "/eggs/egg_diandongchangjinglu.webp",
+      "shiny": null
+    },
+    "3359": {
+      "petId": 3357,
+      "normal": "/eggs/egg_diandongchangjinglu.webp",
+      "shiny": null
+    },
+    "3360": {
+      "petId": 3360,
+      "normal": "/eggs/egg_hudietaotao.webp",
+      "shiny": null
+    },
+    "3361": {
+      "petId": 3360,
+      "normal": "/eggs/egg_hudietaotao.webp",
+      "shiny": null
+    },
+    "3362": {
+      "petId": 3360,
+      "normal": "/eggs/egg_hudietaotao.webp",
+      "shiny": null
+    },
+    "3367": {
+      "petId": 3368,
+      "normal": "/eggs/egg_duudguo.webp",
+      "shiny": null
+    },
+    "3368": {
+      "petId": 3368,
+      "normal": "/eggs/egg_duudguo.webp",
+      "shiny": null
+    },
+    "3369": {
+      "petId": 3369,
+      "normal": "/eggs/egg_youxingguang.webp",
+      "shiny": null
+    },
+    "3370": {
+      "petId": 3369,
+      "normal": "/eggs/egg_youxingguang.webp",
+      "shiny": null
+    },
+    "3371": {
+      "petId": 3369,
+      "normal": "/eggs/egg_youxingguang.webp",
+      "shiny": null
+    },
+    "3372": {
+      "petId": 3372,
+      "normal": "/eggs/egg_chuntudalao.webp",
+      "shiny": null
+    },
+    "3373": {
+      "petId": 3374,
+      "normal": "/eggs/egg_qiqiumao.webp",
+      "shiny": null
+    },
+    "3374": {
+      "petId": 3374,
+      "normal": "/eggs/egg_qiqiumao.webp",
+      "shiny": null
+    },
+    "3375": {
+      "petId": 3375,
+      "normal": "/eggs/egg_qimengmi.webp",
+      "shiny": null
+    },
+    "3376": {
+      "petId": 3377,
+      "normal": "/eggs/egg_fenggunmuchong.webp",
+      "shiny": null
+    },
+    "3377": {
+      "petId": 3377,
+      "normal": "/eggs/egg_fenggunmuchong.webp",
+      "shiny": null
+    },
+    "3378": {
+      "petId": 3378,
+      "normal": "/eggs/egg_guguding.webp",
+      "shiny": null
+    },
+    "3379": {
+      "petId": 3378,
+      "normal": "/eggs/egg_guguding.webp",
+      "shiny": null
+    },
+    "3380": {
+      "petId": 3378,
+      "normal": "/eggs/egg_guguding.webp",
+      "shiny": null
+    },
+    "3381": {
+      "petId": 3381,
+      "normal": "/eggs/egg_shenlanjing.webp",
+      "shiny": null
+    },
+    "3382": {
+      "petId": 3382,
+      "normal": "/eggs/egg_shungdengyu.webp",
+      "shiny": null
+    },
+    "3383": {
+      "petId": 3383,
+      "normal": "/eggs/egg_lidengyu.webp",
+      "shiny": null
+    },
+    "3384": {
+      "petId": 3386,
+      "normal": "/eggs/egg_yulong.webp",
+      "shiny": null
+    },
+    "3385": {
+      "petId": 3386,
+      "normal": "/eggs/egg_yulong.webp",
+      "shiny": null
+    },
+    "3386": {
+      "petId": 3386,
+      "normal": "/eggs/egg_yulong.webp",
+      "shiny": null
+    },
+    "3395": {
+      "petId": 3395,
+      "normal": "/eggs/egg_liao.webp",
+      "shiny": null
+    },
+    "3396": {
+      "petId": 3395,
+      "normal": "/eggs/egg_liao.webp",
+      "shiny": null
+    },
+    "3397": {
+      "petId": 3395,
+      "normal": "/eggs/egg_liao.webp",
+      "shiny": null
+    },
+    "3398": {
+      "petId": 3398,
+      "normal": "/eggs/egg_xingchenchong.webp",
+      "shiny": null
+    },
+    "3399": {
+      "petId": 3398,
+      "normal": "/eggs/egg_xingchenchong.webp",
+      "shiny": null
+    },
+    "3400": {
+      "petId": 3398,
+      "normal": "/eggs/egg_xingchenchong.webp",
+      "shiny": null
+    },
+    "3401": {
+      "petId": 3401,
+      "normal": "/eggs/egg_yilisi.webp",
+      "shiny": null
+    },
+    "3405": {
+      "petId": 3060,
+      "normal": "/eggs/egg_xiaoyoulinglian.webp",
+      "shiny": null
+    },
+    "3406": {
+      "petId": 3406,
+      "normal": "/eggs/egg_tita.webp",
+      "shiny": null
+    },
+    "3407": {
+      "petId": 3406,
+      "normal": "/eggs/egg_tita.webp",
+      "shiny": null
+    },
+    "3410": {
+      "petId": 3411,
+      "normal": "/eggs/egg_quanzhagn2.webp",
+      "shiny": null
+    },
+    "3411": {
+      "petId": 3411,
+      "normal": "/eggs/egg_quanzhagn2.webp",
+      "shiny": null
+    },
+    "3412": {
+      "petId": 3211,
+      "normal": "/eggs/egg_yileilong.webp",
+      "shiny": null
+    },
+    "3417": {
+      "petId": 3417,
+      "normal": "/eggs/egg_gedouxiaoliu.webp",
+      "shiny": null
+    },
+    "3418": {
+      "petId": 3418,
+      "normal": "/eggs/egg_gedouxiaoba.webp",
+      "shiny": null
+    },
+    "3419": {
+      "petId": 3419,
+      "normal": "/eggs/egg_lihaixiaoluo.webp",
+      "shiny": null
+    },
+    "3420": {
+      "petId": 3419,
+      "normal": "/eggs/egg_lihaixiaoluo.webp",
+      "shiny": null
+    },
+    "3430": {
+      "petId": 3430,
+      "normal": "/eggs/egg_haizhizhi_bilanshanhu.webp",
+      "shiny": null
+    },
+    "3434": {
+      "petId": 3435,
+      "normal": "/eggs/egg_dianqie.webp",
+      "shiny": null
+    },
+    "3435": {
+      "petId": 3435,
+      "normal": "/eggs/egg_dianqie.webp",
+      "shiny": null
+    },
+    "3436": {
+      "petId": 3436,
+      "normal": "/eggs/egg_chaizhachong.webp",
+      "shiny": "/eggs/egg_chaizhachong_yise.webp"
+    },
+    "3437": {
+      "petId": 3436,
+      "normal": "/eggs/egg_chaizhachong.webp",
+      "shiny": "/eggs/egg_chaizhachong_yise.webp"
+    },
+    "3438": {
+      "petId": 3439,
+      "normal": "/eggs/egg_mengyouyou.webp",
+      "shiny": null
+    },
+    "3439": {
+      "petId": 3439,
+      "normal": "/eggs/egg_mengyouyou.webp",
+      "shiny": null
+    },
+    "3441": {
+      "petId": 3439,
+      "normal": "/eggs/egg_mengyouyou.webp",
+      "shiny": null
+    },
+    "3442": {
+      "petId": 3443,
+      "normal": "/eggs/egg_xingguangshi_yueguang.webp",
+      "shiny": null
+    },
+    "3443": {
+      "petId": 3443,
+      "normal": "/eggs/egg_xingguangshi_yueguang.webp",
+      "shiny": null
+    },
+    "3444": {
+      "petId": 3444,
+      "normal": "/eggs/egg_pipaniao.webp",
+      "shiny": null
+    },
+    "3448": {
+      "petId": 3307,
+      "normal": "/eggs/egg_kuangjingchong.webp",
+      "shiny": null
+    },
+    "3449": {
+      "petId": 3307,
+      "normal": "/eggs/egg_kuangjingchong.webp",
+      "shiny": null
+    },
+    "3450": {
+      "petId": 3307,
+      "normal": "/eggs/egg_kuangjingchong.webp",
+      "shiny": null
+    },
+    "3451": {
+      "petId": 3307,
+      "normal": "/eggs/egg_kuangjingchong.webp",
+      "shiny": null
+    },
+    "3452": {
+      "petId": 3452,
+      "normal": "/eggs/egg_yajiji_jijiya.webp",
+      "shiny": null
+    },
+    "3453": {
+      "petId": 3453,
+      "normal": "/eggs/egg_dengyidengya.webp",
+      "shiny": null
+    },
+    "3454": {
+      "petId": 3020,
+      "normal": "/eggs/egg_dishu.webp",
+      "shiny": null
+    },
+    "3455": {
+      "petId": 3020,
+      "normal": "/eggs/egg_dishu.webp",
+      "shiny": null
+    },
+    "3456": {
+      "petId": 3020,
+      "normal": "/eggs/egg_dishu.webp",
+      "shiny": null
+    },
+    "3457": {
+      "petId": 3457,
+      "normal": "/eggs/egg_yueyaxuexiong.webp",
+      "shiny": "/eggs/egg_yueyaxuexiong_yise.webp"
+    },
+    "3458": {
+      "petId": 3124,
+      "normal": "/eggs/egg_dingding.webp",
+      "shiny": null
+    },
+    "3459": {
+      "petId": 3124,
+      "normal": "/eggs/egg_dingding.webp",
+      "shiny": null
+    },
+    "3460": {
+      "petId": 3124,
+      "normal": "/eggs/egg_dingding.webp",
+      "shiny": null
+    },
+    "3461": {
+      "petId": 3124,
+      "normal": "/eggs/egg_dingding.webp",
+      "shiny": null
+    },
+    "3462": {
+      "petId": 3124,
+      "normal": "/eggs/egg_dingding.webp",
+      "shiny": null
+    },
+    "3463": {
+      "petId": 3124,
+      "normal": "/eggs/egg_dingding.webp",
+      "shiny": null
+    },
+    "3464": {
+      "petId": 3124,
+      "normal": "/eggs/egg_dingding.webp",
+      "shiny": null
+    },
+    "3465": {
+      "petId": 3124,
+      "normal": "/eggs/egg_dingding.webp",
+      "shiny": null
+    },
+    "3467": {
+      "petId": 3127,
+      "normal": "/eggs/egg_xiaoshijiu.webp",
+      "shiny": null
+    },
+    "3468": {
+      "petId": 3127,
+      "normal": "/eggs/egg_xiaoshijiu.webp",
+      "shiny": null
+    },
+    "3469": {
+      "petId": 3127,
+      "normal": "/eggs/egg_xiaoshijiu.webp",
+      "shiny": null
+    },
+    "3470": {
+      "petId": 3136,
+      "normal": "/eggs/egg_maomao.webp",
+      "shiny": null
+    },
+    "3471": {
+      "petId": 3136,
+      "normal": "/eggs/egg_maomao.webp",
+      "shiny": null
+    },
+    "3472": {
+      "petId": 3136,
+      "normal": "/eggs/egg_maomao.webp",
+      "shiny": null
+    },
+    "3473": {
+      "petId": 3473,
+      "normal": "/eggs/egg_buguake.webp",
+      "shiny": null
+    },
+    "3474": {
+      "petId": 3473,
+      "normal": "/eggs/egg_buguake.webp",
+      "shiny": null
+    },
+    "3475": {
+      "petId": 3330,
+      "normal": "/eggs/egg_haikuichong.webp",
+      "shiny": null
+    },
+    "3476": {
+      "petId": 3330,
+      "normal": "/eggs/egg_haikuichong.webp",
+      "shiny": null
+    },
+    "3477": {
+      "petId": 3330,
+      "normal": "/eggs/egg_haikuichong.webp",
+      "shiny": null
+    },
+    "3478": {
+      "petId": 3124,
+      "normal": "/eggs/egg_dingding.webp",
+      "shiny": null
+    },
+    "3479": {
+      "petId": 3124,
+      "normal": "/eggs/egg_dingding.webp",
+      "shiny": null
+    },
+    "3481": {
+      "petId": 3060,
+      "normal": "/eggs/egg_xiaoyoulinglian.webp",
+      "shiny": null
+    },
+    "3482": {
+      "petId": 3060,
+      "normal": "/eggs/egg_xiaoyoulinglian.webp",
+      "shiny": null
+    },
+    "3483": {
+      "petId": 3377,
+      "normal": "/eggs/egg_fenggunmuchong.webp",
+      "shiny": null
+    },
+    "3484": {
+      "petId": 3484,
+      "normal": "/eggs/egg_luoxuanpapa.webp",
+      "shiny": null
+    },
+    "3485": {
+      "petId": 3319,
+      "normal": "/eggs/egg_fenxingzai.webp",
+      "shiny": null
+    },
+    "3486": {
+      "petId": 3307,
+      "normal": "/eggs/egg_kuangjingchong.webp",
+      "shiny": null
+    },
+    "3490": {
+      "petId": 3490,
+      "normal": "/eggs/egg_xiniou.webp",
+      "shiny": null
+    },
+    "3491": {
+      "petId": 3490,
+      "normal": "/eggs/egg_xiniou.webp",
+      "shiny": null
+    },
+    "3492": {
+      "petId": 3492,
+      "normal": "/eggs/egg_shouhualei.webp",
+      "shiny": null
+    },
+    "3495": {
+      "petId": 3495,
+      "normal": "/eggs/egg_yajiji_ranleya.webp",
+      "shiny": null
+    },
+    "3496": {
+      "petId": 3496,
+      "normal": "/eggs/egg_xuanyechong_yidi.webp",
+      "shiny": null
+    },
+    "3497": {
+      "petId": 3496,
+      "normal": "/eggs/egg_xuanyechong_yidi.webp",
+      "shiny": null
+    },
+    "3498": {
+      "petId": 3496,
+      "normal": "/eggs/egg_xuanyechong_yidi.webp",
+      "shiny": null
+    },
+    "3499": {
+      "petId": 3499,
+      "normal": "/eggs/egg_gongpingge.webp",
+      "shiny": null
+    },
+    "3503": {
+      "petId": 3503,
+      "normal": "/eggs/egg_xianqiushu.webp",
+      "shiny": null
+    },
+    "3505": {
+      "petId": 3505,
+      "normal": "/eggs/egg_yehuixiniu.webp",
+      "shiny": null
+    },
+    "3506": {
+      "petId": 3506,
+      "normal": "/eggs/egg_huayuanman.webp",
+      "shiny": null
+    },
+    "3507": {
+      "petId": 3506,
+      "normal": "/eggs/egg_huayuanman.webp",
+      "shiny": null
+    },
+    "3508": {
+      "petId": 3508,
+      "normal": "/eggs/egg_boboluo.webp",
+      "shiny": null
+    },
+    "3509": {
+      "petId": 3508,
+      "normal": "/eggs/egg_boboluo.webp",
+      "shiny": null
+    },
+    "3510": {
+      "petId": 3508,
+      "normal": "/eggs/egg_boboluo.webp",
+      "shiny": null
+    },
+    "3511": {
+      "petId": 3508,
+      "normal": "/eggs/egg_boboluo.webp",
+      "shiny": null
+    },
+    "3512": {
+      "petId": 3508,
+      "normal": "/eggs/egg_boboluo.webp",
+      "shiny": null
+    },
+    "3513": {
+      "petId": 3508,
+      "normal": "/eggs/egg_boboluo.webp",
+      "shiny": null
+    },
+    "3516": {
+      "petId": 3055,
+      "normal": "/eggs/egg_banbanke.webp",
+      "shiny": null
+    },
+    "3517": {
+      "petId": 3055,
+      "normal": "/eggs/egg_banbanke.webp",
+      "shiny": null
+    },
+    "3518": {
+      "petId": 3055,
+      "normal": "/eggs/egg_banbanke.webp",
+      "shiny": null
+    },
+    "3521": {
+      "petId": 3521,
+      "normal": "/eggs/egg_lilayao.webp",
+      "shiny": null
+    },
+    "3522": {
+      "petId": 3522,
+      "normal": "/eggs/egg_shuixingwei.webp",
+      "shiny": null
+    },
+    "3523": {
+      "petId": 3522,
+      "normal": "/eggs/egg_shuixingwei.webp",
+      "shiny": null
+    },
+    "3526": {
+      "petId": 3118,
+      "normal": "/eggs/egg_guodong.webp",
+      "shiny": null
+    },
+    "3527": {
+      "petId": 3118,
+      "normal": "/eggs/egg_guodong.webp",
+      "shiny": null
+    },
+    "3528": {
+      "petId": 3118,
+      "normal": "/eggs/egg_guodong.webp",
+      "shiny": null
+    },
+    "3529": {
+      "petId": 3529,
+      "normal": "/eggs/egg_haoeryu.webp",
+      "shiny": null
+    },
+    "3530": {
+      "petId": 3529,
+      "normal": "/eggs/egg_haoeryu.webp",
+      "shiny": null
+    },
+    "3531": {
+      "petId": 3531,
+      "normal": "/eggs/egg_xiaoxueren.webp",
+      "shiny": null
+    },
+    "3532": {
+      "petId": 3531,
+      "normal": "/eggs/egg_xiaoxueren.webp",
+      "shiny": null
+    },
+    "3533": {
+      "petId": 3028,
+      "normal": "/eggs/egg_dongyuque.webp",
+      "shiny": null
+    },
+    "3534": {
+      "petId": 3534,
+      "normal": "/eggs/egg_banban.webp",
+      "shiny": null
+    },
+    "3535": {
+      "petId": 3534,
+      "normal": "/eggs/egg_banban.webp",
+      "shiny": null
+    },
+    "3536": {
+      "petId": 3538,
+      "normal": "/eggs/egg_wulata.webp",
+      "shiny": null
+    },
+    "3537": {
+      "petId": 3538,
+      "normal": "/eggs/egg_wulata.webp",
+      "shiny": null
+    },
+    "3538": {
+      "petId": 3538,
+      "normal": "/eggs/egg_wulata.webp",
+      "shiny": null
+    },
+    "3539": {
+      "petId": 3538,
+      "normal": "/eggs/egg_wulata.webp",
+      "shiny": null
+    },
+    "3540": {
+      "petId": 3538,
+      "normal": "/eggs/egg_wulata.webp",
+      "shiny": null
+    },
+    "3541": {
+      "petId": 3538,
+      "normal": "/eggs/egg_wulata.webp",
+      "shiny": null
+    },
+    "3545": {
+      "petId": 3545,
+      "normal": "/eggs/egg_shengjianshicong.webp",
+      "shiny": null
+    },
+    "3546": {
+      "petId": 3545,
+      "normal": "/eggs/egg_shengjianshicong.webp",
+      "shiny": null
+    },
+    "3547": {
+      "petId": 3484,
+      "normal": "/eggs/egg_luoxuanpapa.webp",
+      "shiny": null
+    },
+    "3550": {
+      "petId": 3551,
+      "normal": "/eggs/egg_qiqishi.webp",
+      "shiny": null
+    },
+    "3551": {
+      "petId": 3551,
+      "normal": "/eggs/egg_qiqishi.webp",
+      "shiny": null
+    },
+    "3555": {
+      "petId": 3551,
+      "normal": "/eggs/egg_qiqishi.webp",
+      "shiny": null
+    },
+    "3556": {
+      "petId": 3551,
+      "normal": "/eggs/egg_qiqishi.webp",
+      "shiny": null
+    },
+    "3568": {
+      "petId": 3568,
+      "normal": "/eggs/egg_xiaoheimao.webp",
+      "shiny": null
+    },
+    "3569": {
+      "petId": 3568,
+      "normal": "/eggs/egg_xiaoheimao.webp",
+      "shiny": null
+    },
+    "3571": {
+      "petId": 3344,
+      "normal": "/eggs/egg_huaguitianer.webp",
+      "shiny": null
+    },
+    "3572": {
+      "petId": 3572,
+      "normal": "/eggs/egg_baoyanzai.webp",
+      "shiny": null
+    },
+    "3573": {
+      "petId": 3572,
+      "normal": "/eggs/egg_baoyanzai.webp",
+      "shiny": null
+    },
+    "3577": {
+      "petId": 3577,
+      "normal": "/eggs/egg_moyoushi.webp",
+      "shiny": null
+    },
+    "3578": {
+      "petId": 3577,
+      "normal": "/eggs/egg_moyoushi.webp",
+      "shiny": null
+    },
+    "3579": {
+      "petId": 3577,
+      "normal": "/eggs/egg_moyoushi.webp",
+      "shiny": null
+    },
+    "3582": {
+      "petId": 3585,
+      "normal": "/eggs/egg_yueliangtuo.webp",
+      "shiny": null
+    },
+    "3583": {
+      "petId": 3585,
+      "normal": "/eggs/egg_yueliangtuo.webp",
+      "shiny": null
+    },
+    "3584": {
+      "petId": 3585,
+      "normal": "/eggs/egg_yueliangtuo.webp",
+      "shiny": null
+    },
+    "3585": {
+      "petId": 3585,
+      "normal": "/eggs/egg_yueliangtuo.webp",
+      "shiny": null
+    },
+    "3594": {
+      "petId": 3594,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3595": {
+      "petId": 3594,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3596": {
+      "petId": 3594,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3597": {
+      "petId": 3597,
+      "normal": "/eggs/egg_shuidishe.webp",
+      "shiny": null
+    },
+    "3598": {
+      "petId": 3597,
+      "normal": "/eggs/egg_shuidishe.webp",
+      "shiny": null
+    },
+    "3599": {
+      "petId": 3597,
+      "normal": "/eggs/egg_shuidishe.webp",
+      "shiny": null
+    },
+    "3600": {
+      "petId": 3600,
+      "normal": "/eggs/egg_xiaoyongshi.webp",
+      "shiny": null
+    },
+    "3601": {
+      "petId": 3600,
+      "normal": "/eggs/egg_xiaoyongshi.webp",
+      "shiny": null
+    },
+    "3602": {
+      "petId": 3600,
+      "normal": "/eggs/egg_xiaoyongshi.webp",
+      "shiny": null
+    },
+    "3603": {
+      "petId": 3603,
+      "normal": "/eggs/egg_maotouxiaozhu.webp",
+      "shiny": null
+    },
+    "3604": {
+      "petId": 3603,
+      "normal": "/eggs/egg_maotouxiaozhu.webp",
+      "shiny": null
+    },
+    "3605": {
+      "petId": 3603,
+      "normal": "/eggs/egg_maotouxiaozhu.webp",
+      "shiny": null
+    },
+    "3606": {
+      "petId": 3606,
+      "normal": "/eggs/egg_huajingling.webp",
+      "shiny": null
+    },
+    "3607": {
+      "petId": 3606,
+      "normal": "/eggs/egg_huajingling.webp",
+      "shiny": null
+    },
+    "3608": {
+      "petId": 3606,
+      "normal": "/eggs/egg_huajingling.webp",
+      "shiny": null
+    },
+    "3609": {
+      "petId": 3606,
+      "normal": "/eggs/egg_huajingling.webp",
+      "shiny": null
+    },
+    "3610": {
+      "petId": 3610,
+      "normal": "/eggs/egg_shumochong.webp",
+      "shiny": null
+    },
+    "3611": {
+      "petId": 3610,
+      "normal": "/eggs/egg_shumochong.webp",
+      "shiny": null
+    },
+    "3612": {
+      "petId": 3610,
+      "normal": "/eggs/egg_shumochong.webp",
+      "shiny": null
+    },
+    "3613": {
+      "petId": 3610,
+      "normal": "/eggs/egg_shumochong.webp",
+      "shiny": null
+    },
+    "3614": {
+      "petId": 3614,
+      "normal": "/eggs/egg_shiguangwengweng.webp",
+      "shiny": null
+    },
+    "3615": {
+      "petId": 3614,
+      "normal": "/eggs/egg_shiguangwengweng.webp",
+      "shiny": null
+    },
+    "3616": {
+      "petId": 3616,
+      "normal": "/eggs/egg_buguzhong.webp",
+      "shiny": null
+    },
+    "3617": {
+      "petId": 3616,
+      "normal": "/eggs/egg_buguzhong.webp",
+      "shiny": null
+    },
+    "3618": {
+      "petId": 3618,
+      "normal": "/eggs/egg_xiaoxiangguai.webp",
+      "shiny": null
+    },
+    "3619": {
+      "petId": 3618,
+      "normal": "/eggs/egg_xiaoxiangguai.webp",
+      "shiny": null
+    },
+    "3620": {
+      "petId": 3620,
+      "normal": "/eggs/egg_xueyuanguagua.webp",
+      "shiny": null
+    },
+    "3621": {
+      "petId": 3225,
+      "normal": "/eggs/egg_guzhongshe.webp",
+      "shiny": null
+    },
+    "3622": {
+      "petId": 3225,
+      "normal": "/eggs/egg_guzhongshe.webp",
+      "shiny": null
+    },
+    "3623": {
+      "petId": 3623,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3624": {
+      "petId": 3624,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3625": {
+      "petId": 3625,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3626": {
+      "petId": 3626,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3627": {
+      "petId": 3627,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3628": {
+      "petId": 3628,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3629": {
+      "petId": 3629,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3630": {
+      "petId": 3630,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3631": {
+      "petId": 3631,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3632": {
+      "petId": 3632,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3633": {
+      "petId": 3633,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3634": {
+      "petId": 3634,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3635": {
+      "petId": 3635,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3636": {
+      "petId": 3636,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3637": {
+      "petId": 3637,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3638": {
+      "petId": 3638,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3639": {
+      "petId": 3639,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3640": {
+      "petId": 3640,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3641": {
+      "petId": 3641,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3642": {
+      "petId": 3642,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3643": {
+      "petId": 3643,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3644": {
+      "petId": 3644,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3645": {
+      "petId": 3645,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3646": {
+      "petId": 3646,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3647": {
+      "petId": 3647,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3648": {
+      "petId": 3648,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3649": {
+      "petId": 3649,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3650": {
+      "petId": 3650,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3651": {
+      "petId": 3651,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3652": {
+      "petId": 3652,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3653": {
+      "petId": 3653,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3654": {
+      "petId": 3654,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3655": {
+      "petId": 3655,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3656": {
+      "petId": 3656,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3657": {
+      "petId": 3657,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3658": {
+      "petId": 3658,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3661": {
+      "petId": 3661,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3662": {
+      "petId": 3662,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3663": {
+      "petId": 3663,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3664": {
+      "petId": 3664,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3665": {
+      "petId": 3665,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3666": {
+      "petId": 3666,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3667": {
+      "petId": 3667,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3668": {
+      "petId": 3668,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3669": {
+      "petId": 3669,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3670": {
+      "petId": 3670,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3671": {
+      "petId": 3671,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3672": {
+      "petId": 3672,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3673": {
+      "petId": 3673,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3674": {
+      "petId": 3674,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3675": {
+      "petId": 3675,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3676": {
+      "petId": 3676,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3679": {
+      "petId": 3679,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3680": {
+      "petId": 3680,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3681": {
+      "petId": 3681,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3682": {
+      "petId": 3682,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3683": {
+      "petId": 3683,
+      "normal": "/eggs/egg_gugumao.webp",
+      "shiny": null
+    },
+    "3684": {
+      "petId": 3683,
+      "normal": "/eggs/egg_gugumao.webp",
+      "shiny": null
+    },
+    "3685": {
+      "petId": 3685,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3686": {
+      "petId": 3686,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3687": {
+      "petId": 3687,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3688": {
+      "petId": 3688,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3689": {
+      "petId": 3689,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3690": {
+      "petId": 3690,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3691": {
+      "petId": 3691,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3692": {
+      "petId": 3692,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3693": {
+      "petId": 3693,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3694": {
+      "petId": 3694,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3695": {
+      "petId": 3695,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3696": {
+      "petId": 3696,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3697": {
+      "petId": 3697,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3698": {
+      "petId": 3698,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3699": {
+      "petId": 3699,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3700": {
+      "petId": 3700,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3701": {
+      "petId": 3701,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3702": {
+      "petId": 3702,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3703": {
+      "petId": 3703,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3704": {
+      "petId": 3704,
+      "normal": "/eggs/egg_youyou.webp",
+      "shiny": null
+    },
+    "3705": {
+      "petId": 3704,
+      "normal": "/eggs/egg_youyou.webp",
+      "shiny": null
+    },
+    "3706": {
+      "petId": 3706,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3707": {
+      "petId": 3707,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3708": {
+      "petId": 3708,
+      "normal": "/eggs/egg_xiaoguxiang.webp",
+      "shiny": null
+    },
+    "3709": {
+      "petId": 3708,
+      "normal": "/eggs/egg_xiaoguxiang.webp",
+      "shiny": null
+    },
+    "3710": {
+      "petId": 3710,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3711": {
+      "petId": 3711,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3712": {
+      "petId": 3712,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3713": {
+      "petId": 3713,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3714": {
+      "petId": 3714,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3715": {
+      "petId": 3715,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3716": {
+      "petId": 3716,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3717": {
+      "petId": 3717,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3718": {
+      "petId": 3718,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3719": {
+      "petId": 3719,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3720": {
+      "petId": 3720,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3721": {
+      "petId": 3720,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3722": {
+      "petId": 3720,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "3723": {
+      "petId": 3723,
+      "normal": "/eggs/egg_shuidishe.webp",
+      "shiny": null
+    },
+    "3724": {
+      "petId": 3723,
+      "normal": "/eggs/egg_shuidishe.webp",
+      "shiny": null
+    },
+    "3725": {
+      "petId": 3723,
+      "normal": "/eggs/egg_shuidishe.webp",
+      "shiny": null
+    },
+    "3726": {
+      "petId": 3726,
+      "normal": "/eggs/egg_xiaoyongshi.webp",
+      "shiny": null
+    },
+    "3727": {
+      "petId": 3726,
+      "normal": "/eggs/egg_xiaoyongshi.webp",
+      "shiny": null
+    },
+    "3728": {
+      "petId": 3726,
+      "normal": "/eggs/egg_xiaoyongshi.webp",
+      "shiny": null
+    },
+    "3738": {
+      "petId": 3237,
+      "normal": "/eggs/egg_xiaosongmao.webp",
+      "shiny": null
+    },
+    "3739": {
+      "petId": 3237,
+      "normal": "/eggs/egg_xiaosongmao.webp",
+      "shiny": null
+    },
+    "3742": {
+      "petId": 3742,
+      "normal": "/eggs/egg_yajiji_qilaiya.webp",
+      "shiny": null
+    },
+    "3744": {
+      "petId": 3744,
+      "normal": "/eggs/egg_huohongwei.webp",
+      "shiny": "/eggs/egg_huohongwei_yise.webp"
+    },
+    "3745": {
+      "petId": 3744,
+      "normal": "/eggs/egg_huohongwei.webp",
+      "shiny": "/eggs/egg_huohongwei_yise.webp"
+    },
+    "3746": {
+      "petId": 3746,
+      "normal": "/eggs/egg_xueyingwawa.webp",
+      "shiny": null
+    },
+    "3749": {
+      "petId": 3749,
+      "normal": "/eggs/egg_huohongwei.webp",
+      "shiny": "/eggs/egg_huohongwei_yise.webp"
+    },
+    "3752": {
+      "petId": 3752,
+      "normal": "/eggs/egg_huohongwei.webp",
+      "shiny": "/eggs/egg_huohongwei_yise.webp"
+    },
+    "3754": {
+      "petId": 3754,
+      "normal": "/eggs/egg_huohongwei.webp",
+      "shiny": "/eggs/egg_huohongwei_yise.webp"
+    },
+    "3757": {
+      "petId": 3757,
+      "normal": "/eggs/egg_huohongwei.webp",
+      "shiny": "/eggs/egg_huohongwei_yise.webp"
+    },
+    "3777": {
+      "petId": 3777,
+      "normal": "/eggs/egg_youlingshu.webp",
+      "shiny": null
+    },
+    "4005": {
+      "petId": 3002,
+      "normal": "/eggs/egg_shuilanlan.webp",
+      "shiny": null
+    },
+    "4006": {
+      "petId": 3003,
+      "normal": "/eggs/egg_huohua.webp",
+      "shiny": null
+    },
+    "4007": {
+      "petId": 3001,
+      "normal": "/eggs/egg_miaomiao.webp",
+      "shiny": null
+    },
+    "4011": {
+      "petId": 3011,
+      "normal": "/eggs/egg_emolang.webp",
+      "shiny": null
+    },
+    "4012": {
+      "petId": 3012,
+      "normal": "/eggs/egg_yajiji.webp",
+      "shiny": null
+    },
+    "4019": {
+      "petId": 3017,
+      "normal": "/eggs/egg_bengbengzhongzi.webp",
+      "shiny": null
+    },
+    "4020": {
+      "petId": 3330,
+      "normal": "/eggs/egg_haikuichong.webp",
+      "shiny": null
+    },
+    "4021": {
+      "petId": 3157,
+      "normal": "/eggs/egg_huakuifenghou.webp",
+      "shiny": null
+    },
+    "4022": {
+      "petId": 3029,
+      "normal": "/eggs/egg_qilicao.webp",
+      "shiny": "/eggs/egg_qilicao_yise.webp"
+    },
+    "4064": {
+      "petId": 3064,
+      "normal": "/eggs/egg_youlingshu.webp",
+      "shiny": null
+    },
+    "4072": {
+      "petId": 3103,
+      "normal": "/eggs/egg_xiaobushi.webp",
+      "shiny": null
+    },
+    "4073": {
+      "petId": 3115,
+      "normal": "/eggs/egg_fuzhousha.webp",
+      "shiny": null
+    },
+    "4074": {
+      "petId": 3037,
+      "normal": "/eggs/egg_lanniao.webp",
+      "shiny": null
+    },
+    "4076": {
+      "petId": 4076,
+      "normal": "/eggs/egg_yilisi.webp",
+      "shiny": null
+    },
+    "4078": {
+      "petId": 3070,
+      "normal": "/eggs/egg_huzhuquan.webp",
+      "shiny": null
+    },
+    "4079": {
+      "petId": 3307,
+      "normal": "/eggs/egg_kuangjingchong.webp",
+      "shiny": null
+    },
+    "4083": {
+      "petId": 3568,
+      "normal": "/eggs/egg_xiaoheimao.webp",
+      "shiny": null
+    },
+    "4084": {
+      "petId": 3109,
+      "normal": "/eggs/egg_maya.webp",
+      "shiny": null
+    },
+    "4085": {
+      "petId": 3123,
+      "normal": "/eggs/egg_xueyingwawa.webp",
+      "shiny": null
+    },
+    "4087": {
+      "petId": 3375,
+      "normal": "/eggs/egg_qimengmi.webp",
+      "shiny": null
+    },
+    "4088": {
+      "petId": 3357,
+      "normal": "/eggs/egg_diandongchangjinglu.webp",
+      "shiny": null
+    },
+    "4089": {
+      "petId": 3545,
+      "normal": "/eggs/egg_shengjianshicong.webp",
+      "shiny": null
+    },
+    "4090": {
+      "petId": 3211,
+      "normal": "/eggs/egg_yileilong.webp",
+      "shiny": null
+    },
+    "4093": {
+      "petId": 4093,
+      "normal": "/eggs/egg_gongpingge.webp",
+      "shiny": null
+    },
+    "4096": {
+      "petId": 3375,
+      "normal": "/eggs/egg_qimengmi.webp",
+      "shiny": null
+    },
+    "4097": {
+      "petId": 3375,
+      "normal": "/eggs/egg_qimengmi.webp",
+      "shiny": null
+    },
+    "4098": {
+      "petId": 3123,
+      "normal": "/eggs/egg_xueyingwawa.webp",
+      "shiny": null
+    },
+    "4099": {
+      "petId": 3123,
+      "normal": "/eggs/egg_xueyingwawa.webp",
+      "shiny": null
+    },
+    "4100": {
+      "petId": 3123,
+      "normal": "/eggs/egg_xueyingwawa.webp",
+      "shiny": null
+    },
+    "4101": {
+      "petId": 3123,
+      "normal": "/eggs/egg_xueyingwawa.webp",
+      "shiny": null
+    },
+    "4102": {
+      "petId": 3123,
+      "normal": "/eggs/egg_xueyingwawa.webp",
+      "shiny": null
+    },
+    "4103": {
+      "petId": 3123,
+      "normal": "/eggs/egg_xueyingwawa.webp",
+      "shiny": null
+    },
+    "5001": {
+      "petId": 3307,
+      "normal": "/eggs/egg_kuangjingchong.webp",
+      "shiny": null
+    },
+    "5002": {
+      "petId": 5002,
+      "normal": "/eggs/egg_yilisi.webp",
+      "shiny": null
+    },
+    "5003": {
+      "petId": 3001,
+      "normal": "/eggs/egg_miaomiao.webp",
+      "shiny": null
+    },
+    "5004": {
+      "petId": 3017,
+      "normal": "/eggs/egg_bengbengzhongzi.webp",
+      "shiny": null
+    },
+    "5005": {
+      "petId": 3029,
+      "normal": "/eggs/egg_qilicao.webp",
+      "shiny": "/eggs/egg_qilicao_yise.webp"
+    },
+    "5006": {
+      "petId": 3012,
+      "normal": "/eggs/egg_yajiji.webp",
+      "shiny": null
+    },
+    "5007": {
+      "petId": 3568,
+      "normal": "/eggs/egg_xiaoheimao.webp",
+      "shiny": null
+    },
+    "5008": {
+      "petId": 3103,
+      "normal": "/eggs/egg_xiaobushi.webp",
+      "shiny": null
+    },
+    "5009": {
+      "petId": 3109,
+      "normal": "/eggs/egg_maya.webp",
+      "shiny": null
+    },
+    "5010": {
+      "petId": 3002,
+      "normal": "/eggs/egg_shuilanlan.webp",
+      "shiny": null
+    },
+    "5011": {
+      "petId": 3115,
+      "normal": "/eggs/egg_fuzhousha.webp",
+      "shiny": null
+    },
+    "5012": {
+      "petId": 3330,
+      "normal": "/eggs/egg_haikuichong.webp",
+      "shiny": null
+    },
+    "5013": {
+      "petId": 3123,
+      "normal": "/eggs/egg_xueyingwawa.webp",
+      "shiny": null
+    },
+    "5014": {
+      "petId": 3037,
+      "normal": "/eggs/egg_lanniao.webp",
+      "shiny": null
+    },
+    "5015": {
+      "petId": 3157,
+      "normal": "/eggs/egg_huakuifenghou.webp",
+      "shiny": null
+    },
+    "5016": {
+      "petId": 3011,
+      "normal": "/eggs/egg_emolang.webp",
+      "shiny": null
+    },
+    "5017": {
+      "petId": 3003,
+      "normal": "/eggs/egg_huohua.webp",
+      "shiny": null
+    },
+    "5018": {
+      "petId": 3070,
+      "normal": "/eggs/egg_huzhuquan.webp",
+      "shiny": null
+    },
+    "5019": {
+      "petId": 3064,
+      "normal": "/eggs/egg_youlingshu.webp",
+      "shiny": null
+    },
+    "5020": {
+      "petId": 3357,
+      "normal": "/eggs/egg_diandongchangjinglu.webp",
+      "shiny": null
+    },
+    "5021": {
+      "petId": 3545,
+      "normal": "/eggs/egg_shengjianshicong.webp",
+      "shiny": null
+    },
+    "5022": {
+      "petId": 3211,
+      "normal": "/eggs/egg_yileilong.webp",
+      "shiny": null
+    },
+    "5024": {
+      "petId": 3375,
+      "normal": "/eggs/egg_qimengmi.webp",
+      "shiny": null
+    },
+    "5025": {
+      "petId": 3004,
+      "normal": "/eggs/egg_dimo.webp",
+      "shiny": null
+    },
+    "5026": {
+      "petId": 3004,
+      "normal": "/eggs/egg_dimo.webp",
+      "shiny": null
+    },
+    "5027": {
+      "petId": 3004,
+      "normal": "/eggs/egg_dimo.webp",
+      "shiny": null
+    },
+    "5028": {
+      "petId": 3004,
+      "normal": "/eggs/egg_dimo.webp",
+      "shiny": null
+    },
+    "5029": {
+      "petId": 3330,
+      "normal": "/eggs/egg_haikuichong.webp",
+      "shiny": null
+    },
+    "5030": {
+      "petId": 3037,
+      "normal": "/eggs/egg_lanniao.webp",
+      "shiny": null
+    },
+    "5031": {
+      "petId": 3037,
+      "normal": "/eggs/egg_lanniao.webp",
+      "shiny": null
+    },
+    "5032": {
+      "petId": 3037,
+      "normal": "/eggs/egg_lanniao.webp",
+      "shiny": null
+    },
+    "5033": {
+      "petId": 3017,
+      "normal": "/eggs/egg_bengbengzhongzi.webp",
+      "shiny": null
+    },
+    "5034": {
+      "petId": 3017,
+      "normal": "/eggs/egg_bengbengzhongzi.webp",
+      "shiny": null
+    },
+    "5035": {
+      "petId": 3017,
+      "normal": "/eggs/egg_bengbengzhongzi.webp",
+      "shiny": null
+    },
+    "5036": {
+      "petId": 3012,
+      "normal": "/eggs/egg_yajiji.webp",
+      "shiny": null
+    },
+    "5037": {
+      "petId": 3012,
+      "normal": "/eggs/egg_yajiji.webp",
+      "shiny": null
+    },
+    "5038": {
+      "petId": 3012,
+      "normal": "/eggs/egg_yajiji.webp",
+      "shiny": null
+    },
+    "5039": {
+      "petId": 3012,
+      "normal": "/eggs/egg_yajiji.webp",
+      "shiny": null
+    },
+    "5047": {
+      "petId": 3307,
+      "normal": "/eggs/egg_kuangjingchong.webp",
+      "shiny": null
+    },
+    "5048": {
+      "petId": 3307,
+      "normal": "/eggs/egg_kuangjingchong.webp",
+      "shiny": null
+    },
+    "5049": {
+      "petId": 3307,
+      "normal": "/eggs/egg_kuangjingchong.webp",
+      "shiny": null
+    },
+    "5050": {
+      "petId": 3307,
+      "normal": "/eggs/egg_kuangjingchong.webp",
+      "shiny": null
+    },
+    "5051": {
+      "petId": 3307,
+      "normal": "/eggs/egg_kuangjingchong.webp",
+      "shiny": null
+    },
+    "5052": {
+      "petId": 3012,
+      "normal": "/eggs/egg_yajiji.webp",
+      "shiny": null
+    },
+    "5053": {
+      "petId": 3014,
+      "normal": "/eggs/egg_amiyate.webp",
+      "shiny": null
+    },
+    "5054": {
+      "petId": 3250,
+      "normal": "/eggs/egg_xiaoyu.webp",
+      "shiny": null
+    },
+    "6001": {
+      "petId": 3070,
+      "normal": "/eggs/egg_huzhuquan.webp",
+      "shiny": null
+    },
+    "6002": {
+      "petId": 3017,
+      "normal": "/eggs/egg_bengbengzhongzi.webp",
+      "shiny": null
+    },
+    "6003": {
+      "petId": 3017,
+      "normal": "/eggs/egg_bengbengzhongzi.webp",
+      "shiny": null
+    },
+    "6004": {
+      "petId": 3017,
+      "normal": "/eggs/egg_bengbengzhongzi.webp",
+      "shiny": null
+    },
+    "6005": {
+      "petId": 3307,
+      "normal": "/eggs/egg_kuangjingchong.webp",
+      "shiny": null
+    },
+    "6006": {
+      "petId": 3307,
+      "normal": "/eggs/egg_kuangjingchong.webp",
+      "shiny": null
+    },
+    "6007": {
+      "petId": 3307,
+      "normal": "/eggs/egg_kuangjingchong.webp",
+      "shiny": null
+    },
+    "6020": {
+      "petId": 3568,
+      "normal": "/eggs/egg_xiaoheimao.webp",
+      "shiny": null
+    },
+    "6021": {
+      "petId": 3568,
+      "normal": "/eggs/egg_xiaoheimao.webp",
+      "shiny": null
+    },
+    "6022": {
+      "petId": 3568,
+      "normal": "/eggs/egg_xiaoheimao.webp",
+      "shiny": null
+    },
+    "6023": {
+      "petId": 3070,
+      "normal": "/eggs/egg_huzhuquan.webp",
+      "shiny": null
+    },
+    "6024": {
+      "petId": 3070,
+      "normal": "/eggs/egg_huzhuquan.webp",
+      "shiny": null
+    },
+    "6025": {
+      "petId": 3070,
+      "normal": "/eggs/egg_huzhuquan.webp",
+      "shiny": null
+    },
+    "6026": {
+      "petId": 3103,
+      "normal": "/eggs/egg_xiaobushi.webp",
+      "shiny": null
+    },
+    "6027": {
+      "petId": 3103,
+      "normal": "/eggs/egg_xiaobushi.webp",
+      "shiny": null
+    },
+    "6028": {
+      "petId": 3103,
+      "normal": "/eggs/egg_xiaobushi.webp",
+      "shiny": null
+    },
+    "7001": {
+      "petId": 3011,
+      "normal": "/eggs/egg_emolang.webp",
+      "shiny": null
+    },
+    "7002": {
+      "petId": 3011,
+      "normal": "/eggs/egg_emolang.webp",
+      "shiny": null
+    },
+    "7003": {
+      "petId": 3011,
+      "normal": "/eggs/egg_emolang.webp",
+      "shiny": null
+    },
+    "7004": {
+      "petId": 3011,
+      "normal": "/eggs/egg_emolang.webp",
+      "shiny": null
+    },
+    "7005": {
+      "petId": 3545,
+      "normal": "/eggs/egg_shengjianshicong.webp",
+      "shiny": null
+    },
+    "7006": {
+      "petId": 3545,
+      "normal": "/eggs/egg_shengjianshicong.webp",
+      "shiny": null
+    },
+    "7007": {
+      "petId": 3545,
+      "normal": "/eggs/egg_shengjianshicong.webp",
+      "shiny": null
+    },
+    "7008": {
+      "petId": 3545,
+      "normal": "/eggs/egg_shengjianshicong.webp",
+      "shiny": null
+    },
+    "8012": {
+      "petId": 8012,
+      "normal": "/eggs/egg_jiyishi.webp",
+      "shiny": null
+    },
+    "8013": {
+      "petId": 8013,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "8014": {
+      "petId": 8014,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "8015": {
+      "petId": 8015,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "8016": {
+      "petId": 8016,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "8017": {
+      "petId": 8017,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "8020": {
+      "petId": 8020,
+      "normal": "/eggs/egg_gongpingge.webp",
+      "shiny": null
+    },
+    "9001": {
+      "petId": 9001,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "9002": {
+      "petId": 9002,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "9003": {
+      "petId": 9003,
+      "normal": "/eggs/egg_songzai.webp",
+      "shiny": null
+    },
+    "440313": {
+      "petId": 3037,
+      "normal": "/eggs/egg_lanniao.webp",
+      "shiny": null
+    },
+    "13000151": {
+      "petId": 3001,
+      "normal": "/eggs/egg_miaomiao.webp",
+      "shiny": null
+    },
+    "13000152": {
+      "petId": 3011,
+      "normal": "/eggs/egg_emolang.webp",
+      "shiny": null
+    },
+    "13000153": {
+      "petId": 3029,
+      "normal": "/eggs/egg_qilicao.webp",
+      "shiny": "/eggs/egg_qilicao_yise.webp"
+    },
+    "13000154": {
+      "petId": 3103,
+      "normal": "/eggs/egg_xiaobushi.webp",
+      "shiny": null
+    },
+    "13000155": {
+      "petId": 3037,
+      "normal": "/eggs/egg_lanniao.webp",
+      "shiny": null
+    },
+    "13000156": {
+      "petId": 3330,
+      "normal": "/eggs/egg_haikuichong.webp",
+      "shiny": null
+    },
+    "13000157": {
+      "petId": 3157,
+      "normal": "/eggs/egg_huakuifenghou.webp",
+      "shiny": null
+    },
+    "13000158": {
+      "petId": 13000158,
+      "normal": "/eggs/egg_yilisi.webp",
+      "shiny": null
+    },
+    "13000159": {
+      "petId": 3011,
+      "normal": "/eggs/egg_emolang.webp",
+      "shiny": null
+    },
+    "13000160": {
+      "petId": 3070,
+      "normal": "/eggs/egg_huzhuquan.webp",
+      "shiny": null
+    },
+    "13000161": {
+      "petId": 3017,
+      "normal": "/eggs/egg_bengbengzhongzi.webp",
+      "shiny": null
+    },
+    "13000162": {
+      "petId": 3307,
+      "normal": "/eggs/egg_kuangjingchong.webp",
+      "shiny": null
+    },
+    "13000167": {
+      "petId": 3115,
+      "normal": "/eggs/egg_fuzhousha.webp",
+      "shiny": null
+    },
+    "13000169": {
+      "petId": 3014,
+      "normal": "/eggs/egg_amiyate.webp",
+      "shiny": null
+    },
+    "13000170": {
+      "petId": 3250,
+      "normal": "/eggs/egg_xiaoyu.webp",
+      "shiny": null
+    },
+    "14000001": {
+      "petId": 14000001,
+      "normal": "/eggs/egg_guodong.webp",
+      "shiny": null
+    },
+    "14000002": {
+      "petId": 14000002,
+      "normal": "/eggs/egg_banban.webp",
+      "shiny": null
+    },
+    "15000001": {
+      "petId": 15000001,
+      "normal": "/eggs/egg_banban.webp",
+      "shiny": null
+    },
+    "16000003": {
+      "petId": 16000003,
+      "normal": "/eggs/egg_dishu.webp",
+      "shiny": null
+    },
+    "16000004": {
+      "petId": 16000004,
+      "normal": "/eggs/egg_dimo.webp",
+      "shiny": null
+    },
+    "16000007": {
+      "petId": 16000007,
+      "normal": "/eggs/egg_dimo.webp",
+      "shiny": null
+    },
+    "18000001": {
+      "petId": 3136,
+      "normal": "/eggs/egg_maomao.webp",
+      "shiny": null
+    },
+    "19000001": {
+      "petId": 19000001,
+      "normal": "/eggs/egg_keliji.webp",
+      "shiny": null
+    },
+    "19000003": {
+      "petId": 19000003,
+      "normal": "/eggs/egg_guodong.webp",
+      "shiny": null
+    },
+    "19000005": {
+      "petId": 19000005,
+      "normal": "/eggs/egg_keliji.webp",
+      "shiny": null
+    },
+    "19000006": {
+      "petId": 19000006,
+      "normal": "/eggs/egg_guodong.webp",
+      "shiny": null
+    }
+  }
+}

@@ -16,6 +16,7 @@ import {
 } from '../utils/rocomPets';
 import { getPetGuideImageById } from '../utils/petGuideImages';
 import { toPublicAssetUrl } from '../utils/publicAssets';
+import { getEggUrl } from '../utils/eggImages';
 import { getShinyPetById } from '../utils/shinyPets';
 import type { EggGroup, Pokemon } from '../types';
 import type { RocomEvolutionNode, RocomEvolutionStage } from '../types/rocom';
@@ -249,14 +250,16 @@ const PokemonDetail = () => {
             </div>
           </dl>
 
-          {shinyPet?.hasEggImages && (
+          {getEggUrl(parsedBaseId) && (
             <div className="detail-shiny-eggs" aria-label={`${displayName}蛋图`}>
               <div className="detail-shiny-egg">
-                <img src={shinyPet.normalEggUrl} alt={`${displayName}原色蛋`} loading="lazy" />
+                <img src={getEggUrl(parsedBaseId)!} alt={`${displayName}原色蛋`} loading="lazy" />
               </div>
-              <div className="detail-shiny-egg">
-                <img src={shinyPet.shinyEggUrl} alt={`${displayName}异色蛋`} loading="lazy" />
-              </div>
+              {shinyPet?.shinyEggUrl && (
+                <div className="detail-shiny-egg">
+                  <img src={shinyPet.shinyEggUrl} alt={`${displayName}异色蛋`} loading="lazy" />
+                </div>
+              )}
             </div>
           )}
         </div>

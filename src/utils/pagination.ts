@@ -12,3 +12,23 @@ export const clampPageSize = (pageSize: number): number => {
 
   return Math.min(Math.max(normalizedPageSize, 1), MAX_PAGE_SIZE);
 };
+
+const PAGE_SIZE_STORAGE_KEY = 'roco_page_size';
+
+export const getPersistedPageSize = (defaultSize: number): number => {
+  try {
+    const saved = localStorage.getItem(PAGE_SIZE_STORAGE_KEY);
+
+    return saved ? clampPageSize(Number(saved)) : defaultSize;
+  } catch {
+    return defaultSize;
+  }
+};
+
+export const persistPageSize = (size: number): void => {
+  try {
+    localStorage.setItem(PAGE_SIZE_STORAGE_KEY, String(clampPageSize(size)));
+  } catch {
+    // localStorage 不可用时静默失败
+  }
+};

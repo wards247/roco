@@ -21,6 +21,23 @@
   opacity: 0.7;
 }
 
+.pokemon-card--male {
+  background: #e7f0ff;
+}
+
+.pokemon-card--female {
+  background: #ffe8f0;
+}
+
+.pokemon-card--both {
+  background:
+    linear-gradient(
+      135deg,
+      #e7f0ff 50%,
+      #ffe8f0 50%
+    );
+}
+
 .pokemon-card__detail-link {
   color: inherit;
   text-decoration: none;

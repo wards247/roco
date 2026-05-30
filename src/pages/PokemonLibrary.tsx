@@ -6,7 +6,13 @@ import SearchBar from '../components/SearchBar';
 import { useEggGroups } from '../hooks/useEggGroups';
 import { useMyPokemon } from '../hooks/useMyPokemon';
 import type { Gender, Pokemon } from '../types';
-import { clampPageNumber, clampPageSize, MAX_PAGE_SIZE } from '../utils/pagination';
+import {
+  clampPageNumber,
+  clampPageSize,
+  getPersistedPageSize,
+  MAX_PAGE_SIZE,
+  persistPageSize,
+} from '../utils/pagination';
 import './PokemonLibrary.css';
 
 const DEFAULT_PAGE_SIZE = 10;
@@ -19,7 +25,7 @@ const PokemonLibrary = () => {
   const [selectedGroupId, setSelectedGroupId] = useState<number | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
-  const [pageSize, setPageSize] = useState(DEFAULT_PAGE_SIZE);
+  const [pageSize, setPageSize] = useState(() => getPersistedPageSize(DEFAULT_PAGE_SIZE));
   const [jumpPage, setJumpPage] = useState('1');
   const [choosingGenderBaseId, setChoosingGenderBaseId] = useState<number | null>(null);
 
@@ -47,6 +53,7 @@ const PokemonLibrary = () => {
   const handlePageSizeChange = (value: string) => {
     const nextPageSize = clampPageSize(Number(value));
     setPageSize(nextPageSize);
+    persistPageSize(nextPageSize);
     setCurrentPage(1);
     setJumpPage('1');
   };

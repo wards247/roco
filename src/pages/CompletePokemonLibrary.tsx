@@ -5,7 +5,13 @@ import RocomPetCard from '../components/RocomPetCard';
 import SearchBar from '../components/SearchBar';
 import { useEggGroups } from '../hooks/useEggGroups';
 import { useRocomPets } from '../hooks/useRocomPets';
-import { clampPageNumber, clampPageSize, MAX_PAGE_SIZE } from '../utils/pagination';
+import {
+  clampPageNumber,
+  clampPageSize,
+  getPersistedPageSize,
+  MAX_PAGE_SIZE,
+  persistPageSize,
+} from '../utils/pagination';
 import './CompletePokemonLibrary.css';
 
 const DEFAULT_PAGE_SIZE = 24;
@@ -18,7 +24,7 @@ const CompletePokemonLibrary = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedGroupId, setSelectedGroupId] = useState<number | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const [pageSize, setPageSize] = useState(DEFAULT_PAGE_SIZE);
+  const [pageSize, setPageSize] = useState(() => getPersistedPageSize(DEFAULT_PAGE_SIZE));
   const [jumpPage, setJumpPage] = useState('1');
 
   const eggGroupNameById = useMemo(
@@ -61,6 +67,7 @@ const CompletePokemonLibrary = () => {
   const handlePageSizeChange = (value: string) => {
     const nextPageSize = clampPageSize(Number(value));
     setPageSize(nextPageSize);
+    persistPageSize(nextPageSize);
     setCurrentPage(1);
     setJumpPage('1');
   };

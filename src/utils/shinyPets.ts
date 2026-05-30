@@ -1,5 +1,6 @@
 import { getRocomFriendImageUrl } from './rocomPets';
 import { toPublicAssetUrl } from './publicAssets';
+import { getEggImage } from './eggImages';
 
 export interface ShinyPet {
   id: number;
@@ -63,7 +64,7 @@ const s1ShinyPetDefinitions: ShinyPetDefinition[] = [
   { id: 3011, displayName: '恶魔狼', season: 'S1', name: 'emolang' },
   { id: 3029, displayName: '奇丽草', season: 'S1', name: 'qilicao' },
   { id: 3244, displayName: '绒绒', season: 'S1', name: 'rongrong' },
-  { id: 3309, displayName: '犀角鸟', season: 'S1', name: 'xijiaoniao', shinyImageUrl: '/shiny-pets/xijiaoniao-shiny.webp' },
+  { id: 3309, displayName: '犀角鸟', season: 'S1', name: 'xijiaoniao' },
   { id: 3382, displayName: '双灯鱼', season: 'S1', name: 'shungdengyu' },
   { id: 3436, displayName: '柴渣虫', season: 'S1', name: 'chaizhachong' },
 ];
@@ -74,11 +75,11 @@ const toShinyPet = (pet: ShinyPetDefinition): ShinyPet => {
   const normalImageUrl = toPublicAssetUrl(pet.normalImageUrl ?? getRocomFriendImageUrl(name));
   const hasNormalImage = pet.hasNormalImage ?? true;
 
-  const hasLocalEggFile = name.length > 0;
-  const localEggUrl = hasLocalEggFile
-    ? toPublicAssetUrl(`/shiny-eggs/${name}.png`)
+  const eggImage = getEggImage(pet.id);
+  const localEggUrl = eggImage?.normal
+    ? toPublicAssetUrl(eggImage.normal)
     : '';
-  const localShinyEggUrl = hasLocalEggFile
+  const localShinyEggUrl = name.length > 0
     ? toPublicAssetUrl(`/shiny-eggs/${name}_yise.png`)
     : '';
 
@@ -103,7 +104,7 @@ const toShinyPet = (pet: ShinyPetDefinition): ShinyPet => {
     normalEggUrl: localEggUrl,
     shinyEggUrl: localShinyEggUrl || localEggUrl,
     hasShinyImage,
-    hasEggImages: hasLocalEggFile,
+    hasEggImages: !!(localEggUrl || localShinyEggUrl),
   };
 };
 

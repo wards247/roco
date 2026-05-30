@@ -10,12 +10,12 @@ if (!moonBear || moonBear.displayName !== '月牙雪熊') {
   throw new Error('shiny catalog should include moon bear by pet id');
 }
 
-if (moonBear.normalEggUrl !== '/shiny-eggs/yueyaxuexiong-normal.webp') {
-  throw new Error('normal egg image should use local shiny egg assets');
+if (!moonBear.normalEggUrl?.includes('egg_yueyaxuexiong.webp')) {
+  throw new Error('normal egg image should use eggs/ directory');
 }
 
-if (moonBear.shinyEggUrl !== '/shiny-eggs/yueyaxuexiong-shiny.webp') {
-  throw new Error('shiny egg image should use local shiny egg assets');
+if (!moonBear.shinyEggUrl?.includes('yueyaxuexiong_yise.png')) {
+  throw new Error('shiny egg image should use shiny-eggs/ directory');
 }
 
 if (!moonBear.shinyImageUrl.endsWith('/JL_yueyaxuexiong_yise.webp')) {

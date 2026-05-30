@@ -40,7 +40,7 @@ const PokemonCard = ({
   const canHatch = pokemon.hatch_status_text === '可生蛋';
   const isLibraryMode = actionMode === 'library';
   const isClickable = !!onOpenPokemon;
-  const detailHref = `/pokemon/${pokemon.base_id}`;
+  const detailHref = `#/pokemon/${pokemon.base_id}`;
   const stopActionClick = (event: MouseEvent<HTMLElement>) => {
     event.stopPropagation();
   };
@@ -75,9 +75,17 @@ const PokemonCard = ({
 
   const visibleOwnedGenders = ownedGenders.filter((gender) => gender !== 'unknown');
 
+  const genderBgClass = !isLibraryMode && visibleOwnedGenders.length > 0
+    ? visibleOwnedGenders.includes('male') && visibleOwnedGenders.includes('female')
+      ? 'pokemon-card--both'
+      : visibleOwnedGenders.includes('male')
+        ? 'pokemon-card--male'
+        : 'pokemon-card--female'
+    : '';
+
   return (
     <div
-      className={`pokemon-card ${!canHatch ? 'cannot-hatch' : ''}`}
+      className={`pokemon-card ${!canHatch ? 'cannot-hatch' : ''}${genderBgClass ? ` ${genderBgClass}` : ''}`}
     >
       <div className="pokemon-card__avatar-row">
         <a

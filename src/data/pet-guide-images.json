@@ -2222,6 +2222,163 @@
         3370,
         3371
       ]
+    },
+    {
+      "guideId": 3735,
+      "displayName": "机幕方舟",
+      "sourceName": "机幕方舟",
+      "imageUrl": "/pet-guides/3735.jpg",
+      "sourceUrl": "https://www.taptap.cn/moment/806569507060449995",
+      "articleTitle": "洛克王国丨S2赛季全精灵图鉴348~375",
+      "imageIndex": 1,
+      "relatedIds": [
+        3733,
+        3734,
+        3735
+      ]
+    },
+    {
+      "guideId": 3532,
+      "displayName": "雪怪",
+      "sourceName": "雪怪",
+      "imageUrl": "/pet-guides/3532.jpg",
+      "sourceUrl": "https://www.taptap.cn/moment/806569507060449995",
+      "articleTitle": "洛克王国丨S2赛季全精灵图鉴348~375",
+      "imageIndex": 2,
+      "relatedIds": [
+        3531,
+        3532
+      ]
+    },
+    {
+      "guideId": 3573,
+      "displayName": "爆焰喷喷",
+      "sourceName": "爆焰喷喷",
+      "imageUrl": "/pet-guides/3573.jpg",
+      "sourceUrl": "https://www.taptap.cn/moment/806569507060449995",
+      "articleTitle": "洛克王国丨S2赛季全精灵图鉴348~375",
+      "imageIndex": 3,
+      "relatedIds": [
+        3572,
+        3573
+      ]
+    },
+    {
+      "guideId": 3730,
+      "displayName": "音碟吼",
+      "sourceName": "音碟吼",
+      "imageUrl": "/pet-guides/3730.jpg",
+      "sourceUrl": "https://www.taptap.cn/moment/806569507060449995",
+      "articleTitle": "洛克王国丨S2赛季全精灵图鉴348~375",
+      "imageIndex": 4,
+      "relatedIds": [
+        3729,
+        3730
+      ]
+    },
+    {
+      "guideId": 3660,
+      "displayName": "加油蟹",
+      "sourceName": "加油蟹",
+      "imageUrl": "/pet-guides/3660.jpg",
+      "sourceUrl": "https://www.taptap.cn/moment/806569507060449995",
+      "articleTitle": "洛克王国丨S2赛季全精灵图鉴348~375",
+      "imageIndex": 5,
+      "relatedIds": [
+        3659,
+        3660
+      ]
+    },
+    {
+      "guideId": 3489,
+      "displayName": "小丑公爵",
+      "sourceName": "小丑公爵",
+      "imageUrl": "/pet-guides/3489.jpg",
+      "sourceUrl": "https://www.taptap.cn/moment/806569507060449995",
+      "articleTitle": "洛克王国丨S2赛季全精灵图鉴348~375",
+      "imageIndex": 6,
+      "relatedIds": [
+        3487,
+        3488,
+        3489
+      ]
+    },
+    {
+      "guideId": 3678,
+      "displayName": "烟花伯爵",
+      "sourceName": "烟花伯爵",
+      "imageUrl": "/pet-guides/3678.jpg",
+      "sourceUrl": "https://www.taptap.cn/moment/806569507060449995",
+      "articleTitle": "洛克王国丨S2赛季全精灵图鉴348~375",
+      "imageIndex": 7,
+      "relatedIds": [
+        3677,
+        3678
+      ]
+    },
+    {
+      "guideId": 3684,
+      "displayName": "咕德帽帽",
+      "sourceName": "咕德帽帽",
+      "imageUrl": "/pet-guides/3684.jpg",
+      "sourceUrl": "https://www.taptap.cn/moment/806569507060449995",
+      "articleTitle": "洛克王国丨S2赛季全精灵图鉴348~375",
+      "imageIndex": 8,
+      "relatedIds": [
+        3683,
+        3684
+      ]
+    },
+    {
+      "guideId": 3737,
+      "displayName": "霹雳迪迪",
+      "sourceName": "霹雳迪迪",
+      "imageUrl": "/pet-guides/3737.jpg",
+      "sourceUrl": "https://www.taptap.cn/moment/806569507060449995",
+      "articleTitle": "洛克王国丨S2赛季全精灵图鉴348~375",
+      "imageIndex": 9,
+      "relatedIds": [
+        3736,
+        3737
+      ]
+    },
+    {
+      "guideId": 3709,
+      "displayName": "巨鼓象",
+      "sourceName": "巨鼓象",
+      "imageUrl": "/pet-guides/3709.jpg",
+      "sourceUrl": "https://www.taptap.cn/moment/806569507060449995",
+      "articleTitle": "洛克王国丨S2赛季全精灵图鉴348~375",
+      "imageIndex": 10,
+      "relatedIds": [
+        3708,
+        3709
+      ]
+    },
+    {
+      "guideId": 3235,
+      "displayName": "帅帅魔偶",
+      "sourceName": "帅帅魔偶",
+      "imageUrl": "/pet-guides/3235.jpg",
+      "sourceUrl": "https://www.taptap.cn/moment/806569507060449995",
+      "articleTitle": "洛克王国丨S2赛季全精灵图鉴348~375",
+      "imageIndex": 11,
+      "relatedIds": [
+        3234,
+        3235
+      ]
+    },
+    {
+      "guideId": 3620,
+      "displayName": "学院呱呱",
+      "sourceName": "学院呱呱",
+      "imageUrl": "/pet-guides/3620.jpg",
+      "sourceUrl": "https://www.taptap.cn/moment/806569507060449995",
+      "articleTitle": "洛克王国丨S2赛季全精灵图鉴348~375",
+      "imageIndex": 12,
+      "relatedIds": [
+        3620
+      ]
     }
   ]
 }

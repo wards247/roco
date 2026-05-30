@@ -1,7 +1,7 @@
 import { getPetGuideImageById, getPetGuideImages, hasPetGuideImage } from './petGuideImages';
 
-if (getPetGuideImages().length !== 148) {
-  throw new Error('pet guide image catalog should include all 148 TapTap guide images');
+if (getPetGuideImages().length !== 160) {
+  throw new Error('pet guide image catalog should include all 160 TapTap guide images');
 }
 
 const fireGodGuide = getPetGuideImageById(3006);
@@ -44,4 +44,21 @@ if (getPetGuideImageById(3744)?.guideId !== 3745) {
 
 if (getPetGuideImageById(3371)?.sourceUrl !== 'https://www.taptap.cn/moment/800786233297995334') {
   throw new Error('暮星辰 should resolve to the newly added TapTap guide');
+}
+
+// S2 season (348~375) new guide entries
+if (getPetGuideImageById(3735)?.sourceUrl !== 'https://www.taptap.cn/moment/806569507060449995') {
+  throw new Error('机幕方舟 should resolve to the S2 season TapTap guide');
+}
+
+if (getPetGuideImageById(3733)?.guideId !== 3735) {
+  throw new Error('初机号 should resolve to the 机幕方舟 family guide image');
+}
+
+if (getPetGuideImageById(3620)?.guideId !== 3620) {
+  throw new Error('学院呱呱 should have its own guide image');
+}
+
+if (getPetGuideImageById(3235)?.sourceName !== '帅帅魔偶') {
+  throw new Error('帅帅魔偶 should resolve correctly');
 }

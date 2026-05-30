@@ -1,4 +1,4 @@
-import type { KeyboardEvent } from 'react';
+import type { KeyboardEvent, MouseEvent } from 'react';
 import type { RocomPetCard as RocomPetCardData } from '../types/rocom';
 import './RocomPetCard.css';
 
@@ -10,8 +10,17 @@ interface Props {
 
 const RocomPetCard = ({ pet, eggGroupNames, onOpenPet }: Props) => {
   const isClickable = !!onOpenPet;
+  const detailHref = `#/pokemon/${pet.id}`;
 
-  const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+  const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    if (!onOpenPet) {
+      return;
+    }
+    event.preventDefault();
+    onOpenPet(pet.id);
+  };
+
+  const handleKeyDown = (event: KeyboardEvent<HTMLAnchorElement>) => {
     if (!onOpenPet || (event.key !== 'Enter' && event.key !== ' ')) {
       return;
     }
@@ -21,12 +30,11 @@ const RocomPetCard = ({ pet, eggGroupNames, onOpenPet }: Props) => {
   };
 
   return (
-    <article
+    <a
+      href={detailHref}
       className={`rocom-pet-card ${isClickable ? 'is-clickable' : ''}`}
-      onClick={() => onOpenPet?.(pet.id)}
+      onClick={handleClick}
       onKeyDown={handleKeyDown}
-      role={isClickable ? 'link' : undefined}
-      tabIndex={isClickable ? 0 : undefined}
       aria-label={isClickable ? `查看${pet.name}详情` : undefined}
     >
       <img src={pet.avatarUrl} alt={pet.name} className="rocom-pet-card__avatar" loading="lazy" />
@@ -38,7 +46,7 @@ const RocomPetCard = ({ pet, eggGroupNames, onOpenPet }: Props) => {
         </p>
       </div>
       <span className="rocom-pet-card__stat">{pet.totalStats}</span>
-    </article>
+    </a>
   );
 };
 

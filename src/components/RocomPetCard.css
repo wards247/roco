@@ -8,6 +8,8 @@
   border-radius: 10px;
   padding: 0.85rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  color: inherit;
 }
 
 .rocom-pet-card.is-clickable {
