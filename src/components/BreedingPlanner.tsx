@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useRef, useEffect } from 'react';
 import type { MyPokemon, Pokemon } from '../types';
 import { useBreedingPlannerConfig } from '../hooks/useBreedingPlannerConfig';
 import { getVisibleOwnedGendersForBaseIds } from '../utils/ownedGenders';
@@ -6,7 +6,7 @@ import { toPublicAssetUrl } from '../utils/publicAssets';
 import { shinyPets } from '../utils/shinyPets';
 import {
   buildBreedingPlan,
-  generateBreedingPlacement,
+  generateBreedingPlacementGen,
   getMyPokemonEggGroupIdsForPlanner,
   getPlannerPokemonKey,
 } from '../utils/breedingPlanner';
@@ -86,7 +86,7 @@ const renderPokemonRows = (
 
       return (
         <div
-          className={isOwned ? 'breeding-planner__row breeding-planner__row--owned' : 'breeding-planner__row'}
+          className={isOwned ? `breeding-planner__row breeding-planner__row--owned-${gender}` : 'breeding-planner__row'}
           role="listitem"
           key={key}
         >
@@ -131,12 +131,30 @@ const BreedingPlanGrid = ({ result }: { result: BreedingPlanResult }) => {
   }
 
   const { placement } = result;
-  const cellSize = 60;
-  const viewSize = placement.gridSize * cellSize;
+  const viewSize = 420;
+  const isFineGrid = placement.gridSize > 5;
+  const cellSize = viewSize / placement.gridSize;
   const getCenter = (coord: { x: number; y: number }) => ({
     x: coord.x * cellSize + cellSize / 2,
     y: coord.y * cellSize + cellSize / 2,
   });
+
+  // Deduplicate occupied 2×2 blocks (for fine grid block backgrounds)
+  const occupiedBlocks = new Set<string>();
+  if (isFineGrid) {
+    const allCoords = [...placement.maleCoords, ...placement.femaleCoords];
+    allCoords.forEach((coord) => {
+      const bx = Math.floor(coord.x / 2);
+      const by = Math.floor(coord.y / 2);
+      occupiedBlocks.add(`${bx},${by}`);
+    });
+  }
+
+  const gridLines = placement.gridSize;
+  const majorStep = isFineGrid ? 2 : 1;
+  const majorCellSize = isFineGrid ? cellSize * 2 : cellSize;
+  const nodeBoxSize = majorCellSize - 4;
+  const nodeHalf = nodeBoxSize / 2;
 
   return (
     <svg
@@ -145,18 +163,39 @@ const BreedingPlanGrid = ({ result }: { result: BreedingPlanResult }) => {
       role="img"
       aria-label="配对网格"
     >
-      {Array.from({ length: placement.gridSize * placement.gridSize }, (_, index) => {
-        const x = index % placement.gridSize;
-        const y = Math.floor(index / placement.gridSize);
+      {/* Cell grid lines */}
+      {Array.from({ length: gridLines + 1 }, (_, i) => (
+        <line
+          key={`gh-${i}`}
+          className={i % majorStep === 0 ? 'breeding-planner__major-line' : 'breeding-planner__fine-line'}
+          x1={0}
+          y1={i * cellSize}
+          x2={viewSize}
+          y2={i * cellSize}
+        />
+      ))}
+      {Array.from({ length: gridLines + 1 }, (_, i) => (
+        <line
+          key={`gv-${i}`}
+          className={i % majorStep === 0 ? 'breeding-planner__major-line' : 'breeding-planner__fine-line'}
+          x1={i * cellSize}
+          y1={0}
+          x2={i * cellSize}
+          y2={viewSize}
+        />
+      ))}
 
+      {/* 2×2 block backgrounds for fine grid */}
+      {[...occupiedBlocks].map((key) => {
+        const [bx, by] = key.split(',').map(Number);
         return (
           <rect
-            key={`cell-${x}-${y}`}
-            className="breeding-planner__grid-cell"
-            x={x * cellSize + 4}
-            y={y * cellSize + 4}
-            width={cellSize - 8}
-            height={cellSize - 8}
+            key={`block-${key}`}
+            className="breeding-planner__cell-block"
+            x={bx * majorCellSize + 2}
+            y={by * majorCellSize + 2}
+            width={nodeBoxSize}
+            height={nodeBoxSize}
             rx={8}
           />
         );
@@ -171,7 +210,7 @@ const BreedingPlanGrid = ({ result }: { result: BreedingPlanResult }) => {
         return (
           <line
             key={`${line.maleIndex}-${line.femaleIndex}`}
-            className={line.locked ? 'breeding-planner__line breeding-planner__line--locked' : 'breeding-planner__line'}
+            className="breeding-planner__line"
             x1={start.x}
             y1={start.y}
             x2={end.x}
@@ -189,13 +228,13 @@ const BreedingPlanGrid = ({ result }: { result: BreedingPlanResult }) => {
             <title>{female?.displayName ?? '雌性'}</title>
             <rect
               className="breeding-planner__node-box breeding-planner__node-box--female"
-              x={center.x - 22}
-              y={center.y - 18}
-              width={44}
-              height={36}
+              x={center.x - nodeHalf}
+              y={center.y - nodeHalf}
+              width={nodeBoxSize}
+              height={nodeBoxSize}
               rx={8}
             />
-            <text x={center.x} y={center.y - 2} textAnchor="middle">
+            <text x={center.x} y={center.y - 6} textAnchor="middle">
               ♀
             </text>
             <text x={center.x} y={center.y + 12} textAnchor="middle">
@@ -214,13 +253,13 @@ const BreedingPlanGrid = ({ result }: { result: BreedingPlanResult }) => {
             <title>{male?.displayName ?? '雄性'}</title>
             <rect
               className="breeding-planner__node-box breeding-planner__node-box--male"
-              x={center.x - 22}
-              y={center.y - 18}
-              width={44}
-              height={36}
+              x={center.x - nodeHalf}
+              y={center.y - nodeHalf}
+              width={nodeBoxSize}
+              height={nodeBoxSize}
               rx={8}
             />
-            <text x={center.x} y={center.y - 2} textAnchor="middle">
+            <text x={center.x} y={center.y - 6} textAnchor="middle">
               ♂
             </text>
             <text x={center.x} y={center.y + 12} textAnchor="middle">
@@ -326,8 +365,23 @@ const BreedingPlanner = ({ pokemon, allPokemon }: BreedingPlannerProps) => {
   );
   const [result, setResult] = useState<BreedingPlanResult | null>(null);
   const [placementAttempted, setPlacementAttempted] = useState(false);
+  const [placementLoading, setPlacementLoading] = useState(false);
+  const [placementProgress, setPlacementProgress] = useState(0);
+  const [plannerCollapsed, setPlannerCollapsed] = useState(false);
   const [nestCountDraft, setNestCountDraft] = useState<string | null>(null);
   const [countDrafts, setCountDrafts] = useState<Partial<Record<PlannerPokemonKey, string>>>({});
+
+  // Refs for chunked placement execution
+  const placementGenRef = useRef<Generator<number, BreedingPlanResult> | null>(null);
+  const placementTimerRef = useRef<number | null>(null);
+
+  // Cleanup on unmount: cancel pending chunk
+  useEffect(() => () => {
+    if (placementTimerRef.current !== null) {
+      clearTimeout(placementTimerRef.current);
+    }
+    placementGenRef.current = null;
+  }, []);
 
   const enabledStats = useMemo(
     () => plannerPokemon.reduce(
@@ -350,21 +404,58 @@ const BreedingPlanner = ({ pokemon, allPokemon }: BreedingPlannerProps) => {
   );
 
   const handleBuildPlan = () => {
+    if (plannerCollapsed) {
+      setPlannerCollapsed(false);
+      clearResult();
+      return;
+    }
     setPlacementAttempted(false);
     setResult(buildBreedingPlan({ pokemon: plannerPokemon, config }));
+    setPlannerCollapsed(true);
   };
 
   const handleGeneratePlacement = () => {
     setPlacementAttempted(true);
-    setResult((currentResult) => (
-      currentResult && !currentResult.error
-        ? generateBreedingPlacement(currentResult)
-        : currentResult
-    ));
+    setPlacementLoading(true);
+    setPlacementProgress(0);
+
+    if (!result || result.error) {
+      setPlacementLoading(false);
+      setPlacementProgress(100);
+      return;
+    }
+
+    placementGenRef.current = generateBreedingPlacementGen(result, Math.random);
+    runPlacementChunk();
+  };
+
+  /** 分片执行：每次 Generator yield 后更新进度，setTimeout 调度下一片 */
+  const runPlacementChunk = () => {
+    const gen = placementGenRef.current;
+    if (!gen) {
+      // 组件已卸载或已取消
+      setPlacementLoading(false);
+      return;
+    }
+
+    const { value, done } = gen.next();
+
+    if (done) {
+      // Generator 返回了最终结果
+      setResult(value as BreedingPlanResult);
+      setPlacementLoading(false);
+      setPlacementProgress(100);
+      placementGenRef.current = null;
+    } else {
+      // value 是进度百分比（0~100）
+      setPlacementProgress(value as number);
+      placementTimerRef.current = window.setTimeout(runPlacementChunk, 0);
+    }
   };
 
   const clearResult = () => {
     setPlacementAttempted(false);
+    setPlannerCollapsed(false);
     setResult(null);
   };
 
@@ -483,50 +574,59 @@ const BreedingPlanner = ({ pokemon, allPokemon }: BreedingPlannerProps) => {
         <div className="breeding-planner__actions">
           <button type="button" onClick={() => handleSetAllEnabled(true)}>全选</button>
           <button type="button" onClick={() => handleSetAllEnabled(false)}>清空</button>
-          <button type="button" className="breeding-planner__primary" onClick={handleBuildPlan}>智能推荐配窝方案</button>
+          <button type="button" className="breeding-planner__primary" onClick={handleBuildPlan}>{plannerCollapsed ? '重新生成' : '智能推荐配窝方案'}</button>
           <button
             type="button"
             className="breeding-planner__secondary"
-            disabled={!result || Boolean(result.error)}
+            disabled={!result || Boolean(result.error) || placementLoading}
             onClick={handleGeneratePlacement}
           >
-            生成位置图
+            {placementLoading ? '生成中...' : '生成位置图'}
           </button>
         </div>
       </div>
 
-      <div className="breeding-planner__selectors">
-        <section className="breeding-planner__selector" aria-labelledby="breeding-planner-female-title">
-          <h4 id="breeding-planner-female-title">雌性</h4>
-          {femalePokemon.length > 0
-            ? renderPokemonRows(
-              femalePokemon,
-              'female',
-              config,
-              countDrafts,
-              handleUpdateEntry,
-              handleCountChange,
-              handleCountBlur,
-              ownedKeys,
-            )
-            : <div className="breeding-planner__empty">暂无可参与的雌性精灵。</div>}
-        </section>
-        <section className="breeding-planner__selector" aria-labelledby="breeding-planner-male-title">
-          <h4 id="breeding-planner-male-title">雄性</h4>
-          {malePokemon.length > 0
-            ? renderPokemonRows(
-              malePokemon,
-              'male',
-              config,
-              countDrafts,
-              handleUpdateEntry,
-              handleCountChange,
-              handleCountBlur,
-              ownedKeys,
-            )
-            : <div className="breeding-planner__empty">暂无可参与的雄性精灵。</div>}
-        </section>
-      </div>
+      {placementLoading && (
+        <div className="breeding-planner__progress-bar">
+          <div className="breeding-planner__progress-fill" style={{ width: `${placementProgress}%` }} />
+          <span className="breeding-planner__progress-label">{placementProgress}%</span>
+        </div>
+      )}
+
+      {!plannerCollapsed && (
+        <div className="breeding-planner__selectors">
+          <section className="breeding-planner__selector" aria-labelledby="breeding-planner-female-title">
+            <h4 id="breeding-planner-female-title">雌性</h4>
+            {femalePokemon.length > 0
+              ? renderPokemonRows(
+                femalePokemon,
+                'female',
+                config,
+                countDrafts,
+                handleUpdateEntry,
+                handleCountChange,
+                handleCountBlur,
+                ownedKeys,
+              )
+              : <div className="breeding-planner__empty">暂无可参与的雌性精灵。</div>}
+          </section>
+          <section className="breeding-planner__selector" aria-labelledby="breeding-planner-male-title">
+            <h4 id="breeding-planner-male-title">雄性</h4>
+            {malePokemon.length > 0
+              ? renderPokemonRows(
+                malePokemon,
+                'male',
+                config,
+                countDrafts,
+                handleUpdateEntry,
+                handleCountChange,
+                handleCountBlur,
+                ownedKeys,
+              )
+              : <div className="breeding-planner__empty">暂无可参与的雄性精灵。</div>}
+          </section>
+        </div>
+      )}
 
       {result?.error && (
         <div className="breeding-planner__warning" role="alert">{result.error}</div>
@@ -545,41 +645,78 @@ const BreedingPlanner = ({ pokemon, allPokemon }: BreedingPlannerProps) => {
               <div className="breeding-planner__visual">
                 <BreedingPlanGrid result={result} />
               </div>
-              <section className="breeding-planner__pair-stats" aria-labelledby="breeding-planner-pair-stats-title">
-                <h4 id="breeding-planner-pair-stats-title">雌性配对次数</h4>
-                <div className="breeding-planner__summary-list">
-                  {result.femalePairStats.map((stat) => (
-                    <div className="breeding-planner__summary-row" key={stat.female.id}>
-                      <span title={stat.female.displayName}>{stat.female.displayName}</span>
-                      <strong>{stat.pairCount}</strong>
-                    </div>
-                  ))}
-                </div>
-              </section>
+              <div className="breeding-planner__coverage-sidebar">
+                <section className="breeding-planner__coverage-card" aria-labelledby="breeding-planner-female-coverage-title">
+                  <h4 id="breeding-planner-female-coverage-title">雌性覆盖明细</h4>
+                  <div className="breeding-planner__summary-list">
+                    {result.femaleCoverDetails.map((detail) => (
+                      <div className="breeding-planner__coverage-row" key={detail.female.id}>
+                        <span className="breeding-planner__coverage-male" title={detail.female.displayName}>
+                          <img
+                            className="breeding-planner__coverage-avatar breeding-planner__coverage-avatar--female"
+                            src={toPublicAssetUrl(detail.female.avatarUrl || `/pets/head/${detail.female.baseId}.webp`)}
+                            alt={detail.female.displayName}
+                          />
+                        </span>
+                        <span className="breeding-planner__coverage-females">
+                          {detail.coveredMales.length > 0
+                            ? detail.coveredMales.map((male) => (
+                              <span key={male.id} className="breeding-planner__coverage-covered-item">
+                                <img
+                                  className="breeding-planner__coverage-avatar breeding-planner__coverage-avatar--male"
+                                  src={toPublicAssetUrl(male.avatarUrl || `/pets/head/${male.baseId}.webp`)}
+                                  alt={male.displayName}
+                                  title={male.displayName}
+                                />
+                              </span>
+                            ))
+                            : <span className="breeding-planner__coverage-uncovered">未覆盖</span>}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+                <section className="breeding-planner__coverage-card" aria-labelledby="breeding-planner-male-coverage-title">
+                  <h4 id="breeding-planner-male-coverage-title">雄性覆盖明细</h4>
+                  <div className="breeding-planner__coverage-list">
+                    {result.maleCoverDetails.map((detail) => (
+                      <div className="breeding-planner__coverage-row" key={detail.male.id}>
+                        <span className="breeding-planner__coverage-male" title={detail.male.displayName}>
+                          <img
+                            className="breeding-planner__coverage-avatar breeding-planner__coverage-avatar--male"
+                            src={toPublicAssetUrl(detail.male.avatarUrl || `/pets/head/${detail.male.baseId}.webp`)}
+                            alt={detail.male.displayName}
+                          />
+                        </span>
+                        <span className="breeding-planner__coverage-females">
+                          {detail.coveredFemales.length > 0
+                            ? detail.coveredFemales.map((female) => (
+                              <span key={female.id} className="breeding-planner__coverage-covered-item">
+                                <img
+                                  className="breeding-planner__coverage-avatar breeding-planner__coverage-avatar--female"
+                                  src={toPublicAssetUrl(female.avatarUrl || `/pets/head/${female.baseId}.webp`)}
+                                  alt={female.displayName}
+                                  title={female.displayName}
+                                />
+                              </span>
+                            ))
+                            : <span className="breeding-planner__coverage-uncovered">未覆盖雌性</span>}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              </div>
             </div>
           ) : (
             <div className="breeding-planner__empty-result">
-              {placementAttempted ? '本次没有生成位置图，可再次点击“生成位置图”重试。' : '已生成配窝方案，可继续生成位置图。'}
+              {result.uncoveredFemales.length === result.femaleInstances.length
+                ? '所有雌性均无兼容雄性，无法生成位置图。'
+                : placementAttempted
+                  ? '本次没有生成位置图，可再次点击"生成位置图"重试。'
+                  : '已生成配窝方案，可继续生成位置图。'}
             </div>
           )}
-
-          <section className="breeding-planner__coverage" aria-labelledby="breeding-planner-coverage-title">
-            <h4 id="breeding-planner-coverage-title">雄性覆盖明细</h4>
-            <div className="breeding-planner__coverage-list">
-              {result.maleCoverDetails.map((detail) => (
-                <div className="breeding-planner__coverage-row" key={detail.male.id}>
-                  <span className="breeding-planner__coverage-male" title={detail.male.displayName}>
-                    {detail.male.displayName}
-                  </span>
-                  <span className="breeding-planner__coverage-females">
-                    {detail.coveredFemales.length > 0
-                      ? detail.coveredFemales.map((female) => female.displayName).join('、')
-                      : '未覆盖雌性'}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </section>
         </div>
       )}
     </section>
